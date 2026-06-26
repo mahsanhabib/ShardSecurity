@@ -1,0 +1,214 @@
+\section{Reconfiguration-Phase Accountability Races}
+\label{sec:reconf}
+
+A reviewer's first question about any single-shard, single-epoch attack is: what happens when
+validators rotate among shards? Sharded systems reassign committees and hand off shard state and
+cross-shard artifacts at epoch boundaries~\cite{zamani2018rapidchain,kokoris2018omniledger}. This
+section extends the model to that boundary. Its thesis is deliberately narrow:
+\emph{reconfiguration does not eliminate the accountability race; it relocates it.} Whether
+relocation helps the attacker or the defender depends entirely on how old-epoch certified artifacts
+are handed off, and we give the exact condition (Propositions~\ref{prop:reconf-safe}
+and~\ref{prop:reconf-residual}).
+
+\paragraph{Three events that must be distinguished.}
+We do \emph{not} claim that validator rotation lets bribed validators escape slashing. Robust
+PoS/BFT systems separate three events that a careless analysis conflates:
+(1) \emph{shard rotation}---a validator leaves shard $A$ and joins shard $B$;
+(2) \emph{validator exit}---a validator stops validating; and
+(3) \emph{stake withdrawal}---a validator recovers bonded stake and is no longer slashable.
+A validator that merely rotates out of a shard should remain slashable for old-epoch equivocation,
+because the evidence---validator identity, shard ID, epoch, height/round, and the two conflicting
+signed values---is self-contained and can be enforced by a global staking/beacon layer after
+rotation (Counterexample~\ref{cex:persistent}). The attack's reconfiguration angle is therefore
+\emph{not} ``rotation defeats slashing''; it is whether a \emph{value-bearing certified artifact}
+created by the old committee can execute in the next epoch before old-epoch evidence is enforced.
+
+\paragraph{Variables.}
+Let $\tau$ be the epoch length and $a\in[0,\tau]$ the attack time within the epoch, with
+$r=\tau-a$ the remaining time before nominal reconfiguration. Let $U$ be the unbonding/withdrawal
+delay after validator exit, $\Hreconf(a)$ the extra accountability delay caused by committee handoff,
+state transfer, beacon processing, or proof routing across epochs, $\Tstate$ the time for the new
+committee to obtain and verify shard state, $\Treceipt$ the time for old-epoch receipts/locks/
+withdrawal certificates/outbox messages to become executable in the next epoch, and $\Tevid$ the time
+for old-epoch equivocation evidence to become enforceable against globally bonded stake. Finally,
+$q(a)=\Pr[\text{evidence enforced before stake unslashable}]$ generalizes the enforcement
+probability $q$ of \S\ref{sec:cost} to attack time $a$.
+
+\paragraph{Extended profit model.}
+The single-epoch model of \S\ref{sec:design} becomes, as a function of attack time,
+\begin{equation}
+\mathbb{E}[\Pi(a)] \;=\; \psucc(a)\,\pwin(a)\,\Eval \;-\; B(a) \;-\; \Cop,
+\label{eq:profit-a}
+\end{equation}
+with $B(a)=(F{+}1)\,q(a)\,(s{+}R)$. The window term depends on the handoff design. For
+\emph{receipt-carryover} designs, where the old-epoch artifact survives into epoch $e{+}1$ and
+executes there,
+\begin{equation}
+\pwin(a)=\Pr\big[\,\Tsettle^{\mathrm{ce}} < \Tacc + \Hreconf(a)\,\big],
+\label{eq:pwin-carry}
+\end{equation}
+where the cross-epoch settlement time $\Tsettle^{\mathrm{ce}}=\Treceipt+\Tstate+\Twd$ (with $\Twd$
+the destination withdrawal) must beat $\Tevid$: the handoff penalty $\Hreconf(a)$ \emph{widens} the
+effective accountability deadline, so the artifact need only beat $\Tevid$. For
+\emph{hard-cutoff} designs, where the old committee stops at the boundary and no value-bearing
+artifact may execute afterward,
+\begin{equation}
+\pwin(a)=\Pr\big[\,\Tsettle < \min(\Tacc,\,r)\,\big].
+\label{eq:pwin-cut}
+\end{equation}
+As $a\to\tau$ we have $r\to0$, so last-block attacks become \emph{useless} under a hard cutoff unless
+the malicious artifact was already certified and settles within the shrinking $r$. The two regimes
+pull $\mathbb{E}[\Pi(a)]$ in opposite directions near the boundary; Figure~\ref{fig:reconf-profit}
+shows the resulting curves.
+
+\subsection{What Survives Reconfiguration}
+\label{sec:survives}
+
+Ordinary mempool transactions are \emph{not} the main risk. A pending transaction can be dropped,
+retried, re-gossiped, or carried into the next epoch without ever being consensus-final; nothing
+value-bearing has been certified. The dangerous objects are old-epoch \emph{certified} artifacts:
+finalized shard headers, state roots, receipt/outbox roots, pending incoming receipts, cross-shard
+locks, withdrawal certificates, and bridge-relevant certificates. The attack matters precisely when
+an old committee creates a certified value-bearing artifact that remains \emph{executable} after
+reconfiguration but before old-epoch equivocation evidence is enforced. We therefore restate the
+race in handoff terms:
+
+\begin{quote}
+\emph{Reconfiguration does not eliminate the accountability race; it relocates it. Even if the old
+committee stops producing blocks, certified receipts, locks, and state roots may survive into the
+next epoch. The relevant residual window is not the time left to produce ordinary blocks, but the
+time during which old-epoch artifacts remain executable before old-epoch equivocation evidence is
+enforced.}
+\end{quote}
+
+\subsection{A Taxonomy of Reconfiguration Designs}
+\label{sec:taxonomy}
+
+Table~\ref{tab:taxonomy} classifies the handoff designs by what they do at the boundary and the
+condition under which each is safe or dangerous. Figure~\ref{fig:reconf-fsm} renders the handoff as a
+state machine with the safe (gated) and unsafe (ungated) paths.
+
+\begin{table*}[t]
+\centering
+\caption{Reconfiguration designs and their effect on the attack. ``Safe'' is the condition under
+which $\pwin\to0$ for old-epoch value-bearing artifacts (Proposition~\ref{prop:reconf-safe});
+``dangerous'' is the residual-vulnerability condition (Proposition~\ref{prop:reconf-residual}).}
+\label{tab:taxonomy}
+\small
+\begin{tabularx}{\textwidth}{@{}l X X X X@{}}
+\toprule
+Design & At the epoch boundary & Effect on attack & Safe condition & Dangerous condition \\
+\midrule
+A. Hard cutoff + mempool carryover & Old committee stops; unincluded txns retried/re-gossiped & Last-block attack weak unless the malicious tx was already certified & Value-bearing artifacts cannot execute after the cutoff & A receipt was certified before the cutoff and settles within $r$ \\
+B. Drain phase & Protocol stops accepting new cross-shard txns and finishes pending locks/receipts before rotation & Strong if drained receipts execute before accountability & Pending receipts held through the accountability window & Drained receipts execute immediately at boundary \\
+C. Receipt/outbox handoff & Old-epoch receipts/outbox imported in epoch $e{+}1$ & The most important case: artifact survives and executes next epoch & Import is accountability-gated (held until evidence window elapses) & Imported receipts executed immediately on import \\
+D. Old/new committee overlap & Old committee signs final checkpoint; new committee signs import checkpoint & Depends on whether the new committee checks for conflicts & New committee rejects/quarantines conflicting old certificates & New committee blindly imports one old root \\
+E. Global beacon/control-layer checkpoint & Beacon records shard headers, receipt roots, assignments, slashing evidence & Preserves accountability across rotation & Beacon quarantines old receipt roots until evidence can land & Beacon finalizes old receipt roots before evidence is enforced \\
+F. Rolling/asynchronous reconfiguration & Validators rotate gradually; no single last-block cliff & No cutoff, but attacker optimizes $a$ via $q(a),\Tstate,\Tevid$ & Old-epoch artifacts stay gated throughout the roll & Some artifacts execute during the roll before evidence \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.96\linewidth]{fig5_reconf_fsm.pdf}
+\caption{Epoch-boundary handoff as a state machine. The safe (accountability-gated) path quarantines
+old-epoch artifacts until evidence can land ($\pwin=0$); the unsafe (ungated) path executes them
+immediately, reopening the race.}
+\label{fig:reconf-fsm}
+\end{figure}
+
+\subsection{State Handoff Under Committee Rotation}
+\label{sec:handoff}
+
+New validators must obtain shard state before they can validate. Mechanisms include a full snapshot
+transfer verified against a state root; a checkpoint plus block replay; stateless validation with
+witnesses/Merkle proofs; old/new committee checkpoint overlap; a global beacon/control-layer shard
+header; and erasure-coded or data-availability-backed state reconstruction. Crucially, the new
+committee needs more than account balances. It needs the (1) latest finalized shard header,
+(2) state root, (3) receipt/outbox root, (4) pending incoming receipts, (5) pending cross-shard
+locks, (6) withdrawal certificates, (7) validator-assignment metadata, (8) old-epoch
+equivocation/slashing evidence, and optionally (9) mempool transactions. Of these, mempool state is
+\emph{not} consensus-critical---it can be reconstructed or dropped---whereas receipt roots, locks,
+finalized headers, and equivocation evidence \emph{are}. A handoff that imports value-bearing roots
+(3)--(6) without first importing and checking evidence (8), and without gating execution behind the
+source accountability window, is exactly the dangerous case of Table~\ref{tab:taxonomy}.
+
+\subsection{Counterexamples: When the Attack Does Not Apply}
+\label{sec:counterexamples}
+
+Precise threat models name their boundaries. The following cases make the reconfiguration angle
+reviewer-resistant by stating when it fails.
+
+\begin{counterexample}[Persistent slashability after rotation]\label{cex:persistent}
+A validator rotates from shard $A$ to shard $B$, but its stake remains globally bonded. The
+equivocation evidence (identity, shard ID, epoch, height/round, conflicting signed values) is
+self-contained, so a global slashing contract or beacon layer can slash after rotation. Shard
+rotation therefore does \emph{not} imply accountability escape; $q(a)$ stays high and $B(a)$ does not
+fall.
+\end{counterexample}
+
+\begin{counterexample}[Accountability-gated receipt carryover]\label{cex:gated}
+Old-epoch receipts carry into epoch $e{+}1$ but remain \emph{pending} through a challenge/
+accountability window. If equivocation evidence appears, the receipt root is quarantined and the
+validators slashed. This enforces $\Tsettle\ge\Tacc$ and gives $\pwin=0$ (Figure~\ref{fig:reconf-profit},
+flat line): the attack is killed regardless of $a$.
+\end{counterexample}
+
+\begin{counterexample}[Cross-shard freeze during reconfiguration]\label{cex:freeze}
+The protocol allows local transactions but freezes cross-shard receipt execution during state
+handoff. Last-block cross-shard attacks fail because no value-bearing artifact can settle across the
+boundary.
+\end{counterexample}
+
+\begin{counterexample}[Rolling reconfiguration]\label{cex:rolling}
+There is no single point where the old committee disappears, so there is no last-block escape to
+exploit. The attack must be modeled continuously; with old-epoch artifacts gated throughout the roll,
+$\pwin$ never opens (Figure~\ref{fig:reconf-profit}, rolling curve stays bounded).
+\end{counterexample}
+
+These cases do not weaken the paper; they sharpen its threat model.
+
+\subsection{Two Propositions}
+\label{sec:reconf-props}
+
+\begin{proposition}[Reconfiguration-safe handoff]\label{prop:reconf-safe}
+Suppose a sharded protocol satisfies all of:
+\emph{(i)} old-epoch equivocation evidence remains valid and enforceable after committee rotation;
+\emph{(ii)} validator stake remains bonded and slashable for at least the maximum evidence delay
+$\Tevid$;
+\emph{(iii)} old-epoch receipts, locks, and withdrawal certificates are not executable until the
+corresponding source-shard accountability window has elapsed; and
+\emph{(iv)} the new committee verifies imported state, receipt roots, and pending artifacts against a
+canonical checkpoint and rejects/quarantines conflicting old-epoch certificates.
+Then committee reconfiguration does not increase the adversary's settlement-before-accountability
+probability for old-epoch artifacts; in particular, accountability-gated old-epoch artifacts have
+$\pwin=0$.
+\end{proposition}
+\begin{proof}
+See Appendix~\ref{app:proofs}.
+\end{proof}
+
+\begin{proposition}[Reconfiguration-residual vulnerability]\label{prop:reconf-residual}
+Suppose instead that the protocol allows old-epoch certified receipts, locks, or withdrawal artifacts
+to become executable in epoch $e{+}1$ before old-epoch equivocation evidence can be enforced
+(violating (iii)), and that reconfiguration either increases accountability latency by $\Hreconf(a)$
+with $\Hreconf$ nondecreasing in $a$, or decreases $q(a)$ near the epoch boundary. Then there is a
+boundary region $[\tau-\delta,\tau]$ on which $\mathbb{E}[\Pi(a)]$ is increasing in $a$; attacking
+near the end of the epoch strictly increases expected adversarial profit relative to a mid-epoch
+attack.
+\end{proposition}
+\begin{proof}
+See Appendix~\ref{app:proofs}.
+\end{proof}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{fig6_reconf_profit.pdf}
+\caption{Expected profit $\mathbb{E}[\Pi(a)]$ across the epoch for each handoff design
+(\S\ref{sec:eval}, $N=31$, $V=60s$). Hard cutoff (A) collapses as $a\to\tau$ (residual time $r\to0$);
+unsafe carryover (C) and reconfiguration-delay designs \emph{rise} toward the boundary
+(Proposition~\ref{prop:reconf-residual}); accountability-gated carryover stays flat and negative
+($\pwin=0$, Proposition~\ref{prop:reconf-safe}); rolling reconfiguration (F) has no cliff.}
+\label{fig:reconf-profit}
+\end{figure}

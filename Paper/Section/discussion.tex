@@ -1,0 +1,102 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{Defenses}
+\label{sec:defenses}
+
+Proposition~\ref{prop:immunity} prescribes the principal defense; here we parameterize a portfolio and
+state, for each, which model quantity it moves. Table~\ref{tab:defenses} summarizes. The organizing
+principle from RQ5 is that levers acting on $\pwin$ close the attack, while levers acting only on $B$
+merely raise its price.
+
+\paragraph{A. Accountability-gated cross-shard receipts.}
+Do not execute a receipt until the source shard's accountability window has elapsed
+($\Tsettle\ge\Tacc$). This forces $\pwin=0$ (Propositions~\ref{prop:immunity},~\ref{prop:reconf-safe})
+at the cost of added cross-shard latency. It is the only lever that is robust independent of $N$, $s$,
+and $V$.
+
+\paragraph{B. Persistent slashability across rotation.}
+Keep stake bonded and slashable for old-epoch signatures until the maximum evidence delay expires
+(Counterexample~\ref{cex:persistent}). This holds $q(a)$ high across the boundary, raising $B(a)$, but
+does not by itself close the window.
+
+\paragraph{C. Global evidence submission and D. fast evidence markets.}
+Let any party submit old-epoch equivocation evidence to a global staking/beacon layer, and pay
+watchers to submit it quickly. Both lower $\Tacc$, which simultaneously lowers $\pwin$ and---because
+$q$ rises as $\Tacc$ falls---raises $B$; this is the master-variable lever working for the defender.
+
+\paragraph{E. State/receipt handoff validation.}
+New committees import old roots as \emph{pending} until evidence checks complete and reject conflicting
+old-epoch certificates (condition (iv) of Proposition~\ref{prop:reconf-safe}). This closes the
+reconfiguration-residual window.
+
+\paragraph{F. Value-aware committee sizing.}
+Scale committee size and slashing level with the cross-shard value-at-risk reachable through a shard,
+so that $(F{+}1)q(s{+}R)$ tracks $V$. This raises $B$ and caps effective $V$, but only linearly in
+$F{+}1$; alone it is outrun by any shard whose reachable liquidity grows.
+
+\paragraph{G. Cross-shard freeze/drain rules.}
+Freeze or gate value-bearing cross-shard artifacts during reconfiguration
+(Counterexample~\ref{cex:freeze}), reducing $\pwin$ at the boundary at the cost of throughput.
+
+\begin{table}[t]
+\centering
+\caption{Defenses and the model quantity each moves. $\downarrow$/$\uparrow$ = decreases/increases for
+the defender's benefit; ``lat.'' = adds latency/throughput overhead.}
+\label{tab:defenses}
+\small
+\begin{tabularx}{\linewidth}{@{}lXX@{}}
+\toprule
+Defense & Primarily affects & Cost \\
+\midrule
+A. Finality-gated receipts      & $\pwin\!\to\!0$            & cross-shard lat. \\
+B. Persistent slashability      & $q\!\uparrow$, $B\!\uparrow$ & --- \\
+C. Global evidence submission   & $\Tacc\!\downarrow$ ($\pwin\!\downarrow,q\!\uparrow$) & --- \\
+D. Fast evidence markets        & $\Tacc\!\downarrow$ ($\pwin\!\downarrow,q\!\uparrow$) & watcher fees \\
+E. Handoff validation           & $\pwin\!\to\!0$ (reconfig) & import lat. \\
+F. Value-aware sizing           & $B\!\uparrow$ (linear), $V$ cap & throughput \\
+G. Cross-shard freeze/drain     & $\pwin\!\downarrow$ (boundary) & throughput \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Scope of Applicability}
+\label{sec:applicability}
+
+The attack is conditional, not universal. Table~\ref{tab:applicability} states, assumption by
+assumption, when it applies and why---making explicit that the paper does \emph{not} claim universal
+breakage of sharding.
+
+\begin{table*}[t]
+\centering
+\caption{When the attack applies. ``Applies'' means the assumption opens or sustains a gate; ``No''
+means it closes one.}
+\label{tab:applicability}
+\small
+\begin{tabularx}{\textwidth}{@{}lcX@{}}
+\toprule
+Protocol / design assumption & Applies? & Reason \\
+\midrule
+Small-committee BFT shard                          & Yes        & Local threshold $F{+}1$ is a handful of validators \\
+Public committee assignment before action          & Yes        & Lets the adversary target and recruit the committee \\
+Conditional bribe can verify equivocation evidence & Yes        & Enables a trustless \textsc{PayToEquivocate} payment \\
+Cross-shard receipts execute before acct.\ window  & Yes        & Opens (G1): $\Tsettle<\Tacc$ \\
+Old receipts accountability-gated                  & No         & Forces $\Tsettle\ge\Tacc$, $\pwin=0$ (Prop.~\ref{prop:reconf-safe}) \\
+Stake remains slashable after rotation             & No (weakens)& Keeps $q$ high, raising $B$ (Cex.~\ref{cex:persistent}) \\
+Immediate withdrawal after epoch                   & Yes        & Lowers $q(a)$ near the boundary, cheapening bribes \\
+Global beacon slashing                             & No (weakens)& Preserves accountability across rotation \\
+Rolling reconfiguration                            & Partial    & No last-block cliff; continuous optimization in $a$ \\
+Per-shard bridge withdrawal                        & Yes        & Provides the value sink $V$ \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\subsection{Relationship to Known Attacks}
+Our attack is distinct from cross-shard replay~\cite{sonnino2020replay}, which needs no corruption and
+exploits message replay rather than a manufactured safety violation; replay defenses (e.g.\ Byzcuit)
+do not address priced equivocation. It is also distinct from opportunistic bridge double-spends, where
+the reversal is a chance reorg against a premature-finality bridge~\cite{zamyatin2021sok,lee2022sokbridge};
+here the reversal is produced \emph{inside} the protocol and the timing is governed by accountability,
+not luck. It composes the bribery machinery of~\cite{mccorry2018smart,karakostas2024bribing,sookitoth2025bribers}
+with the small-committee quorum structure and cross-shard latency asymmetry that those works do not
+model.

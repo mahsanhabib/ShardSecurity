@@ -1,0 +1,781 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{57}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{} and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showURL}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showURL #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[Austgen et~al\mbox{.}(2025)]%
+        {austgen2025liquefaction}
+\bibfield{author}{\bibinfo{person}{James Austgen}, \bibinfo{person}{Andr\'{e}s
+  F\'{a}brega}, \bibinfo{person}{Mahimna Kelkar}, \bibinfo{person}{Dani
+  Vilardell}, \bibinfo{person}{Sarah Allen}, \bibinfo{person}{Kushal Babel},
+  \bibinfo{person}{Jay Yu}, {and} \bibinfo{person}{Ari Juels}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Liquefaction: Privately Liquefying Blockchain
+  Assets}. In \bibinfo{booktitle}{\emph{Proceedings of the 2025 IEEE Symposium
+  on Security and Privacy (S\&P)}}. \bibinfo{pages}{1493--1511}.
+\newblock
+
+
+\bibitem[Avarikioti et~al\mbox{.}(2023)]%
+        {avarikioti2019divide}
+\bibfield{author}{\bibinfo{person}{Zeta Avarikioti}, \bibinfo{person}{Antoine
+  Desjardins}, \bibinfo{person}{Eleftherios Kokoris-Kogias}, {and}
+  \bibinfo{person}{Roger Wattenhofer}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Divide and Scale: Formalization and Roadmap to
+  Robust Sharding}. In \bibinfo{booktitle}{\emph{Structural Information and
+  Communication Complexity (SIROCCO)}} \emph{(\bibinfo{series}{LNCS 13892})}.
+  \bibinfo{pages}{199--245}.
+\newblock
+\newblock
+\shownote{arXiv:1910.10434 (2019); DOI 10.1007/978-3-031-32733-9\_10}.
+
+
+\bibitem[Avarikioti et~al\mbox{.}(2025)]%
+        {avarikioti2025cobra}
+\bibfield{author}{\bibinfo{person}{Zeta Avarikioti},
+  \bibinfo{person}{Eleftherios Kokoris-Kogias}, \bibinfo{person}{Ray
+  Neiheiser}, {and} \bibinfo{person}{Christos Stefo}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{title}{{CoBRA}: A Universal Strategyproof Confirmation
+  Protocol for Quorum-based Proof-of-Stake Blockchains}.
+\newblock \bibinfo{howpublished}{arXiv preprint arXiv:2503.16783}.
+\newblock
+
+
+\bibitem[Bano et~al\mbox{.}(2019)]%
+        {bano2019sok}
+\bibfield{author}{\bibinfo{person}{Shehar Bano}, \bibinfo{person}{Alberto
+  Sonnino}, \bibinfo{person}{Mustafa Al-Bassam}, \bibinfo{person}{Sarah
+  Azouvi}, \bibinfo{person}{Patrick McCorry}, \bibinfo{person}{Sarah
+  Meiklejohn}, {and} \bibinfo{person}{George Danezis}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{{SoK}: Consensus in the Age of Blockchains}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 1st ACM Conference on Advances
+  in Financial Technologies (AFT)}}. \bibinfo{pages}{183--198}.
+\newblock
+
+
+\bibitem[Bar-On et~al\mbox{.}(2025)]%
+        {baron2025aegis}
+\bibfield{author}{\bibinfo{person}{Yogev Bar-On}, \bibinfo{person}{Roi
+  Bar-Zur}, \bibinfo{person}{Omer Ben-Porat}, \bibinfo{person}{Nimrod Cohen},
+  \bibinfo{person}{Ittay Eyal}, {and} \bibinfo{person}{Matan Sitbon}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Aegis: Tethering a Blockchain with Primary-Chain
+  Stake}. In \bibinfo{booktitle}{\emph{Proceedings of the 2025 ACM SIGSAC
+  Conference on Computer and Communications Security (CCS)}}.
+\newblock
+\newblock
+\shownote{arXiv:2406.05904; DOI 10.1145/3719027.3744885}.
+
+
+\bibitem[Berger et~al\mbox{.}(2025)]%
+        {berger2025censorship}
+\bibfield{author}{\bibinfo{person}{Ben Berger}, \bibinfo{person}{Edward~W.
+  Felten}, \bibinfo{person}{Akaki Mamageishvili}, {and} \bibinfo{person}{Benny
+  Sudakov}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Economic Censorship Games in Fraud Proofs}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 26th ACM Conference on Economics
+  and Computation (EC)}}. \bibinfo{pages}{670--687}.
+\newblock
+\newblock
+\shownote{arXiv:2502.20334; DOI 10.1145/3736252.3742611}.
+
+
+\bibitem[Bonneau(2016)]%
+        {bonneau2016rent}
+\bibfield{author}{\bibinfo{person}{Joseph Bonneau}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Why Buy When You Can Rent? Bribery Attacks on
+  Bitcoin-Style Consensus}. In \bibinfo{booktitle}{\emph{Financial Cryptography
+  and Data Security Workshops (BITCOIN)}} \emph{(\bibinfo{series}{LNCS 9604})}.
+  \bibinfo{pages}{19--26}.
+\newblock
+\newblock
+\shownote{DOI 10.1007/978-3-662-53357-4\_2}.
+
+
+\bibitem[Buchman et~al\mbox{.}(2018)]%
+        {buchman2018tendermint}
+\bibfield{author}{\bibinfo{person}{Ethan Buchman}, \bibinfo{person}{Jae Kwon},
+  {and} \bibinfo{person}{Zarko Milosevic}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \bibinfo{title}{The Latest Gossip on {BFT} Consensus}.
+\newblock \bibinfo{howpublished}{arXiv preprint arXiv:1807.04938}.
+\newblock
+
+
+\bibitem[Budish(2018)]%
+        {budish2018economic}
+\bibfield{author}{\bibinfo{person}{Eric Budish}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{The Economic Limits of Bitcoin and the
+  Blockchain}}.
+\newblock \bibinfo{type}{NBER Working Paper} 24717.
+  \bibinfo{institution}{National Bureau of Economic Research}.
+\newblock
+\newblock
+\shownote{Published in The Quarterly Journal of Economics, 2024}.
+
+
+\bibitem[Budish et~al\mbox{.}(2024)]%
+        {budish2024economic}
+\bibfield{author}{\bibinfo{person}{Eric Budish}, \bibinfo{person}{Andrew
+  Lewis-Pye}, {and} \bibinfo{person}{Tim Roughgarden}.}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{The Economic Limits of Permissionless Consensus}.
+  In \bibinfo{booktitle}{\emph{Proceedings of the 25th ACM Conference on
+  Economics and Computation (EC)}}. \bibinfo{pages}{704--731}.
+\newblock
+\newblock
+\shownote{arXiv:2405.09173; DOI 10.1145/3670865.3673548}.
+
+
+\bibitem[Buterin(2015)]%
+        {buterin2015pepsilon}
+\bibfield{author}{\bibinfo{person}{Vitalik Buterin}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \bibinfo{title}{The {P + epsilon} Attack}.
+\newblock \bibinfo{howpublished}{Ethereum Foundation Blog,
+  \url{https://blog.ethereum.org/2015/01/28/p-epsilon-attack}}.
+\newblock
+
+
+\bibitem[Buterin and Griffith(2017)]%
+        {buterin2017casper}
+\bibfield{author}{\bibinfo{person}{Vitalik Buterin} {and}
+  \bibinfo{person}{Virgil Griffith}.} \bibinfo{year}{2017}\natexlab{}.
+\newblock \bibinfo{title}{Casper the Friendly Finality Gadget}.
+\newblock \bibinfo{howpublished}{arXiv preprint arXiv:1710.09437}.
+\newblock
+
+
+\bibitem[Castro and Liskov(1999)]%
+        {castro1999pbft}
+\bibfield{author}{\bibinfo{person}{Miguel Castro} {and}
+  \bibinfo{person}{Barbara Liskov}.} \bibinfo{year}{1999}\natexlab{}.
+\newblock \showarticletitle{Practical Byzantine Fault Tolerance}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 3rd Symposium on Operating
+  Systems Design and Implementation (OSDI)}}. \bibinfo{pages}{173--186}.
+\newblock
+
+
+\bibitem[Chung and Shi(2023)]%
+        {chung2023foundations}
+\bibfield{author}{\bibinfo{person}{Hao Chung} {and} \bibinfo{person}{Elaine
+  Shi}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Foundations of Transaction Fee Mechanism Design}.
+  In \bibinfo{booktitle}{\emph{Proceedings of the 2023 ACM-SIAM Symposium on
+  Discrete Algorithms (SODA)}}. \bibinfo{pages}{3856--3899}.
+\newblock
+\newblock
+\shownote{arXiv:2111.03151; Cryptology ePrint Archive 2021/1474; DOI
+  10.1137/1.9781611977554.ch150}.
+
+
+\bibitem[Civit et~al\mbox{.}(2021)]%
+        {civit2021polygraph}
+\bibfield{author}{\bibinfo{person}{Pierre Civit}, \bibinfo{person}{Seth
+  Gilbert}, {and} \bibinfo{person}{Vincent Gramoli}.}
+  \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Polygraph: Accountable Byzantine Agreement}. In
+  \bibinfo{booktitle}{\emph{IEEE 41st International Conference on Distributed
+  Computing Systems (ICDCS)}}. \bibinfo{pages}{403--413}.
+\newblock
+\newblock
+\shownote{Cryptology ePrint Archive, Paper 2019/587; DOI
+  10.1109/ICDCS51616.2021.00046}.
+
+
+\bibitem[{Cosmos / Interchain Stack}(2026)]%
+        {cosmosdocs}
+\bibfield{author}{\bibinfo{person}{{Cosmos / Interchain Stack}}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Cosmos SDK Documentation: Staking, Slashing, and
+  {IBC}}.
+\newblock \bibinfo{howpublished}{\url{https://docs.cosmos.network}}.
+\newblock
+\newblock
+\shownote{Parameters are approximate public values; confirm against current
+  specs.}.
+
+
+\bibitem[Daian et~al\mbox{.}(2020)]%
+        {daian2020flashboys}
+\bibfield{author}{\bibinfo{person}{Philip Daian}, \bibinfo{person}{Steven
+  Goldfeder}, \bibinfo{person}{Tyler Kell}, \bibinfo{person}{Yunqi Li},
+  \bibinfo{person}{Xueyuan Zhao}, \bibinfo{person}{Iddo Bentov},
+  \bibinfo{person}{Lorenz Breidenbach}, {and} \bibinfo{person}{Ari Juels}.}
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Flash Boys 2.0: Frontrunning in Decentralized
+  Exchanges, Miner Extractable Value, and Consensus Instability}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 2020 IEEE Symposium on Security
+  and Privacy (S\&P)}}. \bibinfo{pages}{910--927}.
+\newblock
+
+
+\bibitem[David et~al\mbox{.}(2022)]%
+        {david2022gearbox}
+\bibfield{author}{\bibinfo{person}{Bernardo David}, \bibinfo{person}{Bernardo
+  Magri}, \bibinfo{person}{Christian Matt}, \bibinfo{person}{Jesper~Buus
+  Nielsen}, {and} \bibinfo{person}{Daniel Tschudi}.}
+  \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{{GearBox}: Optimal-size Shard Committees by
+  Leveraging the Safety-Liveness Dichotomy}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 2022 ACM SIGSAC Conference on
+  Computer and Communications Security (CCS)}}. \bibinfo{pages}{683--696}.
+\newblock
+\newblock
+\shownote{Cryptology ePrint Archive, Paper 2021/211; DOI
+  10.1145/3548606.3559375}.
+
+
+\bibitem[Deb et~al\mbox{.}(2024)]%
+        {deb2024stakesure}
+\bibfield{author}{\bibinfo{person}{Soubhik Deb}, \bibinfo{person}{Robert
+  Raynor}, {and} \bibinfo{person}{Sreeram Kannan}.}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \bibinfo{title}{{STAKESURE}: Proof of Stake Mechanisms with Strong
+  Cryptoeconomic Safety}.
+\newblock \bibinfo{howpublished}{arXiv preprint arXiv:2401.05797}.
+\newblock
+
+
+\bibitem[Dong et~al\mbox{.}(2024)]%
+        {dong2024remotestaking}
+\bibfield{author}{\bibinfo{person}{Xinshu Dong},
+  \bibinfo{person}{Orfeas~Stefanos Thyfronitis~Litos},
+  \bibinfo{person}{Ertem~Nusret Tas}, \bibinfo{person}{David Tse},
+  \bibinfo{person}{Robin~Linus Woll}, \bibinfo{person}{Lei Yang}, {and}
+  \bibinfo{person}{Mingchao Yu}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \bibinfo{title}{Remote Staking with Optimal Economic Safety}.
+\newblock \bibinfo{howpublished}{arXiv preprint arXiv:2408.01896}.
+\newblock
+
+
+\bibitem[Durvasula and Roughgarden(2025)]%
+        {durvasula2025restaking}
+\bibfield{author}{\bibinfo{person}{Naveen Durvasula} {and} \bibinfo{person}{Tim
+  Roughgarden}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Robust Restaking Networks}. In
+  \bibinfo{booktitle}{\emph{16th Innovations in Theoretical Computer Science
+  Conference (ITCS)}} \emph{(\bibinfo{series}{LIPIcs},
+  Vol.~\bibinfo{volume}{325})}. \bibinfo{pages}{48:1--48:21}.
+\newblock
+\newblock
+\shownote{arXiv:2407.21785; DOI 10.4230/LIPIcs.ITCS.2025.48}.
+
+
+\bibitem[{Ethereum}(2026)]%
+        {ethconsensusspecs}
+\bibfield{author}{\bibinfo{person}{{Ethereum}}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Ethereum Consensus Specifications}.
+\newblock
+  \bibinfo{howpublished}{\url{https://github.com/ethereum/consensus-specs}}.
+\newblock
+\newblock
+\shownote{Parameters are approximate public values; confirm against current
+  specs.}.
+
+
+\bibitem[Ga\v{z}i et~al\mbox{.}(2025)]%
+        {gazi2025grinding}
+\bibfield{author}{\bibinfo{person}{Peter Ga\v{z}i}, \bibinfo{person}{Saad
+  Quader}, {and} \bibinfo{person}{Alexander Russell}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{title}{Taming Iterative Grinding Attacks on Blockchain
+  Beacons}.
+\newblock \bibinfo{howpublished}{Cryptology ePrint Archive, Paper 2025/1974}.
+\newblock
+\newblock
+\shownote{Published in Advances in Cryptology---ASIACRYPT 2025, LNCS 16246,
+  Springer.}.
+
+
+\bibitem[Gong et~al\mbox{.}(2025)]%
+        {gong2025recover}
+\bibfield{author}{\bibinfo{person}{Tiantian Gong},
+  \bibinfo{person}{Gustavo~Franco Camilo}, \bibinfo{person}{Kartik Nayak},
+  \bibinfo{person}{Andrew Lewis-Pye}, {and} \bibinfo{person}{Aniket Kate}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Recover from Excessive Faults in
+  Partially-Synchronous {BFT SMR}}. In \bibinfo{booktitle}{\emph{34th USENIX
+  Security Symposium}}.
+\newblock
+\newblock
+\shownote{Cryptology ePrint Archive, Paper 2025/083}.
+
+
+\bibitem[{Harmony Team}(2019)]%
+        {harmony2019whitepaper}
+\bibfield{author}{\bibinfo{person}{{Harmony Team}}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \bibinfo{title}{Harmony: Technical Whitepaper}.
+\newblock \bibinfo{howpublished}{\url{https://harmony.one}}.
+\newblock
+
+
+\bibitem[Judmayer et~al\mbox{.}(2021a)]%
+        {judmayer2021paytowin}
+\bibfield{author}{\bibinfo{person}{Aljosha Judmayer}, \bibinfo{person}{Nicholas
+  Stifter}, \bibinfo{person}{Alexei Zamyatin}, \bibinfo{person}{Itay Tsabary},
+  \bibinfo{person}{Ittay Eyal}, \bibinfo{person}{Peter Ga\v{z}i},
+  \bibinfo{person}{Sarah Meiklejohn}, {and} \bibinfo{person}{Edgar~R. Weippl}.}
+  \bibinfo{year}{2021}\natexlab{a}.
+\newblock \showarticletitle{Pay to Win: Cheap, Cross-Chain Bribing Attacks on
+  {PoW} Cryptocurrencies}. In \bibinfo{booktitle}{\emph{Financial Cryptography
+  and Data Security Workshops (WTSC)}} \emph{(\bibinfo{series}{LNCS 12676})}.
+  \bibinfo{pages}{533--549}.
+\newblock
+\newblock
+\shownote{Cryptology ePrint Archive, Paper 2019/775 (preprint title: ``Pay To
+  Win: Cheap, Crowdfundable, Cross-chain Algorithmic Incentive Manipulation
+  Attacks on PoW Cryptocurrencies''); DOI 10.1007/978-3-662-63958-0\_39}.
+
+
+\bibitem[Judmayer et~al\mbox{.}(2021b)]%
+        {judmayer2021sok}
+\bibfield{author}{\bibinfo{person}{Aljosha Judmayer}, \bibinfo{person}{Nicholas
+  Stifter}, \bibinfo{person}{Alexei Zamyatin}, \bibinfo{person}{Itay Tsabary},
+  \bibinfo{person}{Ittay Eyal}, \bibinfo{person}{Peter Ga\v{z}i},
+  \bibinfo{person}{Sarah Meiklejohn}, {and} \bibinfo{person}{Edgar~R. Weippl}.}
+  \bibinfo{year}{2021}\natexlab{b}.
+\newblock \showarticletitle{{SoK}: Algorithmic Incentive Manipulation Attacks
+  on Permissionless {PoW} Cryptocurrencies}. In
+  \bibinfo{booktitle}{\emph{Financial Cryptography and Data Security Workshops
+  (WTSC)}} \emph{(\bibinfo{series}{LNCS 12676})}. \bibinfo{pages}{507--532}.
+\newblock
+\newblock
+\shownote{Cryptology ePrint Archive, Paper 2020/1614; DOI
+  10.1007/978-3-662-63958-0\_38}.
+
+
+\bibitem[Karakostas et~al\mbox{.}(2024)]%
+        {karakostas2024bribing}
+\bibfield{author}{\bibinfo{person}{Dimitris Karakostas},
+  \bibinfo{person}{Aggelos Kiayias}, {and} \bibinfo{person}{Thomas Zacharias}.}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Blockchain Bribing Attacks and the Efficacy of
+  Counterincentives}. In \bibinfo{booktitle}{\emph{Proceedings of the 2024 ACM
+  SIGSAC Conference on Computer and Communications Security (CCS)}}.
+  \bibinfo{pages}{1031--1045}.
+\newblock
+
+
+\bibitem[Kelkar et~al\mbox{.}(2025)]%
+        {kelkar2025omerta}
+\bibfield{author}{\bibinfo{person}{Mahimna Kelkar}, \bibinfo{person}{Aadityan
+  Ganesh}, \bibinfo{person}{Aditi Partap}, \bibinfo{person}{Joseph Bonneau},
+  {and} \bibinfo{person}{S.~Matthew Weinberg}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Breaking Omert\`{a}: On Threshold Cryptography,
+  Smart Collusion, and Whistleblowing}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 2025 ACM SIGSAC Conference on
+  Computer and Communications Security (CCS)}}. \bibinfo{pages}{3505--3519}.
+\newblock
+
+
+\bibitem[Kokoris-Kogias et~al\mbox{.}(2018)]%
+        {kokoris2018omniledger}
+\bibfield{author}{\bibinfo{person}{Eleftherios Kokoris-Kogias},
+  \bibinfo{person}{Philipp Jovanovic}, \bibinfo{person}{Linus Gasser},
+  \bibinfo{person}{Nicolas Gailly}, \bibinfo{person}{Ewa Syta}, {and}
+  \bibinfo{person}{Bryan Ford}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{{OmniLedger}: A Secure, Scale-Out, Decentralized
+  Ledger via Sharding}. In \bibinfo{booktitle}{\emph{Proceedings of the 2018
+  IEEE Symposium on Security and Privacy (S\&P)}}. \bibinfo{pages}{583--598}.
+\newblock
+
+
+\bibitem[Lee(2025)]%
+        {lee2025hollow}
+\bibfield{author}{\bibinfo{person}{Suhyeon Lee}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Hollow Victory: How Malicious Proposers Exploit
+  Validator Incentives in Optimistic Rollup Dispute Games}. In
+  \bibinfo{booktitle}{\emph{Financial Cryptography and Data Security Workshops
+  (WTSC)}}.
+\newblock
+\newblock
+\shownote{arXiv:2504.05094}.
+
+
+\bibitem[Lee et~al\mbox{.}(2022)]%
+        {lee2022sokbridge}
+\bibfield{author}{\bibinfo{person}{Sung-Shine Lee}, \bibinfo{person}{Alexandr
+  Murashkin}, \bibinfo{person}{Martin Derka}, {and} \bibinfo{person}{Jan
+  Gorzny}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \bibinfo{title}{{SoK}: Not Quite Water Under the Bridge: Review of
+  Cross-Chain Bridge Hacks}.
+\newblock \bibinfo{howpublished}{arXiv:2210.16209; published at IEEE ICBC
+  2023}.
+\newblock
+
+
+\bibitem[Liu et~al\mbox{.}(2025)]%
+        {liu2025camael}
+\bibfield{author}{\bibinfo{person}{Yizhong Liu}, \bibinfo{person}{Andi Liu},
+  \bibinfo{person}{Zhuocheng Pan}, \bibinfo{person}{Yuxuan Hu},
+  \bibinfo{person}{Jianwei Liu}, \bibinfo{person}{Song Bian},
+  \bibinfo{person}{Yuan Lu}, \bibinfo{person}{Zhenyu Guan},
+  \bibinfo{person}{Dawei Li}, {and} \bibinfo{person}{Meikang Qiu}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Realizing Corrupted-Shard Tolerance: A Sharding
+  Blockchain with Preserving Global Resilience}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 2025 ACM SIGSAC Conference on
+  Computer and Communications Security (CCS)}}. \bibinfo{pages}{2099--2113}.
+\newblock
+\newblock
+\shownote{System ``Camael''; DOI 10.1145/3719027.3765132}.
+
+
+\bibitem[Luu et~al\mbox{.}(2016)]%
+        {luu2016elastico}
+\bibfield{author}{\bibinfo{person}{Loi Luu}, \bibinfo{person}{Viswesh
+  Narayanan}, \bibinfo{person}{Chaodong Zheng}, \bibinfo{person}{Kunal Baweja},
+  \bibinfo{person}{Seth Gilbert}, {and} \bibinfo{person}{Prateek Saxena}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{A Secure Sharding Protocol for Open Blockchains}.
+  In \bibinfo{booktitle}{\emph{Proceedings of the 2016 ACM SIGSAC Conference on
+  Computer and Communications Security (CCS)}}. \bibinfo{pages}{17--30}.
+\newblock
+
+
+\bibitem[McCorry et~al\mbox{.}(2018)]%
+        {mccorry2018smart}
+\bibfield{author}{\bibinfo{person}{Patrick McCorry}, \bibinfo{person}{Alexander
+  Hicks}, {and} \bibinfo{person}{Sarah Meiklejohn}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Smart Contracts for Bribing Miners}. In
+  \bibinfo{booktitle}{\emph{Financial Cryptography and Data Security Workshops
+  (BITCOIN)}}. \bibinfo{pages}{3--18}.
+\newblock
+
+
+\bibitem[McMenamin(2023)]%
+        {mcmenamin2023sok}
+\bibfield{author}{\bibinfo{person}{Conor McMenamin}.}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \bibinfo{title}{{SoK}: Cross-Domain {MEV}}.
+\newblock \bibinfo{howpublished}{arXiv preprint arXiv:2308.04159}.
+\newblock
+
+
+\bibitem[{MultiversX}(2026)]%
+        {multiversxdocs}
+\bibfield{author}{\bibinfo{person}{{MultiversX}}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{MultiversX Documentation: Adaptive State Sharding}.
+\newblock \bibinfo{howpublished}{\url{https://docs.multiversx.com}}.
+\newblock
+\newblock
+\shownote{Parameters are approximate public values; confirm against current
+  specs.}.
+
+
+\bibitem[Neu et~al\mbox{.}(2022)]%
+        {neu2022accountability}
+\bibfield{author}{\bibinfo{person}{Joachim Neu}, \bibinfo{person}{Ertem~Nusret
+  Tas}, {and} \bibinfo{person}{David Tse}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{The Availability-Accountability Dilemma and its
+  Resolution via Accountability Gadgets}. In
+  \bibinfo{booktitle}{\emph{Financial Cryptography and Data Security (FC)}}
+  \emph{(\bibinfo{series}{LNCS 13411})}. \bibinfo{pages}{541--559}.
+\newblock
+\newblock
+\shownote{arXiv:2105.06075; DOI 10.1007/978-3-031-18283-9\_27}.
+
+
+\bibitem[Newman(2023)]%
+        {newman2023decentralization}
+\bibfield{author}{\bibinfo{person}{Stephen~H. Newman}.}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Decentralization Cheapens Corruptive Majority
+  Attacks}. In \bibinfo{booktitle}{\emph{5th Conference on Advances in
+  Financial Technologies (AFT)}} \emph{(\bibinfo{series}{LIPIcs 282})}.
+  \bibinfo{pages}{13:1--13:19}.
+\newblock
+\newblock
+\shownote{arXiv:2310.01546; DOI 10.4230/LIPIcs.AFT.2023.13}.
+
+
+\bibitem[{Polkadot}(2026)]%
+        {polkadotwiki}
+\bibfield{author}{\bibinfo{person}{{Polkadot}}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Polkadot Wiki: Staking, Slashing, and Cross-Consensus
+  Messaging}.
+\newblock \bibinfo{howpublished}{\url{https://wiki.polkadot.network}}.
+\newblock
+\newblock
+\shownote{Parameters are approximate public values; confirm against current
+  specs.}.
+
+
+\bibitem[Qin et~al\mbox{.}(2022)]%
+        {qin2022quantifying}
+\bibfield{author}{\bibinfo{person}{Kaihua Qin}, \bibinfo{person}{Liyi Zhou},
+  {and} \bibinfo{person}{Arthur Gervais}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Quantifying Blockchain Extractable Value: How Dark
+  is the Forest?}. In \bibinfo{booktitle}{\emph{Proceedings of the 2022 IEEE
+  Symposium on Security and Privacy (S\&P)}}. \bibinfo{pages}{198--214}.
+\newblock
+\newblock
+\shownote{arXiv:2101.05511; DOI 10.1109/SP46214.2022.9833734}.
+
+
+\bibitem[Rana et~al\mbox{.}(2022)]%
+        {rana2022free2shard}
+\bibfield{author}{\bibinfo{person}{Ranvir Rana}, \bibinfo{person}{Sreeram
+  Kannan}, \bibinfo{person}{David Tse}, {and} \bibinfo{person}{Pramod
+  Viswanath}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Free2Shard: Adversary-resistant Distributed
+  Resource Allocation for Blockchains}.
+\newblock \bibinfo{journal}{\emph{Proceedings of the ACM on Measurement and
+  Analysis of Computing Systems (POMACS)}} \bibinfo{volume}{6},
+  \bibinfo{number}{1}, Article \bibinfo{articleno}{19} (\bibinfo{year}{2022}).
+\newblock
+\newblock
+\shownote{ACM SIGMETRICS 2022; DOI 10.1145/3508031; arXiv:2005.09610 (preprint
+  titled ``Free2Shard: Adaptive-adversary-resistant Sharding via Dynamic Self
+  Allocation'')}.
+
+
+\bibitem[Roughgarden(2021)]%
+        {roughgarden2021tfm}
+\bibfield{author}{\bibinfo{person}{Tim Roughgarden}.}
+  \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Transaction Fee Mechanism Design}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 22nd ACM Conference on Economics
+  and Computation (EC)}}.
+\newblock
+\newblock
+\shownote{Extended version in J. ACM 71(4), 2024, DOI 10.1145/3674143;
+  arXiv:2106.01340}.
+
+
+\bibitem[Sarenche et~al\mbox{.}(2025)]%
+        {sarenche2024commitment}
+\bibfield{author}{\bibinfo{person}{Roozbeh Sarenche},
+  \bibinfo{person}{Ertem~Nusret Tas}, \bibinfo{person}{Barnab\'{e} Monnot},
+  \bibinfo{person}{Caspar Schwarz-Schilling}, {and} \bibinfo{person}{Bart
+  Preneel}.} \bibinfo{year}{2025}\natexlab{}.
+\newblock \showarticletitle{Commitment Attacks on Ethereum's Reward Mechanism}.
+  In \bibinfo{booktitle}{\emph{2025 IEEE 10th European Symposium on Security
+  and Privacy (EuroS\&P)}}. \bibinfo{pages}{504--526}.
+\newblock
+\newblock
+\shownote{arXiv:2407.19479; DOI 10.1109/EuroSP63326.2025.00036}.
+
+
+\bibitem[Schwarz-Schilling et~al\mbox{.}(2022)]%
+        {schwarzschilling2022three}
+\bibfield{author}{\bibinfo{person}{Caspar Schwarz-Schilling},
+  \bibinfo{person}{Joachim Neu}, \bibinfo{person}{Barnab\'{e} Monnot},
+  \bibinfo{person}{Aditya Asgaonkar}, \bibinfo{person}{Ertem~Nusret Tas}, {and}
+  \bibinfo{person}{David Tse}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Three Attacks on Proof-of-Stake Ethereum}. In
+  \bibinfo{booktitle}{\emph{Financial Cryptography and Data Security (FC)}}
+  \emph{(\bibinfo{series}{LNCS 13411})}. \bibinfo{pages}{560--576}.
+\newblock
+\newblock
+\shownote{arXiv:2110.10086; DOI 10.1007/978-3-031-18283-9\_28}.
+
+
+\bibitem[Sheng et~al\mbox{.}(2021)]%
+        {sheng2021forensics}
+\bibfield{author}{\bibinfo{person}{Peiyao Sheng}, \bibinfo{person}{Gerui Wang},
+  \bibinfo{person}{Kartik Nayak}, \bibinfo{person}{Sreeram Kannan}, {and}
+  \bibinfo{person}{Pramod Viswanath}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{{BFT} Protocol Forensics}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 2021 ACM SIGSAC Conference on
+  Computer and Communications Security (CCS)}}. \bibinfo{pages}{1722--1743}.
+\newblock
+\newblock
+\shownote{arXiv:2010.06785; DOI 10.1145/3460120.3484566}.
+
+
+\bibitem[Sonnino et~al\mbox{.}(2020)]%
+        {sonnino2020replay}
+\bibfield{author}{\bibinfo{person}{Alberto Sonnino}, \bibinfo{person}{Shehar
+  Bano}, \bibinfo{person}{Mustafa Al-Bassam}, {and} \bibinfo{person}{George
+  Danezis}.} \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Replay Attacks and Defenses Against Cross-shard
+  Consensus in Sharded Distributed Ledgers}. In
+  \bibinfo{booktitle}{\emph{Proceedings of the 2020 IEEE European Symposium on
+  Security and Privacy (EuroS\&P)}}. \bibinfo{pages}{294--308}.
+\newblock
+
+
+\bibitem[So\'{o}ki-T\'{o}th et~al\mbox{.}(2025)]%
+        {sookitoth2025bribers}
+\bibfield{author}{\bibinfo{person}{Bence So\'{o}ki-T\'{o}th},
+  \bibinfo{person}{Istv\'{a}n~Andr\'{a}s Seres}, \bibinfo{person}{Kamilla
+  Kara}, \bibinfo{person}{\'{A}bel Nagy}, \bibinfo{person}{Bal\'{a}zs
+  Pej\'{o}}, {and} \bibinfo{person}{Gergely Bicz\'{o}k}.}
+  \bibinfo{year}{2025}\natexlab{}.
+\newblock \bibinfo{title}{Bribers, Bribers on The Chain, Is Resisting All in
+  Vain? Trustless Consensus Manipulation Through Bribing Contracts}.
+\newblock \bibinfo{howpublished}{Cryptology ePrint Archive, Paper 2025/1719
+  (also arXiv:2509.17185)}.
+\newblock
+
+
+\bibitem[Tas et~al\mbox{.}(2023)]%
+        {tas2023bitcoin}
+\bibfield{author}{\bibinfo{person}{Ertem~Nusret Tas}, \bibinfo{person}{David
+  Tse}, \bibinfo{person}{Fangyu Gai}, \bibinfo{person}{Sreeram Kannan},
+  \bibinfo{person}{Mohammad~Ali Maddah-Ali}, {and} \bibinfo{person}{Fisher
+  Yu}.} \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Bitcoin-Enhanced Proof-of-Stake Security:
+  Possibilities and Impossibilities}. In \bibinfo{booktitle}{\emph{Proceedings
+  of the 2023 IEEE Symposium on Security and Privacy (S\&P)}}.
+  \bibinfo{pages}{126--145}.
+\newblock
+\newblock
+\shownote{arXiv:2207.08392; IACR ePrint 2022/932; DOI
+  10.1109/SP46215.2023.10179426}.
+
+
+\bibitem[Tran et~al\mbox{.}(2023)]%
+        {tran2023crosschain}
+\bibfield{author}{\bibinfo{person}{Quang Tran}, \bibinfo{person}{Lin Chen},
+  \bibinfo{person}{Lei Xu}, \bibinfo{person}{Yang Lu}, \bibinfo{person}{Rabimba
+  Karanjai}, {and} \bibinfo{person}{Weidong Shi}.}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \bibinfo{title}{Cross Chain Bribery Contracts: Majority vs Mighty
+  Minority}.
+\newblock \bibinfo{howpublished}{arXiv preprint arXiv:2306.07984}.
+\newblock
+\newblock
+\shownote{An earlier version appeared in the PAAMS 2019 Workshops, LNCS,
+  pp.~121--133.}.
+
+
+\bibitem[Winzer et~al\mbox{.}(2019)]%
+        {winzer2019temporary}
+\bibfield{author}{\bibinfo{person}{Fredrik Winzer}, \bibinfo{person}{Benjamin
+  Herd}, {and} \bibinfo{person}{Sebastian Faust}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{Temporary Censorship Attacks in the Presence of
+  Rational Miners}. In \bibinfo{booktitle}{\emph{2019 IEEE European Symposium
+  on Security and Privacy Workshops (EuroS\&PW)}}. \bibinfo{pages}{357--366}.
+\newblock
+
+
+\bibitem[Yang et~al\mbox{.}(2026)]%
+        {yang2024bride}
+\bibfield{author}{\bibinfo{person}{Hulin Yang}, \bibinfo{person}{Mingzhe Li},
+  \bibinfo{person}{Jin Zhang}, \bibinfo{person}{Alia Asheralieva},
+  \bibinfo{person}{Qingsong Wei}, {and} \bibinfo{person}{Siow Mong~Rick Goh}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \showarticletitle{{BriDe Arbitrager}: Enhancing Arbitrage in Ethereum
+  2.0 via Bribery-enabled Delayed Block Production}.
+\newblock \bibinfo{journal}{\emph{IEEE Transactions on Dependable and Secure
+  Computing}}  \bibinfo{volume}{23} (\bibinfo{year}{2026}),
+  \bibinfo{pages}{6275--6292}.
+\newblock
+\newblock
+\shownote{arXiv:2407.08537; DOI 10.1109/TDSC.2026.3663308. VERIFY
+  volume/pages/DOI on IEEE Xplore.}.
+
+
+\bibitem[Yin et~al\mbox{.}(2019)]%
+        {yin2019hotstuff}
+\bibfield{author}{\bibinfo{person}{Maofan Yin}, \bibinfo{person}{Dahlia
+  Malkhi}, \bibinfo{person}{Michael~K. Reiter}, \bibinfo{person}{Guy~Golan
+  Gueta}, {and} \bibinfo{person}{Ittai Abraham}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \showarticletitle{{HotStuff}: BFT Consensus in the Lens of
+  Blockchain}. In \bibinfo{booktitle}{\emph{Proceedings of the 2019 ACM
+  Symposium on Principles of Distributed Computing (PODC)}}.
+  \bibinfo{pages}{347--356}.
+\newblock
+
+
+\bibitem[Zamani et~al\mbox{.}(2018)]%
+        {zamani2018rapidchain}
+\bibfield{author}{\bibinfo{person}{Mahdi Zamani}, \bibinfo{person}{Mahnush
+  Movahedi}, {and} \bibinfo{person}{Mariana Raykova}.}
+  \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{{RapidChain}: Scaling Blockchain via Full
+  Sharding}. In \bibinfo{booktitle}{\emph{Proceedings of the 2018 ACM SIGSAC
+  Conference on Computer and Communications Security (CCS)}}.
+  \bibinfo{pages}{931--948}.
+\newblock
+
+
+\bibitem[Zamyatin et~al\mbox{.}(2021)]%
+        {zamyatin2021sok}
+\bibfield{author}{\bibinfo{person}{Alexei Zamyatin}, \bibinfo{person}{Mustafa
+  Al-Bassam}, \bibinfo{person}{Dionysis Zindros}, \bibinfo{person}{Eleftherios
+  Kokoris-Kogias}, \bibinfo{person}{Pedro Moreno-Sanchez},
+  \bibinfo{person}{Aggelos Kiayias}, {and} \bibinfo{person}{William~J.
+  Knottenbelt}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{{SoK}: Communication Across Distributed Ledgers}.
+  In \bibinfo{booktitle}{\emph{Financial Cryptography and Data Security (FC)}}.
+  \bibinfo{pages}{3--36}.
+\newblock
+
+
+\bibitem[Zhang et~al\mbox{.}(2023)]%
+        {zhang2023outofband}
+\bibfield{author}{\bibinfo{person}{Haoqian Zhang}, \bibinfo{person}{Mahsa
+  Bastankhah}, \bibinfo{person}{Louis-Henri Merino}, \bibinfo{person}{Vero
+  Estrada-Gali\~{n}anes}, {and} \bibinfo{person}{Bryan Ford}.}
+  \bibinfo{year}{2023}\natexlab{}.
+\newblock \showarticletitle{Breaking Blockchain Rationality with Out-of-Band
+  Collusion}. In \bibinfo{booktitle}{\emph{Financial Cryptography and Data
+  Security Workshops (WTSC)}} \emph{(\bibinfo{series}{LNCS 13953})}.
+  \bibinfo{pages}{489--501}.
+\newblock
+\newblock
+\shownote{arXiv:2305.00554; DOI 10.1007/978-3-031-48806-1\_31}.
+
+
+\bibitem[{Zilliqa}(2026)]%
+        {zilliqadocs}
+\bibfield{author}{\bibinfo{person}{{Zilliqa}}.}
+  \bibinfo{year}{2026}\natexlab{}.
+\newblock \bibinfo{title}{Zilliqa Documentation and Technical Whitepaper}.
+\newblock \bibinfo{howpublished}{\url{https://www.zilliqa.com}}.
+\newblock
+\newblock
+\shownote{Parameters are approximate public values; confirm against current
+  specs.}.
+
+
+\end{thebibliography}

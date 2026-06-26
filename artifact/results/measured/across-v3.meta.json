@@ -1,0 +1,9 @@
+{
+  "source": "Across public API (app.across.to/api/deposits) + on-chain eth_getLogs cross-validation",
+  "n": 1721,
+  "unit": "T_settle in ms (converted from seconds)",
+  "median_T_settle_s": 4.0,
+  "spotchecks": "4/4 real-data fills emit a canonical Across SpokePool fill log (eth/base/op/polygon)",
+  "note": "settlement marginal (user leg); paired p_win pending devnet arm",
+  "date": "2026-06-14"
+}

@@ -1,0 +1,139 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+Reallocating 'name_of_file' (item size: 1) to 21 items.
+The style file: ACM-Reference-Format.bst
+Reallocating 'name_of_file' (item size: 1) to 16 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Database file #1: ../../reference.bib
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 9000 items.
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Warning--empty publisher in austgen2025liquefaction
+Warning--empty address in austgen2025liquefaction
+Warning--empty publisher in avarikioti2019divide
+Warning--empty address in avarikioti2019divide
+Warning--empty publisher in bano2019sok
+Warning--empty address in bano2019sok
+Warning--empty publisher in baron2025aegis
+Warning--empty address in baron2025aegis
+Warning--page numbers missing in both pages and numpages fields in baron2025aegis
+Warning--empty publisher in berger2025censorship
+Warning--empty address in berger2025censorship
+Warning--empty publisher in bonneau2016rent
+Warning--empty address in bonneau2016rent
+Warning--empty publisher in budish2024economic
+Warning--empty address in budish2024economic
+Warning--empty publisher in castro1999pbft
+Warning--empty address in castro1999pbft
+Warning--empty publisher in chung2023foundations
+Warning--empty address in chung2023foundations
+Warning--empty publisher in civit2021polygraph
+Warning--empty address in civit2021polygraph
+Warning--empty publisher in daian2020flashboys
+Warning--empty address in daian2020flashboys
+Warning--empty publisher in david2022gearbox
+Warning--empty address in david2022gearbox
+Warning--empty publisher in durvasula2025restaking
+Warning--empty address in durvasula2025restaking
+Warning--empty publisher in gong2025recover
+Warning--empty address in gong2025recover
+Warning--page numbers missing in both pages and numpages fields in gong2025recover
+Warning--empty publisher in judmayer2021paytowin
+Warning--empty address in judmayer2021paytowin
+Warning--empty publisher in judmayer2021sok
+Warning--empty address in judmayer2021sok
+Warning--empty publisher in karakostas2024bribing
+Warning--empty address in karakostas2024bribing
+Warning--empty publisher in kelkar2025omerta
+Warning--empty address in kelkar2025omerta
+Warning--empty publisher in kokoris2018omniledger
+Warning--empty address in kokoris2018omniledger
+Warning--empty publisher in lee2025hollow
+Warning--empty address in lee2025hollow
+Warning--page numbers missing in both pages and numpages fields in lee2025hollow
+Warning--empty publisher in liu2025camael
+Warning--empty address in liu2025camael
+Warning--empty publisher in luu2016elastico
+Warning--empty address in luu2016elastico
+Warning--empty publisher in mccorry2018smart
+Warning--empty address in mccorry2018smart
+Warning--empty publisher in neu2022accountability
+Warning--empty address in neu2022accountability
+Warning--empty publisher in newman2023decentralization
+Warning--empty address in newman2023decentralization
+Warning--empty publisher in qin2022quantifying
+Warning--empty address in qin2022quantifying
+Warning--articleno or eid field, but no numpages field, in rana2022free2shard
+Warning--page numbers missing in both pages and numpages fields in rana2022free2shard
+Warning--articleno or eid, but no pages or numpages field in rana2022free2shard
+Warning--empty publisher in roughgarden2021tfm
+Warning--empty address in roughgarden2021tfm
+Warning--page numbers missing in both pages and numpages fields in roughgarden2021tfm
+Warning--empty publisher in sarenche2024commitment
+Warning--empty address in sarenche2024commitment
+Warning--empty publisher in schwarzschilling2022three
+Warning--empty address in schwarzschilling2022three
+Warning--empty publisher in sheng2021forensics
+Warning--empty address in sheng2021forensics
+Warning--empty publisher in sonnino2020replay
+Warning--empty address in sonnino2020replay
+Warning--empty publisher in tas2023bitcoin
+Warning--empty address in tas2023bitcoin
+Warning--empty publisher in winzer2019temporary
+Warning--empty address in winzer2019temporary
+Warning--empty publisher in yin2019hotstuff
+Warning--empty address in yin2019hotstuff
+Warning--empty publisher in zamani2018rapidchain
+Warning--empty address in zamani2018rapidchain
+Warning--empty publisher in zamyatin2021sok
+Warning--empty address in zamyatin2021sok
+Warning--empty publisher in zhang2023outofband
+Warning--empty address in zhang2023outofband
+You've used 57 entries,
+            6273 wiz_defined-function locations,
+            1823 strings with 31779 characters,
+and the built_in function-call counts, 64292 in all, are:
+= -- 6944
+> -- 2248
+< -- 1
++ -- 758
+- -- 756
+* -- 4563
+:= -- 6354
+add.period$ -- 315
+call.type$ -- 57
+change.case$ -- 452
+chr.to.int$ -- 56
+cite$ -- 138
+duplicate$ -- 6053
+empty$ -- 4233
+format.name$ -- 931
+if$ -- 15013
+int.to.chr$ -- 3
+int.to.str$ -- 1
+missing$ -- 192
+newline$ -- 524
+num.names$ -- 398
+pop$ -- 2541
+preamble$ -- 1
+purify$ -- 906
+quote$ -- 0
+skip$ -- 2323
+stack$ -- 0
+substring$ -- 4749
+swap$ -- 546
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1676
+warning$ -- 81
+while$ -- 341
+width$ -- 0
+write$ -- 1137
+(There were 81 warnings)

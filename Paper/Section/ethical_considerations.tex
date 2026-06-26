@@ -1,0 +1,18 @@
+\section*{Ethical Considerations}
+\addcontentsline{toc}{section}{Ethical Considerations}
+
+This work analyzes a bribery pattern that could be harmful if applied to a production system. We
+therefore keep the \emph{attack} machinery local-only: the proof-of-concept runs against synthetic
+committees, the \textsc{PayToEquivocate} escrow is a Python model that omits the engineering required
+to weaponize a live contract, and the equivocation leg is never executed on any shared network---a
+runtime gate refuses any non-local chain-id. The live measurement of \S\ref{sec:measured} is strictly
+\emph{read-only}: it reads already-public ledger data (historical double-sign slashes, ordinary bridge
+fills) over public endpoints, handles no funds or keys, mounts no attack, and surfaces only on-chain
+events the ledger already exposes---no off-chain de-anonymization.
+
+The benefit of publication is defensive: the model identifies exactly which design choices close the
+window, and the case study and measurement show why fast evidence and finality-gated settlement
+protect deployed systems. If we uncover an exploitable configuration on a named deployed system, we
+will notify the affected project maintainers before public disclosure, share only the minimum details
+needed for remediation during the embargo, and gate any exploit-enabling artifact components until
+the relevant defenses are deployed or the maintainers approve release.

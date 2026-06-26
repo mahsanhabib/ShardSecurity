@@ -1,0 +1,20 @@
+{
+  "arm": "self-equivocation localnet, REAL client code (not the shadow rehearsal)",
+  "binary": "gaiad v19.2.0 (Cosmos Hub), sha256 11d0386fc201bc61436bc6b869b0d90b5d5689af64415af9f1b4ba5134c83a6a",
+  "chain_id": "shardbribe-localnet-1",
+  "setup": "2-validator localnet (val0 honest, val1 equivocator) + a second instance of val1's consensus key (two-nodes-one-key, fresh node_key, double_sign_check_height=0). val0 observes val1's conflicting precommits and reports DuplicateVoteEvidence.",
+  "genesis": {"unbonding_time": "60s", "evidence.max_age_duration": "120s", "slash_fraction_double_sign": "0.05"},
+  "result": {
+    "infraction_height": 163,
+    "evidence_included_block": 164,
+    "slash_applied_block": 164,
+    "t_infraction_ms": 1781734301889,
+    "t_slash_ms": 1781734303214,
+    "T_acc_ms": 1325,
+    "T_acc_s": 1.32,
+    "slash_event": {"reason": "double_sign", "power": "100", "burned_coins": "5000000", "jailed": true, "mode": "BeginBlock"},
+    "validator_after": {"jailed": true, "tombstoned": true, "jailed_until": "9999-12-31T23:59:59Z", "tokens": "95000000 (was 100000000, -5%)", "status": "BOND_STATUS_UNBONDING"},
+    "q_attack": "1.0 (slash at +1.32s landed well before the 60s stake-exit -> stake caught)"
+  },
+  "note": "This UPGRADES the cooperative T_acc^lo from the in-process shadow rehearsal + passive public-data reads to REAL Cosmos SDK x/evidence->x/slashing execution. It confirms 'enforcement within ~1-2 blocks'. Self-equivocation on an OWN isolated localnet (chain-id gated); no shared network, no bribery, no third-party funds. See artifact/LOCALNET-RQ8.md."
+}

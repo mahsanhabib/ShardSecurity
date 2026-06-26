@@ -1,0 +1,53 @@
+\section{Threat Model}
+\label{sec:threat}
+
+\paragraph{Adversary.}
+The adversary $\mathcal{A}$ is a profit-maximizing, computationally bounded party that (i) controls a
+budget usable for bribes and gas; (ii) can deploy smart contracts on the sharded system or a
+connected chain; (iii) can observe the public mempool, certificates, and committee assignments;
+and (iv) may, with bounded probability, induce or exploit transient network asynchrony or occupy a
+leader role within the target committee (this is the lever that engineers the honest-vote split
+underlying $\psucc$). $\mathcal{A}$ \emph{cannot} break cryptographic primitives, cannot corrupt
+more than the network-wide Byzantine threshold across \emph{all} shards simultaneously, and does
+not control the randomness used for committee assignment (we treat assignment as given for the
+target epoch).
+
+\paragraph{Sub-threshold, precisely.}
+$\mathcal{A}$ is \emph{sub-threshold} in the network-wide sense: across the whole validator set it
+controls strictly fewer than the global $1/3$ safety threshold. Within the single target committee,
+however, it procures $F+1$ equivocating validators---at or above that committee's local threshold.
+We never assume $\mathcal{A}$ is below the \emph{local} committee threshold; the entire point is that
+the global bound is respected while one committee's bound is not.
+
+\paragraph{Targets and goal.}
+$\mathcal{A}$ targets a single committee $C$ of size $N=3F+1$ during one epoch. The goal is to cause
+$C$ to finalize two conflicting certificates over shard-local state and to convert the resulting
+ambiguity into irreversible value $V$ through the cross-shard or bridge interface, with positive net
+profit after bribes, slashing-induced effects, and operating costs. Buying $F+1$ equivocators is
+\emph{necessary} (Lemma~\ref{lem:intersection}) but not \emph{sufficient}: $\mathcal{A}$ must also
+drive a usable honest-vote split, which succeeds with probability $\psucc$ determined by the protocol
+and network (\S\ref{sec:floor}).
+
+\paragraph{Defender.}
+The defender runs accountable BFT with a slashing mechanism: provable equivocation by a validator
+yields a transferable proof; upon enforcement, the validator's bonded stake $s_i$ is slashed and the
+offending branch is reverted or quarantined~\cite{buterin2017casper,buchman2018tendermint}.
+Validators have a bonding/unbonding period; let $\Tacc$ denote the end-to-end accountability latency
+(detection $\rightarrow$ proof propagation $\rightarrow$ enforcement $\rightarrow$ reversion).
+Cross-shard receipts settle with latency $\Tsettle$. We treat a \emph{robust} defender as one whose
+stake remains globally bonded and slashable across committee rotation for at least the maximum
+evidence delay; \S\ref{sec:reconf} analyzes what happens when this property is weakened.
+
+\paragraph{Assumptions.}
+\begin{assumption}[Rational validators]\label{ass:rational}
+Each validator maximizes expected payoff and accepts a bribe iff it weakly exceeds the expected cost
+of the prescribed behavior.
+\end{assumption}
+\begin{assumption}[Accountable equivocation]\label{ass:accountable}
+Equivocation is detectable and attributable: two validly signed conflicting messages from the same
+validator constitute a proof that any honest party can verify and submit.
+\end{assumption}
+\begin{assumption}[Asynchronous settlement]\label{ass:async}
+Cross-shard effects are not gated on the source shard's accountability window unless the protocol
+explicitly enforces such gating; absent such a gate, $\Tsettle$ and $\Tacc$ are independent.
+\end{assumption}

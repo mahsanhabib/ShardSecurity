@@ -1,0 +1,239 @@
+# Main configuration for "Priced to Equivocate" artifact.
+# Every quantitative result in the paper is produced by run_all.py from this
+# file; change a value here and re-run to regenerate all figures and tables.
+# All randomness is seeded; results are deterministic given this config.
+
+seed: 20240917            # master seed; per-experiment seeds derive from it
+
+# ---- self-validation + local proof-of-concept --------------------------
+validation:
+  N_values: [4, 7, 16, 31]      # committees to cross-check psucc on
+  phi_values: [0.3, 0.5, 0.7]   # view-split values
+  trials: 20000                 # Monte-Carlo rounds per (N, phi)
+  tolerance: 0.02               # max allowed |psucc_mc - psucc_closed_form|
+poc:
+  N: 31                         # committee for the end-to-end PoC
+  bribe_per: 0.6                # per-validator bribe funded into the escrow
+
+# ---- Floor: psucc vs view-split (necessary-but-not-sufficient) ---------
+floor:
+  N: 31
+  points: 60
+  extra_equivocators: [0, 1, 2]   # k = F+1, F+2, F+3
+  mc_phis: [0.2, 0.35, 0.5, 0.65, 0.8]
+  mc_trials: 20000
+
+# ---- RQ1: window-open probability pwin vs latency ratio rho ------------
+rq1:
+  rho_min: 0.25
+  rho_max: 4.0
+  points: 60
+  settle_cv_values: [0.1, 0.3]  # two settle-time coefficients of variation
+  trials: 60000
+
+# ---- RQ2: bribe cost B = (F+1) q (s+R) vs committee size ---------------
+rq2:
+  N_values: [4, 7, 16, 31, 64, 100, 200, 400]
+  q_values: [0.25, 0.5, 0.75, 1.0]
+  s: 1.0
+  R: 0.5
+
+# ---- RQ3: profitability regions ---------------------------------------
+rq3:
+  N: 31
+  q: 0.5
+  phi: 0.5
+  psucc: 0.85                    # adversary's split-control reliability
+  s: 1.0
+  R: 0.5
+  Cop: 1.0
+  rho_min: 0.25
+  rho_max: 4.0
+  rho_points: 60
+  rho_fixed: 2.0                 # window-open slice for the (q,V) heatmap
+  settle_cv: 0.3
+  V_min: 0.0
+  V_max: 200.0
+  V_points: 80
+  q_min: 0.05
+  q_max: 1.0
+  q_points: 60
+  trials: 40000
+
+# ---- RQ4: reconfiguration -- E[Pi(a)] across the epoch ----------------
+rq4:
+  N: 31
+  V: 60.0
+  s: 1.0
+  R: 0.5
+  Cop: 1.0
+  q_base: 0.6
+  phi: 0.5
+  psucc: 0.85                    # adversary's split-control reliability
+  tau: 1.0                       # epoch length (normalized)
+  U: 0.15                        # unbonding / withdrawal delay
+  settle_mean: 0.35              # base cross-shard settlement time
+  acc_mean: 0.55                 # base accountability latency Tacc
+  Treceipt: 0.10                 # cross-epoch receipt-import latency
+  Tstate: 0.08                   # state-handoff time
+  Hmax: 0.40                     # max extra accountability delay at boundary
+  settle_cv: 0.3
+  acc_cv: 0.3
+  a_points: 41
+  trials: 40000
+
+# ---- RQ5: defenses -- effect of each lever on E[Pi] -------------------
+rq5:
+  N: 31
+  q: 0.5
+  V: 60.0
+  s: 1.0
+  R: 0.5
+  Cop: 1.0
+  phi: 0.5
+  psucc: 0.85                    # adversary's split-control reliability
+  rho_baseline: 2.0
+  trials: 40000
+  persistent_q_mult: 1.8         # persistent slashability pushes q up
+  fast_evidence_rho_mult: 0.4    # faster evidence lowers Tacc -> lowers rho
+  large_N: 100                   # value-aware committee sizing (linear in F+1)
+
+# ---- RQ6: discrete-event testbed (MEASURED pwin, real Ed25519) ---------
+rq6:
+  N: 31
+  link_mean_ms: 80.0             # per-message network latency mean
+  link_cv: 0.6                   # heavy-tailed links
+  enforce_delay_ms: 600.0        # slashing inclusion + branch revert
+  dest_interval_ms: 2000.0       # destination shard block interval (~2 s)
+  clawback_ms: 500.0             # withdrawal clawback window
+  runs: 300                      # protocol runs per sweep point
+  points: 12                     # settlement-scale sweep resolution
+  settle_scale_min: 0.02
+  settle_scale_max: 1.5
+  analytic_trials: 20000
+
+# ---- RQ7: real-systems case study (documented parameters) --------------
+rq7:
+  R_frac: 0.5                    # continuation value as a fraction of stake
+
+# ---- RQ8: MEASURED q / T_acc / T_settle on deployed systems -------------
+# See PREREGISTRATION-rq8.md (tag prereg/rq8-v1). estimate.py reads committed
+# results/measured/*.jsonl; if that dir is absent run_all.py no-ops this block,
+# so the reproduction path is unchanged until a real measurement exists.
+rq8:
+  measured_dir: results/measured  # committed JSONL (testbed-schema records)
+  epsilon: 0.05                   # p_win upper-CI threshold in the decision rule
+  alpha: 0.05                     # CI coverage (1-alpha)
+  bootstrap_resamples: 10000      # BCa / percentile bootstrap B
+  episodes_per_chain: 40          # min paired devnet episodes (power: Wilson upper ~0.09)
+  settle_samples_min: 5000        # min real bridge transfers for tail quantiles
+  Tacc_bounds: [cooperative, adversarial]   # lo for OPEN branch, hi for RULED_OUT
+  preregistration:
+    tag: prereg/rq8-v1
+    # sha256 of PREREGISTRATION-rq8.md, frozen before the assemble step so the
+    # decision rule / epsilon / sample sizes are committed against this content.
+    hash: 77e152b721126fa229bd8126d9a986bf9f77ec55b8b3d7670f867480cb5da423
+  # Endpoints for `python measure_all.py`. Fill in what you have; null arms are
+  # skipped. The devnet shadow arm needs nothing external and runs by default.
+  # See MEASUREMENT.md for where to source each input.
+  endpoints:
+    cosmos:
+      rpc: null                 # e.g. https://cosmos-rpc.publicnode.com (archive)
+      chain_id: cosmoshub-4
+      heights: null             # e.g. "12345,2345678" (double-sign heights from Mintscan)
+    ibc:
+      src_rpc: null             # two-zone IBC devnet, source RPC (height-based collect_ibc.py)
+      dst_rpc: null             # destination RPC
+      src_heights: null         # heights carrying send_packet
+      dst_heights: null         # heights carrying recv_packet
+      channel: channel-0
+    ibc_public:                 # public-mainnet negative control (auto-discovering; collect_ibc_public.py)
+      enabled: true
+      src_rpc: https://cosmos-rpc.publicnode.com    # Cosmos Hub (source)
+      dst_rpc: https://osmosis-rpc.publicnode.com   # Osmosis (destination)
+      channel: channel-141      # Hub's canonical transfer channel to Osmosis
+      src_chain: cosmoshub-4
+      dst_chain: osmosis-1
+    bridge:
+      graph_url: null           # an Across (or other intent-bridge) subgraph URL
+      query: null               # optional: @file or inline GraphQL if schema differs
+      deposits_key: deposits
+      fills_key: fills
+    devnet:
+      enabled: true             # in-process shadow backend; no external infra
+      positive_episodes: 60
+      pair_bridge: true         # append paired episodes into across-v3.jsonl
+    reorg:
+      corpus: null              # e.g. data/reorg_incidents.csv
+    postmortem:
+      corpus: null              # e.g. data/exploits.csv
+  # one entry per results/measured/<stem>.jsonl, supplying the verdict context
+  paths:
+    cosmoshub-4:
+      system: Cosmos Hub
+      path: IBC cross-chain (safe target)
+      structurally_gated: true        # IBC verifies finalized source header
+      g2_classic_clearable: false     # q~1, long unbonding -> bribe ~ full stake
+    cometbft-qmax-pool:
+      system: CometBFT pool (13 chains)
+      path: pooled double-sign q_max / T_acc
+      structurally_gated: true        # accountability fast + settlement gated
+      g2_classic_clearable: false
+    across-v3:
+      system: Across V3
+      path: fast-bridge marginal (real)
+      structurally_gated: false
+      g2_classic_clearable: true
+      g2_solver_clearable: true
+      reorg_alone_suffices: false     # set true if plain reorg griefs the solver
+    across-v3-selffill:
+      system: Across V3 (self-fill)
+      path: paired self-fill (rehearsal)
+      structurally_gated: false
+      g2_classic_clearable: true
+      g2_solver_clearable: true
+      reorg_alone_suffices: false
+    across-v3-selffill-rpc:              # real-client-code paired race (localnet/run_arm.sh B-open)
+      system: Across V3 (self-fill)
+      path: paired self-fill (real code)
+      structurally_gated: false
+      g2_classic_clearable: true
+      g2_solver_clearable: true
+      reorg_alone_suffices: false
+    across-v3-paired-gated-rpc:          # Proposition-1 twin: finality-gated relayer (run_arm.sh B-gated)
+      system: Across V3 (gated twin)
+      path: finality-gated relayer (Prop.1)
+      structurally_gated: true           # T_settle >= T_acc by construction -> RULED_OUT
+      g2_classic_clearable: true
+      g2_solver_clearable: true
+      reorg_alone_suffices: false
+    devnet-rpc-gaiad:
+      system: gaiad v19 localnet (real)
+      path: double-sign slash (real code)
+      structurally_gated: false
+      g2_classic_clearable: false
+    ibc-cosmoshub-osmosis-negative:
+      system: Cosmos Hub/Osmosis (public IBC)
+      path: native IBC (negative control)
+      structurally_gated: true
+      g2_classic_clearable: false
+    fastexit-devnet-positive:
+      system: fast-exit devnet
+      path: positive control (rehearsal)
+      structurally_gated: false
+      g2_classic_clearable: true
+    fastexit-devnet-positive-rpc:        # real-client-code arm C (localnet/run_arm.sh C)
+      system: fast-exit (real code)
+      path: real unbond, obs. completion
+      structurally_gated: false
+      g2_classic_clearable: true
+    reorg-natural-experiment:
+      system: reorg corpus
+      path: beyond-clawback irreversibility (corroborative marginal)
+      structurally_gated: false
+      g2_classic_clearable: false
+    exploit-postmortem:
+      system: exploit postmortems
+      path: adversarial T_settle fast-tail (corroborative marginal)
+      structurally_gated: false
+      g2_classic_clearable: false

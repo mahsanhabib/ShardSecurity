@@ -1,0 +1,350 @@
+% =====================================================================
+% DRAFT ADDITIONS for Related Work / reference.bib
+% Prior art the paper does not currently cite (Tier-1 + Tier-2 + key foundations).
+% See prior-art-assessment.md for the full annotated list and threat ratings.
+% Generated 2026-06-22. Verify every entry against the canonical source before final submission.
+% =====================================================================
+
+% ---------------------------------------------------------------------
+% PART 1 — BibTeX entries (append to reference.bib)
+% ---------------------------------------------------------------------
+%
+% --- Tier 1: closest neighbours (economic gate / accountability-latency limit / finality-gating) ---
+%
+% @inproceedings{budish2024economic,
+%   author    = {Budish, Eric and Lewis-Pye, Andrew and Roughgarden, Tim},
+%   title     = {The Economic Limits of Permissionless Consensus},
+%   booktitle = {Proceedings of the 25th ACM Conference on Economics and Computation (EC)},
+%   year      = {2024},
+%   note      = {arXiv:2405.09173; DOI 10.1145/3670865.3673548}
+% }
+% @techreport{budish2018economic,
+%   author      = {Budish, Eric},
+%   title       = {The Economic Limits of Bitcoin and the Blockchain},
+%   institution = {National Bureau of Economic Research},
+%   type        = {NBER Working Paper},
+%   number      = {24717},
+%   year        = {2018},
+%   note        = {Published in The Quarterly Journal of Economics, 2024}
+% }
+% @misc{deb2024stakesure,
+%   author       = {Deb, Soubhik and Raynor, Robert and Kannan, Sreeram},
+%   title        = {{STAKESURE}: Proof of Stake Mechanisms with Strong Cryptoeconomic Safety},
+%   howpublished = {arXiv preprint arXiv:2401.05797},
+%   year         = {2024}
+% }
+% @inproceedings{tas2023bitcoin,
+%   author    = {Tas, Ertem Nusret and Tse, David and Gai, Fangyu and Kannan, Sreeram and Maddah-Ali, Mohammad Ali and Yu, Fisher},
+%   title     = {Bitcoin-Enhanced Proof-of-Stake Security: Possibilities and Impossibilities},
+%   booktitle = {Proceedings of the 2023 IEEE Symposium on Security and Privacy (S\&P)},
+%   year      = {2023},
+%   note      = {arXiv:2207.08392}
+% }
+% @misc{avarikioti2025cobra,
+%   author       = {Avarikioti, Zeta and Kokoris-Kogias, Eleftherios and Neiheiser, Ray and Stefo, Christos},
+%   title        = {{CoBRA}: A Universal Strategyproof Confirmation Protocol for Quorum-based Proof-of-Stake Blockchains},
+%   howpublished = {arXiv preprint arXiv:2503.16783},
+%   year         = {2025}
+% }
+%
+% --- Tier 2: bribery lineage (currently missing from the cited bribery family) ---
+%
+% @inproceedings{bonneau2016rent,
+%   author    = {Bonneau, Joseph},
+%   title     = {Why Buy When You Can Rent? Bribery Attacks on Bitcoin-Style Consensus},
+%   booktitle = {Financial Cryptography and Data Security Workshops (BITCOIN)},
+%   series    = {LNCS 9604},
+%   pages     = {19--26},
+%   year      = {2016}
+% }
+% @inproceedings{judmayer2021paytowin,
+%   author    = {Judmayer, Aljosha and Stifter, Nicholas and Zamyatin, Alexei and Tsabary, Itay and Eyal, Ittay and Ga\v{z}i, Peter and Meiklejohn, Sarah and Weippl, Edgar},
+%   title     = {Pay to Win: Cheap, Crowdfundable, Cross-chain Algorithmic Incentive Manipulation Attacks on {PoW} Cryptocurrencies},
+%   booktitle = {Financial Cryptography and Data Security Workshops (WTSC)},
+%   year      = {2021},
+%   note      = {Cryptology ePrint Archive, Paper 2019/775}
+% }
+% @inproceedings{judmayer2021sok,
+%   author    = {Judmayer, Aljosha and Stifter, Nicholas and Zamyatin, Alexei and Tsabary, Itay and Eyal, Ittay and Ga\v{z}i, Peter and Meiklejohn, Sarah and Weippl, Edgar},
+%   title     = {{SoK}: Algorithmic Incentive Manipulation Attacks on Permissionless {PoW} Cryptocurrencies},
+%   booktitle = {Financial Cryptography and Data Security Workshops},
+%   year      = {2021},
+%   note      = {Cryptology ePrint Archive, Paper 2020/1614}
+% }
+% @inproceedings{zhang2023outofband,
+%   author    = {Zhang, Haoqian and Bastankhah, Mahsa and Merino, Louis-Henri and Estrada-Gali\~{n}anes, Vero and Ford, Bryan},
+%   title     = {Breaking Blockchain Rationality with Out-of-Band Collusion},
+%   booktitle = {Financial Cryptography and Data Security Workshops (WTSC)},
+%   series    = {LNCS 13953},
+%   pages     = {489--501},
+%   year      = {2023},
+%   note      = {arXiv:2305.00554}
+% }
+% @misc{buterin2015pepsilon,
+%   author       = {Buterin, Vitalik},
+%   title        = {The {P + epsilon} Attack},
+%   howpublished = {Ethereum Foundation Blog},
+%   year         = {2015},
+%   note         = {\url{https://blog.ethereum.org/2015/01/28/p-epsilon-attack}}
+% }
+% @misc{sarenche2024commitment,
+%   author       = {Sarenche, Roozbeh and Tas, Ertem Nusret and Monnot, Barnab\'{e} and Schwarz-Schilling, Caspar and Preneel, Bart},
+%   title        = {Commitment Attacks on Ethereum's Reward Mechanism},
+%   howpublished = {arXiv preprint arXiv:2407.19479},
+%   year         = {2024}
+% }
+% @misc{yang2024bride,
+%   author       = {Yang, Hulin and Li, Mingzhe and Zhang, Jin and Asheralieva, Alia and Wei, Qingsong and Goh, Siow Mong Rick},
+%   title        = {{BriDe Arbitrager}: Enhancing Arbitrage in Ethereum 2.0 via Bribery-enabled Delayed Block Production},
+%   howpublished = {arXiv preprint arXiv:2407.08537},
+%   year         = {2024}
+% }
+% @inproceedings{newman2023decentralization,
+%   author    = {Newman, Stephen H.},
+%   title     = {Decentralization Cheapens Corruptive Majority Attacks},
+%   booktitle = {5th Conference on Advances in Financial Technologies (AFT)},
+%   series    = {LIPIcs 282},
+%   pages     = {13:1--13:19},
+%   year      = {2023},
+%   note      = {arXiv:2310.01546}
+% }
+%
+% --- Foundations worth citing where T_acc / accountability is introduced ---
+%
+% @inproceedings{sheng2021forensics,
+%   author    = {Sheng, Peiyao and Wang, Gerui and Nayak, Kartik and Kannan, Sreeram and Viswanath, Pramod},
+%   title     = {{BFT} Protocol Forensics},
+%   booktitle = {Proceedings of the 2021 ACM SIGSAC Conference on Computer and Communications Security (CCS)},
+%   pages     = {1722--1743},
+%   year      = {2021},
+%   note      = {arXiv:2010.06785}
+% }
+% @inproceedings{civit2021polygraph,
+%   author    = {Civit, Pierre and Gilbert, Seth and Gramoli, Vincent},
+%   title     = {Polygraph: Accountable Byzantine Agreement},
+%   booktitle = {IEEE International Conference on Distributed Computing Systems (ICDCS)},
+%   pages     = {403--413},
+%   year      = {2021},
+%   note      = {Cryptology ePrint Archive, Paper 2019/587}
+% }
+% @inproceedings{neu2022accountability,
+%   author    = {Neu, Joachim and Tas, Ertem Nusret and Tse, David},
+%   title     = {The Availability-Accountability Dilemma and its Resolution via Accountability Gadgets},
+%   booktitle = {Financial Cryptography and Data Security (FC)},
+%   year      = {2022},
+%   note      = {arXiv:2105.06075}
+% }
+% @inproceedings{gong2025recover,
+%   author    = {Gong, Tiantian and Camilo, Gustavo Franco and Nayak, Kartik and Lewis-Pye, Andrew and Kate, Aniket},
+%   title     = {Recover from Excessive Faults in Partially-Synchronous {BFT SMR}},
+%   booktitle = {34th USENIX Security Symposium},
+%   year      = {2025},
+%   note      = {Cryptology ePrint Archive, Paper 2025/083}
+% }
+%
+% --- Sharding background (Free2Shard PDF is already in the repo's Related Paper/ folder) ---
+%
+% @article{rana2022free2shard,
+%   author  = {Rana, Ranvir and Kannan, Sreeram and Tse, David and Viswanath, Pramod},
+%   title   = {Free2Shard: Adversary-resistant Distributed Resource Allocation for Blockchains},
+%   journal = {Proc. ACM Meas. Anal. Comput. Syst. (POMACS)},
+%   volume  = {6}, number = {1}, year = {2022},
+%   note    = {ACM SIGMETRICS 2022; arXiv:2005.09610}
+% }
+% @misc{avarikioti2019divide,
+%   author       = {Avarikioti, Zeta and Desjardins, Antoine and Kokoris-Kogias, Eleftherios and Wattenhofer, Roger},
+%   title        = {Divide and Scale: Formalization and Roadmap to Robust Sharding},
+%   howpublished = {arXiv preprint arXiv:1910.10434},
+%   year         = {2019}
+% }
+% @inproceedings{durvasula2025restaking,
+%   author    = {Durvasula, Naveen and Roughgarden, Tim},
+%   title     = {Robust Restaking Networks},
+%   booktitle = {16th Innovations in Theoretical Computer Science Conference (ITCS)},
+%   year      = {2025},
+%   note      = {arXiv:2407.21785}
+% }
+
+
+% ---------------------------------------------------------------------
+% PART 2 — Related-work prose (drop into Section/related_work.tex)
+% ---------------------------------------------------------------------
+
+% (2a) EXPAND the existing "Bribery and crypto-economic security." paragraph by inserting,
+%      after the McCorry sentence, the bribery ancestors and the modern conditional-bribery line:
+
+\paragraph{Bribery and crypto-economic security (expanded).}
+The economic study of buying consensus participation predates smart-contract bribery: Bonneau showed
+that a \emph{rented}---rather than owned---majority has no long-term stake to protect and is therefore
+cheap to mobilize~\cite{bonneau2016rent}, and Buterin's $P{+}\epsilon$ argument showed that a credible
+conditional payment can make the adversary's preferred action dominant at near-zero realized
+cost~\cite{buterin2015pepsilon}. Smart contracts then made such bribes
+trustless~\cite{mccorry2018smart,winzer2019temporary}; Judmayer et al.\ systematize the resulting
+\emph{algorithmic incentive-manipulation} attacks and demonstrate cheap, crowdfundable, cross-chain
+bribery that funds a double-spend on a target chain~\cite{judmayer2021sok,judmayer2021paytowin}, while
+out-of-band collusion contracts make defection the strict equilibrium for a sub-threshold rational
+coalition and even sketch evading slashing by censoring the proof~\cite{zhang2023outofband}.
+Game-theoretic treatments price bribery against PoS safety and characterize when slashing and dilution
+make it unprofitable~\cite{karakostas2024bribing}; the most recent line implements trustless contracts
+that buy votes, force exits, and auction beacon manipulation~\cite{sookitoth2025bribers,kelkar2025omerta,austgen2025liquefaction},
+and modern variants coerce attesters through credible commitments~\cite{sarenche2024commitment} or
+buy block delay for MEV without triggering slashing at all~\cite{yang2024bride}. Newman further shows
+the equilibrium per-validator bribe can fall well below naive expected-loss bounds via low
+pivotality and externalized cost~\cite{newman2023decentralization}. All of this establishes that
+equivocation is buyable, trustless, and far cheaper than total stake; none of it models the
+small-committee quorum structure, the cross-shard realization of the violation, or the way
+accountability \emph{latency} prices the bribe.
+
+% (2b) NEW paragraph (insert after the bribery paragraph). This is the most important addition: it
+%      pre-empts the closest prior art on the economic gate, the accountability-latency limit, and
+%      finality-gating, and states the delta explicitly.
+
+\paragraph{Economic limits, slashable safety, and accountability latency.}
+A separate line bounds attacks economically rather than by a Byzantine fraction. Budish's flow-vs-stock
+argument~\cite{budish2018economic} and its permissionless-consensus generalization establish that an
+attack is deterred only when its cost exceeds its profit, and---decisively for us---that under partial
+synchrony above the $1/3$ threshold targeted punishment \emph{cannot} be enforced before the violator
+liquidates, so accountability has an intrinsic latency-bounded limit~\cite{budish2024economic}. STAKESURE
+makes the cost-of-corruption vs.\ profit-from-corruption gate explicit and caps attacker profit by gating
+off-chain and bridge value release on a reversion window~\cite{deb2024stakesure}; CoBRA independently
+bounds finalizable value below the slashable stake so a rational validator's gain cannot exceed its
+bond~\cite{avarikioti2025cobra}; and Bitcoin-enhanced PoS makes the unbonding delay the operative
+security variable, racing slashing against withdrawal and gating safety on external
+finality~\cite{tas2023bitcoin}. These results supply the accountability substrate we build on:
+identifiability of culprits after a fork~\cite{civit2021polygraph}, per-protocol forensic support that
+fixes how many of the necessary equivocators are provably catchable~\cite{sheng2021forensics}, the
+accountable-finalized prefix that underlies finality-gating~\cite{neu2022accountability}, and the
+detection-and-recovery machinery whose latency we abstract as $\Tacc$~\cite{gong2025recover}.
+\emph{Our contribution is orthogonal to all of these:} they study a monolithic or single-chain (or
+restaking) setting in which the adversary owns stake or value is throttled, and they assume slashing is
+effectively immediate or that the violator must control a (super)majority. We instead study a globally
+\emph{sub-threshold} adversary who, after committee assignment, \emph{buys} the $F{+}1$ equivocators one
+$N{=}3F{+}1$ committee makes necessary, prices that bribe by the probability $q$ that the fraud proof is
+enforced before stake becomes unslashable, and realizes value across the shard/bridge boundary in
+$\Tsettle$ before $\Tacc$. Finality-gating (Proposition~\ref{prop:immunity}) is our specialization of the
+accountable-finalized-prefix idea to cross-shard acceptance.
+
+% (2c) ADD to the existing "Single-shard compromise and adaptive corruption." paragraph:
+
+\paragraph{Sharding-specific corruption (addition).}
+Closest in setting are adaptive-corruption analyses of sharding: Divide \& Scale formalizes when a
+sharded ledger can stay consistent and scalable against epoch-adaptive vs.\ fully adaptive
+adversaries, requiring succinct state-update proofs at epoch boundaries~\cite{avarikioti2019divide}, and
+Free2Shard defends a globally sub-threshold but locally concentrated adaptive adversary by letting honest
+nodes re-allocate across shards~\cite{rana2022free2shard}. These treat the captured committee as a
+\emph{corruption}-budget event and target liveness/throughput; we treat it as an \emph{economic
+procurement} event and ask what the captor extracts before accountability resolves. Restaking economics
+similarly bounds attacks by an over-collateralization condition~\cite{durvasula2025restaking}, but
+without the accountability-latency race.
+
+
+% ---------------------------------------------------------------------
+% PART 3 — Positioning-table rows (add to tab:positioning in related_work.tex)
+% Columns: Bribery priced? | Committee-local? | Cross-shard settlement? | Accountability race? | Reconfig handoff?
+% ---------------------------------------------------------------------
+
+% Econ. limits of perm. consensus~\cite{budish2024economic}      & \nomark & \nomark & \nomark & \partialmark & \nomark & Monolithic latency-limit; we localize to bought committee equivocation \\
+% STAKESURE~\cite{deb2024stakesure}                               & \partialmark & \nomark & \partialmark & \partialmark & \nomark & Bribe priced by slashing \emph{latency} $q$, not a reversion window \\
+% Bitcoin-enhanced PoS~\cite{tas2023bitcoin}                      & \nomark & \nomark & \nomark & \partialmark & \partialmark & Sub-threshold committee bribe vs.\ supermajority posterior corruption \\
+% CoBRA~\cite{avarikioti2025cobra}                                & \nomark & \nomark & \nomark & \partialmark & \nomark & External briber + latency pricing + cross-shard extraction (vs.\ throughput throttle) \\
+% Out-of-band collusion~\cite{zhang2023outofband}                 & \yes & \nomark & \nomark & \partialmark & \nomark & Committee-local quorum floor; race, not majority proof-censorship \\
+% Pay-To-Win / rent~\cite{judmayer2021paytowin,bonneau2016rent}   & \yes & \nomark & \partialmark & \nomark & \nomark & Intra-protocol bought equivocation priced by accountability latency \\
+% Commitment attacks~\cite{sarenche2024commitment}               & \yes & \nomark & \nomark & \nomark & \nomark & Sharded quorum break + cross-shard settlement, not single-proposer reorg \\
+% Restaking econ.~\cite{durvasula2025restaking}                   & \nomark & \nomark & \nomark & \partialmark & \nomark & Accountability-latency race, not static over-collateralization \\
+% Free2Shard / Divide\&Scale~\cite{rana2022free2shard,avarikioti2019divide} & \nomark & \partialmark & \nomark & \nomark & \partialmark & Economic procurement + payout, not corruption-budget liveness \\
+
+
+% =====================================================================
+% PART 4 — HIGH-PRIORITY ADDITIONS from the §9 verification (2026-06-22)
+% Two top-venue nearest neighbours that MUST be cited and distinguished,
+% plus the key supporting works (remote staking, fraud-proof incentives,
+% optimal shard committees, MEV value model).
+% =====================================================================
+
+% ---- BibTeX ----
+%
+% @inproceedings{liu2025camael,
+%   author    = {Liu, Yizhong and Liu, Andi and Pan, Zhuocheng and Hu, Yuxuan and Lu, Yuan and others},
+%   title     = {Realizing Corrupted-Shard Tolerance: A Sharding Blockchain with Preserving Global Resilience},
+%   booktitle = {Proceedings of the 2025 ACM SIGSAC Conference on Computer and Communications Security (CCS)},
+%   year      = {2025},
+%   note      = {DOI 10.1145/3719027.3765132; system ``Camael''. VERIFY full author list against the ACM page.}
+% }
+% @inproceedings{berger2025censorship,
+%   author    = {Berger, Ben and Felten, Edward W. and Mamageishvili, Akaki and Sudakov, Benny},
+%   title     = {Economic Censorship Games in Fraud Proofs},
+%   booktitle = {Proceedings of the 26th ACM Conference on Economics and Computation (EC)},
+%   year      = {2025},
+%   note      = {arXiv:2502.20334; DOI 10.1145/3736252.3742611}
+% }
+% @misc{dong2024remotestaking,
+%   author       = {Dong, Xinshu and Thyfronitis Litos, Orfeas Stefanos and Tas, Ertem Nusret and Tse, David and Woll, Robin Linus and Yang, Lei and Yu, Mingchao},
+%   title        = {Remote Staking with Optimal Economic Safety},
+%   howpublished = {arXiv preprint arXiv:2408.01896},
+%   year         = {2024}
+% }
+% @inproceedings{lee2025hollow,
+%   author    = {Lee, Suhyeon},
+%   title     = {Hollow Victory: How Malicious Proposers Exploit Validator Incentives in Optimistic Rollup Dispute Games},
+%   booktitle = {Financial Cryptography and Data Security Workshops (WTSC)},
+%   year      = {2025},
+%   note      = {arXiv:2504.05094}
+% }
+% @inproceedings{david2022gearbox,
+%   author    = {David, Bernardo and Magri, Bernardo and Matt, Christian and Nielsen, Jesper Buus and Tschudi, Daniel},
+%   title     = {{GearBox}: Optimal-size Shard Committees by Leveraging the Safety-Liveness Dichotomy},
+%   booktitle = {Proceedings of the 2022 ACM SIGSAC Conference on Computer and Communications Security (CCS)},
+%   year      = {2022},
+%   note      = {Cryptology ePrint Archive, Paper 2021/211}
+% }
+% @inproceedings{baron2025aegis,
+%   author    = {Bar-On, Yogev and Bar-Zur, Roi and Ben-Porat, Omer and Cohen, Nimrod and Eyal, Ittay and Sitbon, Matan},
+%   title     = {Aegis: Tethering a Blockchain with Primary-Chain Stake},
+%   booktitle = {Proceedings of the 2025 ACM SIGSAC Conference on Computer and Communications Security (CCS)},
+%   year      = {2025},
+%   note      = {arXiv:2406.05904}
+% }
+% @inproceedings{qin2022quantifying,
+%   author    = {Qin, Kaihua and Zhou, Liyi and Gervais, Arthur},
+%   title     = {Quantifying Blockchain Extractable Value: How Dark is the Forest?},
+%   booktitle = {Proceedings of the 2022 IEEE Symposium on Security and Privacy (S\&P)},
+%   year      = {2022},
+%   note      = {arXiv:2101.05511}
+% }
+
+% ---- Prose (insert into related_work.tex) ----
+
+% (4a) Add to the "Single-shard compromise and adaptive corruption." paragraph — this is the nearest
+%      sharded neighbour and a CCS'25 paper, so it must be engaged head-on:
+\paragraph{Corrupted-shard tolerance (addition).}
+Most directly, Camael~\cite{liu2025camael} formalizes exactly our structural premise---a single shard
+exceeding its local BFT threshold (up to $2/3$ corrupt) while global stake remains below $1/3$---and
+builds a \emph{defense}: it detects concealed safety violations via snapshots, convicts the offenders,
+and reconfigures the shard. Camael is complementary to our work rather than overlapping: it is a
+detect-and-remediate construction and does not price the corruption, model the cross-shard
+value-extraction race, or establish a finality-gating immunity result. Tellingly, Camael's own
+snapshot-and-conviction pipeline is an instance of the accountability latency $\Tacc$ that our race
+turns on: the faster that loop, the larger our $q$ and the smaller our window.
+
+% (4b) Add to the "Economic limits, slashable safety, and accountability latency." paragraph (Part 2b):
+\paragraph{Bribing against an accountability window (addition).}
+Closest to our race in spirit is the economic-censorship game of Berger et
+al.~\cite{berger2025censorship}, in which an attacker bribes block proposers to censor a defender's
+challenge transactions and \emph{exhaust the challenge-period time budget}, with the attacker/defender
+budget ratio deciding who wins. This is the same fundamental move---paying to outlast accountability---
+that our $\Tsettle<\Tacc$ gate captures, and the analogous incentive failure where winning a fraud
+proof is itself unprofitable is studied by Lee~\cite{lee2025hollow}. We differ in mechanism and setting:
+their adversary censors a single defender's transaction in an L1$\rightarrow$L2 challenge window,
+whereas ours buys the $F{+}1$ quorum-intersection equivocators of an $N{=}3F{+}1$ committee, prices that
+bribe by the enforcement probability $q$ (Eq.~\eqref{eq:bribe-individual}), and races \emph{irreversible
+cross-shard/bridge settlement} against detection-and-slashing rather than depleting a fixed challenge
+clock. Remote-staking with optimal economic safety~\cite{dong2024remotestaking} supplies the dual
+defensive primitive---a remote unbonding protocol that guarantees slashing \emph{before} stake is
+withdrawn---which is precisely the ``slash before unslashable'' condition our $q$ measures, and
+Aegis~\cite{baron2025aegis} similarly keeps stake ``correct until withdrawal'' with committee resets.
+
+% ---- Positioning-table rows ----
+% Corrupted-shard tolerance (Camael)~\cite{liu2025camael}      & \nomark & \yes & \partialmark & \nomark & \partialmark & We \emph{attack} \& price it; finality-gating immunity \\
+% Economic censorship games~\cite{berger2025censorship}        & \partialmark & \nomark & \partialmark & \yes & \nomark & Committee quorum bribery; latency-priced; cross-shard $V$ \\
+% Remote staking opt. safety~\cite{dong2024remotestaking}      & \nomark & \nomark & \nomark & \partialmark & \partialmark & Sub-threshold bribe race vs.\ sufficiency-of-slashing proof \\
+% GearBox~\cite{david2022gearbox}                              & \nomark & \yes & \nomark & \nomark & \partialmark & Small committees \emph{amplify} the bribery we price \\

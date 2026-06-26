@@ -1,0 +1,24 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+Sharding makes a single committee cheap to corrupt and bribery makes corruption purchasable, but
+neither fact is consequential while accountable BFT can slash and revert in time. We have argued that
+the real question is a race, and we have given it a model: a bribe-cost expression in which the price
+of equivocation is set by the probability $q$ that the fraud proof is enforced before the validator's
+stake becomes unslashable, coupled to an accountability-race condition that factors viability into a
+window gate $\Tsettle<\Tacc$ and an economic gate $\Eval>B+\Cop$. We were precise that the $F{+}1$
+equivocators are necessary but not sufficient---success additionally requires an honest-vote split
+captured by $\psucc$---and that ``sub-threshold'' is a network-wide, not a committee-local, statement.
+The accountability latency $\Tacc$ emerges as a master variable that both widens the window and
+cheapens the bribe---``cheap to corrupt'' and ``easy to cash out'' are two symptoms of one
+quantity---and we proved that finality-gating cross-shard acceptance closes the attack
+unconditionally. Extending the model to epoch boundaries, we showed that reconfiguration does not
+remove the race but relocates it: a safe-handoff theorem gives the four conditions under which old-epoch
+artifacts are immune, and a residual-vulnerability theorem shows that, absent them, last-of-epoch
+attacks strictly dominate. The framework is constructive in both directions---it tells an attacker
+exactly when sub-threshold committee bribery pays, and a designer exactly what to enforce so that it
+never does---and it is reproducible: a seeded simulator and a local proof-of-concept regenerate every
+figure and table, with the harness reproducing the closed-form success probability to within
+Monte-Carlo error. The decisive next step is to measure the two load-bearing quantities, $q$ and
+$\Tacc$, on one concrete deployed sharded system, and thereby exhibit---or rule out---a real design
+with an open window and profitable economics.

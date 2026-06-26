@@ -1,0 +1,31 @@
+% ===== paper.tex =====
+% CANONICAL SUBMISSION FILE (IEEE S&P style).
+% Requires IEEEtran.cls and IEEEtran.bst (standard on TeX Live / Overleaf).
+% Compile: pdflatex paper -> bibtex paper -> pdflatex paper -> pdflatex paper
+%
+% (A preview PDF in this repository was produced with paper_article.tex because the
+%  authoring sandbox lacked IEEEtran; the body and references are identical.)
+
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+\input{common-preamble}
+
+\begin{document}
+
+\title{Priced to Equivocate: Sub-Threshold Committee Bribery and the\\
+Accountability Race in Sharded Blockchains}
+
+% For double-blind submission keep this anonymized; for camera-ready, fill in authors.
+\author{\IEEEauthorblockN{Paper~\#XXX --- Double-Blind Submission}}
+% \author{\IEEEauthorblockN{First Author}\IEEEauthorblockA{Affiliation\\email}
+%   \and \IEEEauthorblockN{Second Author}\IEEEauthorblockA{Affiliation\\email}}
+
+\maketitle
+
+\input{body}
+
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+
+\end{document}

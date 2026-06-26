@@ -1,0 +1,105 @@
+\appendices
+
+\section{Reproduction}
+\label{app:repro}
+
+All parameters live in \texttt{configs/main.yaml} (committee sizes, $\varphi$, $q$, $\psucc$,
+settlement/accountability stage means and coefficients of variation, $\tau$, $U$, $\Treceipt$,
+$\Tstate$, $\Hreconf$, Monte-Carlo trials, and the master seed). The network-free pipeline is three
+commands:
+\begin{quote}\small\ttfamily
+python run\_all.py --config configs/main.yaml\\
+python plot\_figures.py --input results/main.json --out figures/\\
+python make\_tables.py --input results/main.json --out ../Paper/Section/\_generated
+\end{quote}
+The first runs every experiment in $\approx\ArtifactRuntime$\,s on a laptop and writes a single
+\texttt{results/main.json}; the second regenerates the figures; the third regenerates the \LaTeX{}
+data tables the paper \texttt{\textbackslash input}s (so the numbers cannot drift from the artifact).
+A \texttt{--quick} flag scales the Monte-Carlo trials down for a smoke run, and \texttt{tests/} encodes
+the load-bearing claims (floor necessity, $\psucc$ monotonicity, the immunity proposition, and the
+end-to-end proof-of-concept) as unit tests. Table~\ref{tab:artifact} maps the modules to their roles.
+
+\begin{table}[t]
+\centering
+\caption{Artifact modules (in \texttt{artifact/shardbribe/} unless noted).}
+\label{tab:artifact}
+\small
+\begin{tabularx}{\linewidth}{@{}lX@{}}
+\toprule
+Module & Role \\
+\midrule
+\texttt{model.py} & single source of truth for the equations of \S\ref{sec:design}: equivocation floor, closed-form $\psucc$, bribe cost, profit, the two gates \\
+\texttt{bft\_harness.py} & abstract $N{=}3F{+}1$ committee; on equivocation emits a genuine, verifiable evidence object (the shape an accountable BFT layer slashes on) \\
+\texttt{quorum.py} & Monte-Carlo quorum simulator; an \emph{independent} estimator of $\psucc$ \\
+\texttt{testbed.py} & discrete-event BFT round with real Ed25519; \emph{measures} $\Tacc$/$\Tsettle$ from event timing \\
+\texttt{race.py}, \texttt{crossshard.py} & gamma-stage race model; cross-shard receipt with an accountability-gating switch ($\Tsettle{\ge}\Tacc$) \\
+\texttt{escrow.py} & runnable \textsc{PayToEquivocate} model; pays only on a valid proof, rejects forgeries and double claims \\
+\texttt{reconfig.py} & epoch-boundary model: $q(a)$ and the six handoff designs A--F \\
+\texttt{realsystems.py} & documented-parameter case study (\S\ref{sec:eval}) \\
+\texttt{livemeasure.py}, \texttt{collect\_*.py} & read-only collectors for the live measurement of \S\ref{sec:measured} \\
+\texttt{run\_all.py} & driver: self-validates, then runs every experiment into one \texttt{results/main.json} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The live measurement of \S\ref{sec:measured} is a \emph{separate, read-only} step driven by
+\texttt{collect\_*.py}: each collector fetches already-public on-chain data (historical double-sign
+slashes, ordinary bridge fills) over public endpoints and writes \texttt{results/measured/*.jsonl},
+which \texttt{run\_all.py} folds into the reproduction path when present. It is not required to
+reproduce the model results, and the equivocation leg is gated to a private chain-id and never run on
+a shared network.
+
+\section{Proofs}
+\label{app:proofs}
+
+\begin{proof}[Proof of Proposition~\ref{prop:reconf-safe}]
+Fix any old-epoch value-bearing artifact. By (iii) its earliest executable time $\Tsettle^{\text{ce}}$
+is at least the source-shard accountability window, which by definition is $\ge\Tacc$ for that
+artifact; hence $\Pr[\Tsettle^{\text{ce}}<\Tacc]=0$, i.e.\ $\pwin=0$, exactly as in
+Proposition~\ref{prop:immunity}. It remains to show reconfiguration cannot bypass the gate.
+Conditions (i)--(ii) ensure the evidence that triggers the gate remains valid and enforceable against
+still-bonded stake after rotation, so the gate's quarantine action can always fire; condition (iv)
+ensures the new committee cannot be made to import a conflicting old-epoch root that would let the
+artifact execute outside the gate. Thus no rotation-induced path makes a gated artifact executable
+before $\Tacc$, and $\pwin$ for old-epoch artifacts is no larger than in the single-epoch gated case,
+which is $0$.
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:reconf-residual}]
+Under carryover, $\pwin(a)=\Pr[\Tsettle^{\text{ce}}<\Tacc+\Hreconf(a)]$ from
+Eq.~\eqref{eq:pwin-carry}. Since the CDF of $\Tacc+\Hreconf(a)$ at a fixed settlement level is
+nondecreasing in the deadline, and $\Hreconf$ is nondecreasing in $a$, $\pwin(a)$ is nondecreasing in
+$a$. The bribe term $B(a)=(F{+}1)q(a)(s{+}R)$ is nonincreasing in $a$ wherever $q(a)$ decreases toward
+the boundary (e.g.\ when immediate post-epoch withdrawal makes stake unslashable at $r+U$ with
+$r=\tau-a\to0$). With $\psucc(a)$ and $\Eval$ fixed, both terms of
+$\mathbb{E}[\Pi(a)]=\psucc\,\pwin(a)\,\Eval-B(a)-\Cop$ are nondecreasing in $a$ on the boundary
+region, and at least one is strictly so under the stated hypotheses; hence $\mathbb{E}[\Pi(a)]$ is
+increasing there, giving $\mathbb{E}[\Pi(\tau^-)]>\mathbb{E}[\Pi(a_{\mathrm{mid}})]$. The contrast
+with the hard-cutoff design is immediate from Eq.~\eqref{eq:pwin-cut}: there $\pwin(a)\le\Pr[\Tsettle<r]\to0$
+as $a\to\tau$, so $\mathbb{E}[\Pi(a)]\to-B(a)-\Cop<0$.
+\end{proof}
+
+\section{Trustless Bribery Escrow}
+\label{app:contract}
+
+The \textsc{PayToEquivocate} contract of \S\ref{sec:procedure} releases a per-validator bribe only on a
+valid, conflicting equivocation proof; a runnable local model is in the artifact (\S\ref{sec:impl}).
+
+\begin{lstlisting}[caption={Trustless bribery escrow (model).},label={lst:contract}]
+contract PayToEquivocate:
+  state escrow: uint                 # funded with total bribe B
+  state registered: map[Validator -> bool]
+  state paid: map[Validator -> bool]
+
+  fn register(v):                    # validator opts in
+    registered[v] = true
+
+  fn claim(v, sigA, sigB, blkA, blkB):
+    require registered[v] and not paid[v]
+    require blkA != blkB
+    require conflict(blkA, blkB)     # same height/epoch, different value
+    require verifySig(v, sigA, blkA)
+    require verifySig(v, sigB, blkB)
+    paid[v] = true
+    transfer(v, bribePer())          # pay after valid proof
+\end{lstlisting}

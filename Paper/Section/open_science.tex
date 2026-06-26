@@ -1,0 +1,17 @@
+\section*{Open Science}
+\addcontentsline{toc}{section}{Open Science}
+
+The artifact needed to evaluate the paper is the local directory \texttt{artifact/}: it contains the
+model, simulators, BFT harness, discrete-event testbed, configuration file, plotting scripts, table
+generator, tests, and a README with exact reproduction commands. The artifact is deterministic under
+\texttt{configs/main.yaml}; it regenerates \texttt{results/main.json}, all figure PDFs, and the
+\LaTeX{} tables in \texttt{Paper/Section/\_generated/}. For anonymous review, the same contents should be
+provided as an anonymized supplemental archive or through an anonymous artifact host; the
+camera-ready version should replace that review-only access path with a stable public repository
+URL or DOI.
+
+The live measurement of \S\ref{sec:measured} is \emph{read-only} over public ledger data: the released
+collectors fetch already-public on-chain events and contain no exploit tooling, and the
+equivocation leg is gated to a private chain-id. \emph{Active} measurement of a deployed system under
+adversarial conditions remains future work; the timestamp schema of \S\ref{sec:setup} describes how it
+would be collected under coordinated disclosure.

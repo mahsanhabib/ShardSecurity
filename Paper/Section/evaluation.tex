@@ -1,0 +1,225 @@
+\section{Evaluation}
+\label{sec:eval}
+
+We organize the evaluation around seven research questions, preceded by a validation step that
+establishes the simulator and the proof-of-concept are sound. RQ1--RQ5 exercise the model; RQ6
+cross-validates it against a discrete-event testbed with real signatures; RQ7 applies it to the
+documented parameters of deployed systems. All numbers are produced by the artifact
+(\S\ref{sec:impl}); figure and table references are to artifact output.
+
+\paragraph{Validation and proof-of-concept (RQ0).}
+The Monte-Carlo BFT harness reproduces the closed-form $\psucc$ of Eq.~\eqref{eq:psucc} across all
+tested $(N,\varphi)$ with maximum absolute deviation $\ArtifactMaxValErr$ (tolerance $0.02$),
+validating both the harness and the closed form. A sub-floor purchase ($k<F{+}1$) yields a conflicting
+certificate in \emph{zero} of every trial, confirming Lemma~\ref{lem:intersection} empirically. The
+end-to-end PoC, on a committee of $N=\ArtifactPoCN$ ($F=10$, floor $k=\ArtifactPoCk$), drives both
+branches to the quorum $Q=21$ under an engineered split, emits $\ArtifactPoCEvidence$ valid
+equivocation proofs, and the \textsc{PayToEquivocate} escrow pays exactly those $\ArtifactPoCBribes$
+and rejects a forged (non-conflicting) proof. The attack is therefore realizable end-to-end in the
+local model, not merely asserted.
+
+\paragraph{The floor is necessary, not sufficient.}
+Figure~\ref{fig:psucc} plots $\psucc$ against the view-split $\varphi$ for $k\in\{F{+}1,F{+}2,F{+}3\}$,
+with the Monte-Carlo overlay matching the closed form. At the floor $k=F{+}1$, success requires an
+exact even split, so $\psucc$ peaks at only $\ArtifactPsuccFloor$ at $\varphi=\tfrac12$ and falls off
+sharply for asymmetric splits; each extra purchased equivocator widens the feasible band
+(Eq.~\eqref{eq:band}) and raises $\psucc$. This quantifies the central caveat: buying the $F{+}1$
+floor is necessary but, without engineering a balanced honest split, far from sufficient.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{fig_psucc.pdf}
+\caption{$\psucc$ vs.\ view-split $\varphi$ for the floor and two larger purchases ($N=31$). Markers:
+Monte-Carlo harness; lines: closed form (Eq.~\eqref{eq:psucc}). The floor peaks at
+$\psucc=\ArtifactPsuccFloor$; extra equivocators widen the success band.}
+\label{fig:psucc}
+\end{figure}
+
+\paragraph{RQ1: When does the settlement window open?}
+The window is nearly a step function---there is almost no middle ground between closed and open. The
+window-open probability $\pwin$ crosses $0.5$ within $1\%$ of $\rho=\Tacc/\Tsettle=1$ and saturates
+toward $1$ for $\rho\gg1$ (Figure~\ref{fig:pwin}), with higher settle-time variance softening the
+transition, exactly as the model predicts. The finality-gated baseline (Proposition~\ref{prop:immunity})
+is identically zero for all $\rho$---the flat line at the bottom---so closing the window is not a matter
+of degree but of construction.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{fig_pwin.pdf}
+\caption{RQ1. Window-open probability $\pwin$ vs.\ latency ratio $\rho$, for two settle-time
+coefficients of variation, plus the finality-gated immunity baseline ($\pwin\equiv0$).}
+\label{fig:pwin}
+\end{figure}
+
+\paragraph{RQ2: How does the bribe cost scale?}
+The bribe is strikingly small relative to the committee: at $N=31,\,q=0.5,\,R=0.5s$ the minimum total
+bribe is just $8.25s$---the adversary pays $F{+}1{=}11$ validators a \emph{fraction} $q$ of their
+stake-at-risk, not the whole committee's stake. Figure~\ref{fig:cost} plots $B=(F{+}1)q(s{+}R)$ against
+committee size $N$ for several $q$: cost grows only \emph{linearly} in $N$ (through $F{+}1$) and
+linearly in $q$. The policy reading is that raising $N$ increases the (G2) cost only linearly,
+whereas closing (G1) removes the threat outright---consistent with Proposition~\ref{prop:immunity} and
+quantified in RQ5.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{fig4_cost.pdf}
+\caption{RQ2. Minimum total bribe $B$ vs.\ committee size $N$ for $q\in\{0.25,0.5,0.75,1.0\}$,
+$R=0.5s$. Cost is linear in $N$.}
+\label{fig:cost}
+\end{figure}
+
+\paragraph{RQ3: When is the attack profitable?}
+Profit lives in a single quadrant: both gates must hold at once. Figure~\ref{fig:phase} shows
+$\mathbb{E}[\Pi]$ over the $(\rho,\Eval)$ plane is positive only in the upper-right region where
+$\rho>1$ \emph{and} $\Eval>\Eval^{*}$; the finality-gated baseline collapses the entire plane to
+non-positive profit. Table~\ref{tab:breakeven} reports the break-even value
+$\Eval^{*}=(F{+}1)q(s{+}R)+\Cop$ across $N$ and $q$. Figure~\ref{fig:profitqV}
+slices the profitable region over $(q,\Eval)$ at a window-open $\rho$, showing the linear shift of the
+break-even frontier with $q$. Sensitivity to the adversary's split-control reliability is direct: the
+break-even value scales as $1/(\psucc\pwin)$, so a weak adversary ($\psucc=0.2$) needs roughly
+$4{\times}$ the value of a strong one ($\psucc=0.85$) to clear (G2). We do not treat $\psucc=0.85$ as a
+default: it is the view-control regime; an uncontrolled split caps $\psucc$ at $\ArtifactPsuccFloor$ at
+the $F{+}1$ floor, and reaching $0.85$ by purchase alone costs $k\approx F{+}6$ at a $1.45\times$ bribe
+(\S\ref{sec:floor}). The phase diagram (Fig.~\ref{fig:phase}) is thus the strong-adversary upper edge of
+a band whose lower edge is the floor.
+
+\begin{table}[t]
+\centering
+\caption{RQ3. Break-even extractable value $\Eval^{*}=(F{+}1)q(s{+}R)+\Cop$ (units of $s$; $R=0.5s$,
+$\Cop=1$), regenerated by the artifact.}
+\label{tab:breakeven}
+\small
+\input{../Section/_generated/tab_breakeven}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{fig3_phase.pdf}
+\caption{RQ3. Profit phase diagram $\mathbb{E}[\Pi]$ over $(\rho,\Eval)$ ($N=31$, $q=0.5$,
+$\psucc=0.85$---the strong split-control/view-control regime; uncontrolled-split floor
+$\ArtifactPsuccFloor$). The $E[\Pi]=0$ contour separates the profitable region (both gates hold) from
+the rest; the finality-gated baseline is non-positive everywhere.}
+\label{fig:phase}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{fig_profit_qV.pdf}
+\caption{RQ3. Profit over $(q,\Eval)$ at a window-open latency ratio. The break-even frontier shifts
+linearly with the enforcement probability $q$.}
+\label{fig:profitqV}
+\end{figure}
+
+\paragraph{RQ4: How does reconfiguration change the race?}
+Figure~\ref{fig:reconf-profit} (\S\ref{sec:reconf}) reports $\mathbb{E}[\Pi(a)]$ across the epoch for
+the six handoff designs. The hard-cutoff design is profitable mid-epoch but collapses to
+$-B-\Cop$ as $a\to\tau$ (residual time $r\to0$): last-block attacks are weak. The unsafe-carryover and
+reconfiguration-delay designs instead \emph{rise} toward the boundary---old-epoch artifacts survive,
+$\Hreconf(a)$ widens the deadline, and $q(a)$ falls (cheaper bribes)---confirming
+Proposition~\ref{prop:reconf-residual}. The accountability-gated carryover stays flat and negative
+($\pwin=0$, Proposition~\ref{prop:reconf-safe}), and rolling reconfiguration shows a smooth optimum
+with no last-block cliff (Counterexample~\ref{cex:rolling}).
+
+\paragraph{RQ5: Which defenses close the attack?}
+Only the two levers that touch the window flip the sign of profit; the two that only raise the cost
+leave the attack firmly profitable (Table~\ref{tab:rq5defenses}). From a profitable baseline
+($\mathbb{E}[\Pi]=+38.9$), finality-gated receipts drive profit to $-9.2$ (the immunity baseline,
+$\pwin\!\to\!0$), and faster evidence---which lowers $\Tacc$, hence both $\pwin$ and (via larger $q$)
+the bribe---drives it to $-0.5$. Purely economic levers do not: persistent slashability (raising $q$,
+hence $B$) leaves profit at $+32.3$, and a larger committee (raising $B$ linearly) at $+21.7$. Both
+the table and Figure~\ref{fig:defenses} are the quantitative form of the master-variable claim:
+closing the window dominates raising the cost.
+
+\begin{table}[t]
+\centering
+\caption{RQ5. Each defensive lever from a profitable baseline ($N=31$, $V=60s$, $\psucc=0.85$): the
+gate it attacks (G1 $=$ window $\Tsettle<\Tacc$; G2 $=$ cost $V>B$), the resulting window probability
+$\pwin$, bribe $B$ (units of $s$), expected profit $\mathbb{E}[\Pi]$, and whether it makes the attack
+unprofitable. Only window-closing levers (\yes) work. Regenerated by the artifact.}
+\label{tab:rq5defenses}
+\small
+\setlength{\tabcolsep}{4.5pt}
+\input{../Section/_generated/tab_defenses}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{fig_defenses.pdf}
+\caption{RQ5. Effect of each defensive lever on $\mathbb{E}[\Pi]$ ($N=31$, $V=60s$). Only levers that
+reduce $\pwin$ (finality gating; faster evidence) make the attack unprofitable; economic levers only
+dent it.}
+\label{fig:defenses}
+\end{figure}
+
+\paragraph{RQ6: Does a running protocol reproduce the model?}
+The analyses above are validated against an \emph{independent mechanism}. The discrete-event testbed
+(\S\ref{sec:impl}) runs an actual BFT commit round over a modeled network with real Ed25519
+signatures and derives $\Tacc$ and $\Tsettle$ from event timing rather than sampling them from the
+model. Sweeping the settlement-pipeline scale moves the \emph{measured} latency ratio across $1$;
+Figure~\ref{fig:testbed} overlays the measured $\pwin$ on the closed form. Both exhibit the sharp
+threshold at $\rho\approx1$---near-zero below, near-one above---crossing $0.5$ at $\rho\approx1$; the
+measured transition is somewhat steeper because the testbed's settlement-latency variance is lower
+than the gamma model's. This is corroboration by a separate mechanism, not the model checking itself.
+Two concrete observations: the equivocation evidence is a real $\ArtifactEvidenceBytes$-byte object
+(two $\ArtifactSigBytes$-byte Ed25519 signatures), and at \emph{realistic} parameters (80\,ms links,
+a 2\,s destination block, fast evidence) the measured baseline is $\rho=\ArtifactTbBaseRho$ with
+$\pwin=\ArtifactTbBasePwin$ ($\Tsettle\approx\ArtifactTbSettleMs$\,ms vs.\
+$\Tacc\approx\ArtifactTbAccMs$\,ms): the naive cross-shard pipeline sits in the \emph{closed-window}
+regime, because a multi-second destination block is slower than evidence propagation. The danger is
+therefore not committee size but \emph{fast} settlement (a bridge that releases early) against slow or
+weak accountability.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{fig_testbed.pdf}
+\caption{RQ6. Testbed-\emph{measured} $\pwin$ (points) vs.\ the closed-form model (line) over the
+measured latency ratio. An independent discrete-event protocol simulation with real signatures
+reproduces the $\rho\approx1$ threshold.}
+\label{fig:testbed}
+\end{figure}
+
+\paragraph{RQ7: Are deployed systems exposed (documented parameters)?}
+Every surveyed deployed system lands in the safe regime---and for a \emph{structural} reason, not an
+economic one: it is protected by fast evidence and finality-gating, not by committee size or unbonding
+length (Table~\ref{tab:realsystems})~\cite{harmony2019whitepaper,cosmosdocs,ethconsensusspecs,multiversxdocs,polkadotwiki,zilliqadocs}.
+\S\ref{sec:measured} then \emph{measures} these load-bearing quantities directly rather than assuming
+them; two structural facts explain the placement. First,
+equivocation evidence forms in minutes, far inside the unslashable horizon---which \S\ref{sec:measured}
+measures as the evidence-expiry window (${\sim}48$\,h on Cosmos), \emph{not} the multi-week unbonding
+period it is commonly mistaken for---so $q\approx1$, the bribe is essentially the full stake-at-risk of
+$F{+}1$ validators, and the break-even $\Eval^{*}$ sits at $64$--$300$ validator-stakes (G2 hard to
+clear). Second, finality-gated settlement (Cosmos IBC, Polkadot relay-chain finality) closes G1 by
+construction (Proposition~\ref{prop:immunity}). The only exposed configuration is the fast-exit,
+ungated-settlement quadrant---a \emph{hypothetical} row here ($q\approx0.25$, $\Eval^{*}\approx8$
+stakes) that \S\ref{sec:measured} then \emph{realizes} on a real value path, where a fast intent
+bridge's user leg settles in seconds---the lone quadrant where neither structural protection is present.
+
+\begin{table*}[t]
+\centering
+\caption{RQ7. The model at documented parameters of named systems (approximate public figures as of
+2026; confirm against current specifications before camera-ready). $N$ is the committee size (the
+per-shard committee for sharded rows; the validator/finality-committee size otherwise), distinct from
+the measurement sample size $n_{\mathrm{obs}}$ of Table~\ref{tab:measured}. $V^{*}$ is in multiples of one
+validator's stake-at-risk. The \emph{Window (G1)} column is the settlement-gate state
+(\gated/\openg/\dependsg), and \emph{Verdict} is the resulting one-word outcome: \immune\ when G1 is
+closed by construction, \hardgate\ when (G2) is hard to clear because $q\!\approx\!1$, and \exposed\
+otherwise. $q$ here is the documented-parameter estimate; \S\ref{sec:measured} measures
+the operative evidence-expiry-based value. Cosmos~Hub and Ethereum~PoS are non-sharded accountable-BFT
+reference points (IBC finality-gating and single-chain accountability, respectively), included as
+comparators; the fast-exit row is a labelled \emph{hypothetical}, not a deployed system.}
+\label{tab:realsystems}
+\small
+\input{../Section/_generated/tab_realsystems}
+\end{table*}
+
+\paragraph{Summary.}
+Under the model the attack is profitable only in the joint region
+$\{\rho>1\}\cap\{\Eval>\Eval^{*}\}$, the bribe scales only linearly with committee size, and the
+defender's decisive lever is the one that closes the window rather than the one that raises the cost.
+A discrete-event testbed with real signatures independently reproduces the $\rho\approx1$ threshold,
+and a case study of documented parameters places deployed systems in the safe regime---evidence
+landing inside the measured evidence-expiry horizon (\S\ref{sec:measured}) keeps $q\approx1$ and (G2)
+hard, while finality-gating closes (G1)---so the residual risk is concentrated in fast-exit,
+ungated-settlement designs, which \S\ref{sec:measured} exhibits on a real bridge path.
+Reconfiguration helps the attacker only in designs that let
+old-epoch certified artifacts execute before old-epoch evidence is enforced.

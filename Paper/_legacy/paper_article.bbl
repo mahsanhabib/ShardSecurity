@@ -1,0 +1,177 @@
+\begin{thebibliography}{10}
+
+\bibitem{austgen2025liquefaction}
+James Austgen, Andr\'{e}s F\'{a}brega, Mahimna Kelkar, Dani Vilardell, Sarah
+  Allen, Kushal Babel, Jay Yu, and Ari Juels.
+\newblock Liquefaction: Privately liquefying blockchain assets.
+\newblock In {\em Proceedings of the 2025 IEEE Symposium on Security and
+  Privacy (S\&P)}, pages 1493--1511, 2025.
+
+\bibitem{bano2019sok}
+Shehar Bano, Alberto Sonnino, Mustafa Al-Bassam, Sarah Azouvi, Patrick McCorry,
+  Sarah Meiklejohn, and George Danezis.
+\newblock {SoK}: Consensus in the age of blockchains.
+\newblock In {\em Proceedings of the 1st ACM Conference on Advances in
+  Financial Technologies (AFT)}, pages 183--198, 2019.
+
+\bibitem{buchman2018tendermint}
+Ethan Buchman, Jae Kwon, and Zarko Milosevic.
+\newblock The latest gossip on {BFT} consensus.
+\newblock arXiv preprint arXiv:1807.04938, 2018.
+
+\bibitem{buterin2017casper}
+Vitalik Buterin and Virgil Griffith.
+\newblock Casper the friendly finality gadget.
+\newblock arXiv preprint arXiv:1710.09437, 2017.
+
+\bibitem{castro1999pbft}
+Miguel Castro and Barbara Liskov.
+\newblock Practical byzantine fault tolerance.
+\newblock In {\em Proceedings of the 3rd Symposium on Operating Systems Design
+  and Implementation (OSDI)}, pages 173--186, 1999.
+
+\bibitem{cosmosdocs}
+{Cosmos / Interchain Stack}.
+\newblock Cosmos sdk documentation: Staking, slashing, and {IBC}.
+\newblock \url{https://docs.cosmos.network}, 2026.
+\newblock Parameters are approximate public values; confirm against current
+  specs.
+
+\bibitem{daian2020flashboys}
+Philip Daian, Steven Goldfeder, Tyler Kell, Yunqi Li, Xueyuan Zhao, Iddo
+  Bentov, Lorenz Breidenbach, and Ari Juels.
+\newblock Flash boys 2.0: Frontrunning in decentralized exchanges, miner
+  extractable value, and consensus instability.
+\newblock In {\em Proceedings of the 2020 IEEE Symposium on Security and
+  Privacy (S\&P)}, pages 910--927, 2020.
+
+\bibitem{ethconsensusspecs}
+{Ethereum}.
+\newblock Ethereum consensus specifications.
+\newblock \url{https://github.com/ethereum/consensus-specs}, 2026.
+\newblock Parameters are approximate public values; confirm against current
+  specs.
+
+\bibitem{gazi2025grinding}
+Peter Ga\v{z}i, Saad Quader, and Alexander Russell.
+\newblock Taming iterative grinding attacks on blockchain beacons.
+\newblock Cryptology ePrint Archive, Paper 2025/1974, 2025.
+\newblock Published in Advances in Cryptology---ASIACRYPT 2025, LNCS 16246,
+  Springer.
+
+\bibitem{harmony2019whitepaper}
+{Harmony Team}.
+\newblock Harmony: Technical whitepaper.
+\newblock \url{https://harmony.one}, 2019.
+
+\bibitem{karakostas2024bribing}
+Dimitris Karakostas, Aggelos Kiayias, and Thomas Zacharias.
+\newblock Blockchain bribing attacks and the efficacy of counterincentives.
+\newblock In {\em Proceedings of the 2024 ACM SIGSAC Conference on Computer and
+  Communications Security (CCS)}, pages 1031--1045, 2024.
+
+\bibitem{kelkar2025omerta}
+Mahimna Kelkar, Aadityan Ganesh, Aditi Partap, Joseph Bonneau, and S.~Matthew
+  Weinberg.
+\newblock Breaking omert\`{a}: On threshold cryptography, smart collusion, and
+  whistleblowing.
+\newblock In {\em Proceedings of the 2025 ACM SIGSAC Conference on Computer and
+  Communications Security (CCS)}, pages 3505--3519, 2025.
+
+\bibitem{kokoris2018omniledger}
+Eleftherios Kokoris-Kogias, Philipp Jovanovic, Linus Gasser, Nicolas Gailly,
+  Ewa Syta, and Bryan Ford.
+\newblock {OmniLedger}: A secure, scale-out, decentralized ledger via sharding.
+\newblock In {\em Proceedings of the 2018 IEEE Symposium on Security and
+  Privacy (S\&P)}, pages 583--598, 2018.
+
+\bibitem{lee2022sokbridge}
+Sung-Shine Lee, Alexandr Murashkin, Martin Derka, and Jan Gorzny.
+\newblock {SoK}: Not quite water under the bridge: Review of cross-chain bridge
+  hacks.
+\newblock arXiv:2210.16209; published at IEEE ICBC 2023, 2022.
+
+\bibitem{luu2016elastico}
+Loi Luu, Viswesh Narayanan, Chaodong Zheng, Kunal Baweja, Seth Gilbert, and
+  Prateek Saxena.
+\newblock A secure sharding protocol for open blockchains.
+\newblock In {\em Proceedings of the 2016 ACM SIGSAC Conference on Computer and
+  Communications Security (CCS)}, pages 17--30, 2016.
+
+\bibitem{mccorry2018smart}
+Patrick McCorry, Alexander Hicks, and Sarah Meiklejohn.
+\newblock Smart contracts for bribing miners.
+\newblock In {\em Financial Cryptography and Data Security Workshops
+  (BITCOIN)}, pages 3--18, 2018.
+
+\bibitem{multiversxdocs}
+{MultiversX}.
+\newblock Multiversx documentation: Adaptive state sharding.
+\newblock \url{https://docs.multiversx.com}, 2026.
+\newblock Parameters are approximate public values; confirm against current
+  specs.
+
+\bibitem{polkadotwiki}
+{Polkadot}.
+\newblock Polkadot wiki: Staking, slashing, and cross-consensus messaging.
+\newblock \url{https://wiki.polkadot.network}, 2026.
+\newblock Parameters are approximate public values; confirm against current
+  specs.
+
+\bibitem{sonnino2020replay}
+Alberto Sonnino, Shehar Bano, Mustafa Al-Bassam, and George Danezis.
+\newblock Replay attacks and defenses against cross-shard consensus in sharded
+  distributed ledgers.
+\newblock In {\em Proceedings of the 2020 IEEE European Symposium on Security
+  and Privacy (EuroS\&P)}, pages 294--308, 2020.
+
+\bibitem{sookitoth2025bribers}
+Bence So\'{o}ki-T\'{o}th, Istv\'{a}n~Andr\'{a}s Seres, Kamilla Kara, \'{A}bel
+  Nagy, Bal\'{a}zs Pej\'{o}, and Gergely Bicz\'{o}k.
+\newblock Bribers, bribers on the chain, is resisting all in vain? trustless
+  consensus manipulation through bribing contracts.
+\newblock Cryptology ePrint Archive, Paper 2025/1719 (also arXiv:2509.17185),
+  2025.
+
+\bibitem{tran2023crosschain}
+Quang Tran, Lin Chen, Lei Xu, Yang Lu, Rabimba Karanjai, and Weidong Shi.
+\newblock Cross chain bribery contracts: Majority vs mighty minority.
+\newblock arXiv preprint arXiv:2306.07984, 2023.
+\newblock An earlier version appeared in the PAAMS 2019 Workshops, LNCS,
+  pp.~121--133.
+
+\bibitem{winzer2019temporary}
+Fredrik Winzer, Benjamin Herd, and Sebastian Faust.
+\newblock Temporary censorship attacks in the presence of rational miners.
+\newblock In {\em 2019 IEEE European Symposium on Security and Privacy
+  Workshops (EuroS\&PW)}, pages 357--366, 2019.
+
+\bibitem{yin2019hotstuff}
+Maofan Yin, Dahlia Malkhi, Michael~K. Reiter, Guy~Golan Gueta, and Ittai
+  Abraham.
+\newblock {HotStuff}: Bft consensus in the lens of blockchain.
+\newblock In {\em Proceedings of the 2019 ACM Symposium on Principles of
+  Distributed Computing (PODC)}, pages 347--356, 2019.
+
+\bibitem{zamani2018rapidchain}
+Mahdi Zamani, Mahnush Movahedi, and Mariana Raykova.
+\newblock {RapidChain}: Scaling blockchain via full sharding.
+\newblock In {\em Proceedings of the 2018 ACM SIGSAC Conference on Computer and
+  Communications Security (CCS)}, pages 931--948, 2018.
+
+\bibitem{zamyatin2021sok}
+Alexei Zamyatin, Mustafa Al-Bassam, Dionysis Zindros, Eleftherios
+  Kokoris-Kogias, Pedro Moreno-Sanchez, Aggelos Kiayias, and William~J.
+  Knottenbelt.
+\newblock {SoK}: Communication across distributed ledgers.
+\newblock In {\em Financial Cryptography and Data Security (FC)}, pages 3--36,
+  2021.
+
+\bibitem{zilliqadocs}
+{Zilliqa}.
+\newblock Zilliqa documentation and technical whitepaper.
+\newblock \url{https://www.zilliqa.com}, 2026.
+\newblock Parameters are approximate public values; confirm against current
+  specs.
+
+\end{thebibliography}

@@ -1,0 +1,13 @@
+{
+  "chain_id": "fastexit-devnet-positive",
+  "backend": "shadow",
+  "preview": {
+    "episodes": 60,
+    "q_attack_point": 0.0,
+    "paired": 60,
+    "pwin_point": 1.0,
+    "T_settle_median_s": 3.3836349045283756,
+    "T_acc_median_s": 600.1974905529786,
+    "tacc_bound": "lo"
+  }
+}

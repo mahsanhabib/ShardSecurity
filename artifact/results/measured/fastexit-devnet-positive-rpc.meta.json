@@ -1,0 +1,18 @@
+{
+  "chain_id": "fastexit-devnet-positive",
+  "backend": "rpc",
+  "client": "gaiad v19.2.0",
+  "env": "WSL2 Ubuntu userspace, no sudo",
+  "mechanism": "two-nodes-one-key double-sign + real MsgUndelegate, observed complete_unbonding vs slash",
+  "episodes": 40,
+  "unbond_observed": 40,
+  "caught": 0,
+  "escaped": 40,
+  "q_attack_point": 0.0,
+  "T_acc_ms": {
+    "min": 2073.43408203125,
+    "median": 2083.1884765625,
+    "max": 4124.949951171875
+  },
+  "note": "real-client-code arm C (LOCALNET-RQ8.md); q-arm only, paired p_win from bridge self-fill arm"
+}

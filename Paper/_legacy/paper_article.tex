@@ -1,0 +1,27 @@
+% ===== paper_article.tex =====
+% FALLBACK wrapper that compiles without IEEEtran (used to produce the preview PDF).
+% Content is identical to paper.tex; only the document class / title block differ.
+% Compile: pdflatex paper_article -> bibtex paper_article -> pdflatex paper_article x2
+
+\documentclass[10pt,twocolumn]{article}
+\usepackage[letterpaper,margin=0.72in,columnsep=0.26in]{geometry}
+
+\input{common-preamble}
+
+\usepackage{titling}
+\setlength{\droptitle}{-3.5em}
+
+\title{\bfseries Priced to Equivocate: Sub-Threshold Committee Bribery and the Accountability Race in Sharded Blockchains}
+\author{Paper \#XXX \,---\, Double-Blind Submission\\
+\small\itshape Preview build (article class). Canonical submission file: \texttt{paper.tex} (IEEEtran).}
+\date{}
+
+\begin{document}
+\maketitle
+
+\input{body}
+
+\bibliographystyle{plain}
+\bibliography{refs}
+
+\end{document}

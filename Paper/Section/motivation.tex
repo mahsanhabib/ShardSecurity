@@ -1,0 +1,50 @@
+\section{Motivation and Problem Statement}
+\label{sec:motivation}
+
+\paragraph{What ``sub-threshold'' means.}
+Throughout, \emph{sub-threshold} refers to the \emph{network-wide} corruption threshold, not a
+committee's local one. A monolithic accountable BFT chain of $n$ validators tolerates up to a
+$1/3$ adversarial fraction globally. Our adversary stays comfortably below that global bound, yet
+buys enough faults to exceed the local threshold of a \emph{single} committee. The adversary is
+thus globally sub-threshold but locally decisive. This is precisely the regime sharding creates
+and monolithic analyses miss.
+
+\paragraph{Why the cost of corruption collapses under sharding.}
+Consider a network of $n$ validators partitioned into $m$ committees of size $N=n/m$. Attacking a
+monolithic chain requires corrupting $\Theta(n)$ validators; attacking one shard requires
+corrupting only $F+1 = \lfloor (N-1)/3\rfloor + 1$ validators. For the small committees used in
+practice---RapidChain reports committee sizes on the order of a few tens of
+nodes~\cite{zamani2018rapidchain}---the per-shard threshold is a handful of validators even when
+$n$ is in the thousands. Random assignment and periodic reconfiguration raise the cost of
+\emph{targeting} a specific committee, but they do not change the fact that, conditioned on
+revealed membership, the local safety margin is small.
+
+\paragraph{Why value is large.}
+A shard's finalized state is acted upon as though it were permanent. Cross-shard transaction
+protocols move assets between shards on the strength of finalized receipts, and bridges move
+assets between chains the same way~\cite{zamyatin2021sok,lee2022sokbridge}. Extractable value $V$
+is therefore bounded not by a single shard's local balances but by the liquidity reachable through
+its cross-shard and bridge interfaces. The same plumbing that makes sharding useful makes a
+single compromised shard valuable to attack.
+
+\paragraph{Why timing is the crux.}
+Accountable BFT does not prevent equivocation; it punishes it after the fact. The protective value
+of slashing is therefore a function of \emph{latency}: how long after the conflicting certificates
+appear can a transfer predicated on the bad branch still be reversed? Cross-shard pipelines are
+frequently asynchronous: the source shard finalizes first, emits a receipt, and the destination
+shard processes it later, paying gas on the destination side~\cite{harmony2019whitepaper}. If the
+destination effect (and any subsequent withdrawal) clears before the source-side equivocation is
+proven and the branch reverted, the adversary keeps the proceeds while the bribed validators bear
+the slashing. This is the accountability race. Committee reconfiguration does not eliminate this
+race; as we show in \S\ref{sec:reconf}, it \emph{relocates} it to the question of whether
+old-epoch certified artifacts execute before old-epoch equivocation evidence is enforced.
+
+\paragraph{Problem statement.}
+Given a sharded BFT protocol with committee size $N$, a slashing/eviction mechanism with
+accountability latency $\Tacc$, and a cross-shard settlement latency $\Tsettle$, we ask:
+(i) under what conditions does there exist a window $\Tsettle < \Tacc$ in which fraudulently
+finalized state can be converted to irreversible value; (ii) what is the minimum total bribe $B$
+required to forge the necessary conflicting certificate; (iii) for which configurations is the
+adversary's expected profit positive; and (iv) how does committee reconfiguration at the epoch
+boundary change the answer? We seek conditions that are \emph{checkable} against a concrete
+design, so that the same analysis serves both as an attack and as a design rule.

@@ -1,0 +1,23 @@
+\section{Implementation and Artifact}
+\label{sec:impl}
+
+We implement the model as a seeded artifact (\,$\sim$1{,}900 lines of Python over the standard library
+plus \texttt{numpy}, with \texttt{cryptography} for Ed25519 and \texttt{matplotlib}/\texttt{pyyaml}). It
+has three layers: an \emph{analysis} layer that evaluates the closed-form model and its Monte-Carlo
+counterparts; a \emph{proof-of-concept} that runs the attack end-to-end on an abstract committee; and a
+\emph{discrete-event testbed} in which the race latencies are \emph{measured outputs} of a running
+protocol, not inputs. Two properties are load-bearing for the evaluation. First, the testbed gives each
+validator a real Ed25519 keypair, delivers every message after a heavy-tailed per-link latency, and
+derives $\Tacc$ and $\Tsettle$ from event timing---so the agreement between testbed and closed form
+(\S\ref{sec:eval}, Fig.~\ref{fig:testbed}) is a genuine cross-validation rather than a tautology, and
+the equivocation evidence is a real $\ArtifactEvidenceBytes$-byte pair of $\ArtifactSigBytes$-byte
+signatures over conflicting values. Second, the driver \emph{self-validates} before producing any
+result (\S\ref{sec:eval}): the Monte-Carlo harness must reproduce the closed-form $\psucc$ to tolerance,
+a sub-floor purchase ($k<F{+}1$) must yield zero conflicting certificates, and the end-to-end PoC must
+emit valid evidence and a paying escrow. The three layers share a single core: one component is the
+source of truth for the equations of \S\ref{sec:design}, an \emph{independent} Monte-Carlo estimator
+cross-checks $\psucc$, and the testbed derives the race latencies; the reconfiguration analysis, the
+real-systems case study, and the read-only live measurement of \S\ref{sec:measured} reuse the same
+core rather than re-deriving its quantities. A module-by-module map of the artifact, together with the
+reproduction commands and the parameter file, is given in Appendix~\ref{app:repro}
+(Table~\ref{tab:artifact}); the live-measurement collectors are read-only over public data.

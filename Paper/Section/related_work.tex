@@ -1,0 +1,222 @@
+\section{Background and Related Work}
+\label{sec:related}
+\label{sec:background}
+
+\paragraph{Sharded BFT and quorum intersection.}
+We assume the now-standard committee-based design~\cite{luu2016elastico,kokoris2018omniledger,zamani2018rapidchain}
+in which each shard runs a quorum-based BFT protocol~\cite{castro1999pbft,yin2019hotstuff,buchman2018tendermint}.
+The safety of a single shard rests on quorum intersection (Lemma~\ref{lem:intersection}). Cross-shard
+atomicity is typically achieved with a two-phase-commit-style protocol coordinated either by the
+client or by the shards~\cite{kokoris2018omniledger}; both variants are known to be fragile, as we
+discuss below.
+
+\paragraph{Single-shard compromise and adaptive corruption.}
+That a committee exceeding its Byzantine threshold compromises all transactions touching it is
+identified as an outstanding problem in the canonical systematization~\cite{bano2019sok}. A long
+line of sharding work treats the Byzantine fraction as \emph{exogenous} and asks how to make a
+captured committee less likely---large committees and unbiasable assignment~\cite{luu2016elastico},
+periodic reconfiguration and bounded-adversary epoch models~\cite{zamani2018rapidchain}---or how to
+detect capture after the fact. We instead ask what it \emph{costs} to produce the captured committee
+once membership is revealed, and what the captor can then extract before accountability resolves.
+
+\paragraph{Adaptive corruption and corrupted-shard tolerance.}
+Closest in setting are adaptive-corruption analyses of sharding. \cite{avarikioti2019divide}
+formalizes when a sharded ledger stays consistent and scalable against epoch-adaptive versus fully
+adaptive adversaries (requiring succinct state-update proofs at epoch boundaries), and
+\cite{rana2022free2shard} defends a globally sub-threshold but locally concentrated adaptive adversary
+by letting honest nodes re-allocate across shards; \cite{david2022gearbox} minimizes committee size by
+separating safety from liveness, which only \emph{amplifies} the leverage of our attack, since smaller
+committees are cheaper to bribe. Most directly, the concurrent Camael design~\cite{liu2025camael}
+formalizes exactly our structural premise---a single shard exceeding its local BFT threshold (up to
+$2/3$ corrupt) while global stake stays below $1/3$---and builds a \emph{defense} that detects
+concealed safety violations via snapshots, convicts offenders, and reconfigures the shard. These works
+treat the captured committee as a \emph{corruption}-budget event and target consistency, liveness, or
+remediation; we treat it as an \emph{economic procurement} event and ask what the captor extracts
+before accountability resolves. Tellingly, Camael's snapshot-and-conviction pipeline is itself an
+instance of the accountability latency $\Tacc$ our race turns on.
+
+\paragraph{Bribery and crypto-economic security.}
+The economic study of buying consensus predates trustless contracts: \cite{bonneau2016rent} showed a
+\emph{rented} majority has no long-term stake to protect and is cheap to mobilize, and the
+$P{+}\epsilon$ argument~\cite{buterin2015pepsilon} showed a credible conditional payment can make the
+adversary's preferred action dominant at near-zero realized cost. Bribing consensus participants via
+smart contracts originates with~\cite{mccorry2018smart};
+\cite{winzer2019temporary} studies temporary censorship by rational miners (with bribes that are
+\emph{not} trustless, as the bribee must trust the briber). \cite{tran2023crosschain} proposes
+cross-chain bribery contracts that bribe rational miners in a target network at low cost.
+\cite{judmayer2021sok,judmayer2021paytowin} systematize these \emph{algorithmic
+incentive-manipulation} attacks and demonstrate cheap, crowdfundable, cross-chain bribery funding a
+double-spend on a target chain, and out-of-band collusion contracts~\cite{zhang2023outofband} make
+defection the strict equilibrium for a sub-threshold rational coalition, even sketching evasion of
+slashing by censoring the proof; that proposer--user side contracts are a fundamental incentive limit
+is established by the impossibility of side-contract-proof transaction-fee
+mechanisms~\cite{roughgarden2021tfm,chung2023foundations}.
+\cite{karakostas2024bribing} gives a game-theoretic treatment of bribery aimed at PoS \emph{safety},
+distinguishing \emph{guided} bribes (paid for prescribed behavior) from \emph{effective} bribes
+(paid conditional on attack success), and shows that counterincentives---specifically slashing and
+dilution---characterize when the attack becomes unprofitable. Most recently,
+\cite{sookitoth2025bribers} implements and evaluates three trustless bribery mechanisms on a deployed
+PoS system---buying votes to fork, inducing validator exits, and auctioning randomness-beacon
+(RANDAO) manipulation---and explicitly debunks the belief that crypto-economic security equals the
+total staked value. Modern variants coerce attesters through credible
+commitments~\cite{sarenche2024commitment} or buy block delay for MEV without triggering slashing at
+all~\cite{yang2024bride}, while \cite{newman2023decentralization} shows the equilibrium per-validator
+bribe can fall well below naive expected-loss bounds via low pivotality. Related work studies smart
+collusion and whistleblowing as a counterforce to
+such contracts~\cite{kelkar2025omerta}, the private liquefaction of staked assets to enable
+vote-buying~\cite{austgen2025liquefaction}, and grinding/manipulation of blockchain randomness
+beacons~\cite{gazi2025grinding}. These works establish that buying equivocation is feasible,
+trustless, and far cheaper than the total-stake figure suggests. They do \emph{not} model the
+small-committee quorum structure, the cross-shard realization of the resulting violation, or the way
+accountability latency \emph{prices} the bribe.
+
+\paragraph{Economic limits, slashable safety, and accountability latency.}
+A separate line bounds attacks economically rather than by a Byzantine fraction. Budish's
+flow-versus-stock argument~\cite{budish2018economic} and its permissionless-consensus
+generalization~\cite{budish2024economic} establish that an attack is deterred only when its cost
+exceeds its profit and---decisively for us---that under partial synchrony above the $1/3$ threshold
+targeted punishment \emph{cannot} be enforced before the violator liquidates, an intrinsic
+latency-bounded limit on accountability. STAKESURE makes the cost-of-corruption versus
+profit-from-corruption gate explicit and caps attacker profit by gating off-chain and bridge value
+release on a reversion window~\cite{deb2024stakesure}; CoBRA bounds finalizable value below the
+slashable stake so a rational validator's gain cannot exceed its bond~\cite{avarikioti2025cobra}; and
+Bitcoin-enhanced PoS makes the unbonding delay the operative security variable, racing slashing
+against withdrawal and gating safety on external finality~\cite{tas2023bitcoin}. These results rest on
+an accountability substrate we also assume: identifiability of culprits after a
+fork~\cite{civit2021polygraph}, per-protocol forensic support fixing how many of the necessary
+equivocators are provably catchable~\cite{sheng2021forensics}, the accountable-finalized prefix
+underlying finality-gating~\cite{neu2022accountability}, and the detection-and-recovery machinery
+whose latency we abstract as $\Tacc$~\cite{gong2025recover}. All study a monolithic, single-chain, or
+restaking~\cite{durvasula2025restaking} setting in which the adversary owns stake or value is
+throttled, and most assume slashing is effectively immediate. We instead study a globally
+\emph{sub-threshold} adversary who, after committee assignment, \emph{buys} the $F{+}1$ equivocators
+one $N{=}3F{+}1$ committee makes necessary, prices that bribe by the probability $q$ that the proof is
+enforced before stake becomes unslashable, and realizes value across the shard/bridge boundary in
+$\Tsettle$ before $\Tacc$; our finality-gating immunity (Proposition~\ref{prop:immunity}) specializes
+the accountable-finalized-prefix idea to cross-shard acceptance.
+
+\paragraph{Bribing against an accountability window.}
+Closest to our race in spirit is the economic-censorship game of~\cite{berger2025censorship}, in which
+an attacker bribes block proposers to censor a defender's challenge transactions and \emph{exhaust the
+challenge-period time budget}, with the attacker/defender budget ratio deciding who wins; the
+analogous failure where winning a fraud proof is itself unprofitable is studied
+by~\cite{lee2025hollow}. This is the same move our $\Tsettle<\Tacc$ gate captures---paying to outlast
+accountability---but their adversary censors a single defender's transaction in an
+L1$\rightarrow$L2 challenge window, whereas ours buys the quorum-intersection equivocators of an
+$N{=}3F{+}1$ committee and races \emph{irreversible cross-shard/bridge} settlement against
+detection-and-slashing rather than depleting a fixed challenge clock. The dual defensive
+primitive---a remote unbonding protocol that guarantees slashing \emph{before} stake is
+withdrawn---is exactly the ``slash before unslashable'' condition our $q$
+measures~\cite{dong2024remotestaking}, as is the ``correct until withdrawal'' collateral with
+committee resets of~\cite{baron2025aegis}.
+
+\paragraph{Cross-shard, cross-chain, and settlement-before-finality value extraction.}
+\cite{sonnino2020replay} presents replay attacks on cross-shard consensus that enable double-spends
+and even minting \emph{without subverting any node} and even when Byzantine safety holds---a
+different vector from ours (protocol-level message replay, not committee corruption), defended by
+their Byzcuit protocol, but clear evidence that cross-shard settlement is a realizable value sink. In
+the cross-chain setting, extracting value on a destination and then reverting the source---the
+canonical bridge double-mint and reorg-double-spend pattern~\cite{zamyatin2021sok,lee2022sokbridge}---is
+precisely the timing move our $\Tsettle<\Tacc$ gate formalizes, but there the reversal is an
+opportunistic reorg against a bridge that acts before finality~\cite{schwarzschilling2022three}, not a
+reversal manufactured \emph{inside} the protocol by a bribed committee. Miner/maximal-extractable-value
+research~\cite{daian2020flashboys} further shows that consensus-level manipulation has directly
+monetizable value, and empirical and cross-domain studies quantify the magnitude of such extractable
+value~\cite{qin2022quantifying,mcmenamin2023sok}; together these motivate treating $V$ as bounded by
+reachable liquidity rather than local balances.
+
+\paragraph{Accountable BFT, slashing, and reconfiguration.}
+Accountable consensus turns equivocation into a transferable fraud proof and slashes the offending
+stake~\cite{buterin2017casper,buchman2018tendermint}; this is the defender we assume, and the reason
+the bare composition of ``small committee'' and ``buyable faults'' is not yet an attack. Sharded
+systems additionally rotate committees across epochs and hand off shard state and cross-shard
+artifacts at the boundary~\cite{zamani2018rapidchain,kokoris2018omniledger}. Prior work studies
+reconfiguration as a means of \emph{raising} adversarial cost (a fresh committee each epoch); we
+study how the boundary interacts with accountability, and identify exactly when handoff relocates the
+race rather than closing it (\S\ref{sec:reconf}).
+
+\paragraph{Positioning.}
+Table~\ref{tab:positioning} situates this work against the closest prior art across the ten
+capability dimensions that jointly define the attack. The five \emph{load-bearing} axes are
+whether the work \emph{prices} the corruption, whether it is \emph{committee-local}, whether it
+models \emph{cross-shard settlement}, whether it models the \emph{accountability race} (value
+before slashing), and whether it treats \emph{reconfiguration handoff}; we add five finer
+capability columns---a \emph{trustless} payment channel, a \emph{safety} (rather than liveness or
+censorship) target, a bribe priced by slashing \emph{latency} $q$, an \emph{immunity} condition,
+and an \emph{implemented/measured} artifact---so the comparison is granular rather than coarse.
+Read by rows, every prior mechanism leaves at least four columns empty; read by the bottom block,
+no prior work addresses more than a handful of the dimensions. Only this work spans all of them,
+and that intersection---plus the explicit viability and immunity conditions---is the contribution
+of this paper.
+
+\begin{table*}[t]
+\centering
+\caption{Positioning against the closest prior work across the capability dimensions of the attack.
+\yes~addresses it, \partialmark~partially/implicitly, \nomark~does not, \namark~not applicable to
+that work's setting. Columns: bribe \emph{priced}; \emph{trustless} payment (no briber--bribee
+trust); targets \emph{safety} (vs.\ liveness/censorship); \emph{committee-local} sub-threshold
+quorum; cross-shard/bridge \emph{value} realization; the \emph{accountability race} (value before
+slashing); bribe priced by slashing \emph{latency} $q$; an \emph{immunity}-by-construction
+condition; \emph{reconfiguration} handoff; and an \emph{implemented/measured} artifact. This work
+is the only row populated across every dimension.}
+\label{tab:positioning}
+\scriptsize
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{@{}l l *{10}{c}@{}}
+\toprule
+\textbf{Work} & \textbf{Setting}
+ & \rotatebox[origin=l]{90}{Bribe \emph{priced}\,}
+ & \rotatebox[origin=l]{90}{Trustless\,}
+ & \rotatebox[origin=l]{90}{Targets \emph{safety}\,}
+ & \rotatebox[origin=l]{90}{Committee-local\,}
+ & \rotatebox[origin=l]{90}{Cross-shard $V$\,}
+ & \rotatebox[origin=l]{90}{Accountability race\,}
+ & \rotatebox[origin=l]{90}{Latency-priced $q$\,}
+ & \rotatebox[origin=l]{90}{Immunity condition\,}
+ & \rotatebox[origin=l]{90}{Reconfig.\ handoff\,}
+ & \rotatebox[origin=l]{90}{Impl./measured\,} \\
+\midrule
+\textbf{This work} & sharded
+ & \yes & \yes & \yes & \yes & \yes & \yes & \yes & \yes & \yes & \yes \\
+\midrule
+\multicolumn{12}{@{}l}{\textit{Bribery mechanisms}}\\
+Bribing miners~\cite{mccorry2018smart} & monolithic
+ & \yes & \yes & \partialmark & \nomark & \nomark & \nomark & \nomark & \nomark & \nomark & \yes \\
+Cross-chain bribery~\cite{tran2023crosschain} & cross-chain
+ & \yes & \yes & \partialmark & \nomark & \partialmark & \nomark & \nomark & \nomark & \nomark & \partialmark \\
+Pay-to-win~\cite{judmayer2021paytowin} & cross-chain
+ & \yes & \yes & \partialmark & \nomark & \partialmark & \nomark & \nomark & \nomark & \nomark & \partialmark \\
+Out-of-band collusion~\cite{zhang2023outofband} & monolithic
+ & \yes & \yes & \nomark & \partialmark & \nomark & \partialmark & \nomark & \nomark & \nomark & \nomark \\
+Bribing \& counterincentives~\cite{karakostas2024bribing} & monolithic
+ & \yes & \namark & \yes & \nomark & \partialmark & \partialmark & \nomark & \nomark & \nomark & \nomark \\
+BriDe Arbitrager~\cite{yang2024bride} & monolithic
+ & \yes & \yes & \nomark & \partialmark & \nomark & \nomark & \nomark & \nomark & \nomark & \yes \\
+Trustless bribery contracts~\cite{sookitoth2025bribers} & monolithic
+ & \yes & \yes & \partialmark & \nomark & \nomark & \nomark & \nomark & \nomark & \nomark & \yes \\
+\addlinespace[1pt]
+\multicolumn{12}{@{}l}{\textit{Economic limits and slashable safety}}\\
+Economic limits~\cite{budish2024economic} & monolithic
+ & \namark & \namark & \yes & \nomark & \nomark & \partialmark & \partialmark & \nomark & \nomark & \nomark \\
+STAKESURE~\cite{deb2024stakesure} & restaking
+ & \partialmark & \namark & \partialmark & \nomark & \partialmark & \partialmark & \nomark & \yes & \nomark & \nomark \\
+CoBRA~\cite{avarikioti2025cobra} & monolithic
+ & \namark & \namark & \yes & \nomark & \partialmark & \partialmark & \nomark & \yes & \nomark & \partialmark \\
+Bitcoin-enhanced PoS~\cite{tas2023bitcoin} & monolithic
+ & \namark & \namark & \yes & \nomark & \nomark & \partialmark & \partialmark & \yes & \partialmark & \partialmark \\
+Remote staking~\cite{dong2024remotestaking} & restaking
+ & \namark & \namark & \yes & \nomark & \partialmark & \yes & \yes & \partialmark & \partialmark & \nomark \\
+\addlinespace[1pt]
+\multicolumn{12}{@{}l}{\textit{Accountability-window and sharding}}\\
+Economic censorship games~\cite{berger2025censorship} & rollup
+ & \partialmark & \namark & \nomark & \nomark & \nomark & \yes & \partialmark & \nomark & \nomark & \nomark \\
+Corrupted-shard tolerance~\cite{liu2025camael} & sharded
+ & \namark & \namark & \yes & \yes & \partialmark & \nomark & \nomark & \nomark & \partialmark & \yes \\
+Cross-shard replay~\cite{sonnino2020replay} & sharded
+ & \namark & \namark & \yes & \yes & \yes & \nomark & \nomark & \nomark & \nomark & \yes \\
+Free2Shard~\cite{rana2022free2shard} & sharded
+ & \namark & \namark & \yes & \yes & \nomark & \nomark & \nomark & \nomark & \partialmark & \partialmark \\
+\bottomrule
+\end{tabular}
+\end{table*}

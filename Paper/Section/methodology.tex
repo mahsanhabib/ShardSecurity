@@ -1,0 +1,258 @@
+\section{A Model of Priced Equivocation and the Accountability Race}
+\label{sec:design}
+
+We now build the model. Table~\ref{tab:notation} summarizes notation, and Table~\ref{tab:results}
+previews the formal results, which we prove in this section and \S\ref{sec:reconf}.
+
+\begin{table}[t]
+\centering
+\caption{Summary of formal results. The single conditional inequality $\Tsettle<\Tacc$ (gate G1)
+governs all of them: closing it yields immunity, leaving it open sustains the attack.}
+\label{tab:results}
+\small
+\begin{tabularx}{\linewidth}{@{}l X l@{}}
+\toprule
+Result & Statement & Where \\
+\midrule
+Lemma~\ref{lem:intersection} & Two conflicting commit certificates force $\ge F{+}1$ equivocators
+(quorum intersection) & \S\ref{sec:floor} \\
+Prop.~\ref{prop:immunity} & Finality-gating cross-shard acceptance forces $\pwin{=}0$, hence
+$\mathbb{E}[\Pi]\le0$ (immunity by construction) & \S\ref{sec:race} \\
+Prop.~\ref{prop:reconf-safe} & A handoff meeting conditions (i)--(iv) keeps $\pwin{=}0$ for old-epoch
+certified artifacts after rotation & \S\ref{sec:reconf} \\
+Prop.~\ref{prop:reconf-residual} & Ungated carryover makes $\mathbb{E}[\Pi(a)]$ rise toward the
+epoch boundary (residual vulnerability) & \S\ref{sec:reconf} \\
+Cex.~\ref{cex:persistent}--\ref{cex:rolling} & Four boundaries where the attack fails: persistent
+slashability, gated carryover, cross-shard freeze, rolling reconfiguration & \S\ref{sec:reconf} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Notation for the sub-threshold bribery and accountability-race model.}
+\label{tab:notation}
+\small
+\begin{tabularx}{\linewidth}{@{}lX@{}}
+\toprule
+Symbol & Meaning \\
+\midrule
+$N=3F+1$ & committee size; $F$ tolerated faults \\
+$Q=2F+1$ & commit quorum size \\
+$k=F+1$ & equivocators needed for two conflicting certificates \\
+$\varphi$ & view-split: fraction of honest votes on one branch \\
+$s_i,\,R_i$ & validator $i$'s bonded stake; continuation value \\
+$q$ & Pr[fraud proof enforced before stake unslashable] \\
+$b_i,\,B$ & bribe to validator $i$; total bribe $\sum_i b_i$ \\
+$\Eval$ & value extractable via the conflicting finality \\
+$\Tsettle$ & time to irreversibly realize $\Eval$ \\
+$\Tacc$ & accountability latency (detect$\rightarrow$slash$\rightarrow$revert) \\
+$\pwin$ & $\Pr[\Tsettle < \Tacc]$ \\
+$\psucc$ & $\Pr[\text{conflicting finality}\mid k\text{ equivocators}]$ \\
+$\Cop$ & operating cost (gas, infrastructure, stake acquisition) \\
+$\Pi$ & adversary net profit \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{The Equivocation Floor (Necessary, Not Sufficient)}
+\label{sec:floor}
+
+\begin{lemma}[Equivocation floor]\label{lem:intersection}
+In a committee of $N=3F+1$ with commit quorum $Q=2F+1$, any two conflicting commit certificates
+share at least $F+1$ signers, each of whom must have signed both branches. Hence at least
+$k=F+1$ validators must equivocate.
+\end{lemma}
+\begin{proof}
+Two certificates are sets $Q_1,Q_2$ of signers with $|Q_1|=|Q_2|=2F+1$ drawn from $N=3F+1$ validators.
+By inclusion--exclusion, $|Q_1\cap Q_2|\ge |Q_1|+|Q_2|-N = 2(2F+1)-(3F+1)=F+1$. A validator in
+$Q_1\cap Q_2$ signed both (conflicting) values, i.e.\ equivocated. Thus $|\{\text{equivocators}\}|\ge F+1$.
+\end{proof}
+
+Lemma~\ref{lem:intersection} gives a \emph{necessary} condition. It is emphatically \emph{not}
+sufficient: each certificate still needs $Q-(F{+}1)=F$ additional signatures from honest validators,
+which requires that the honest validators be \emph{split} across the two branches. We make this
+quantitative. Suppose the adversary buys $k\ge F+1$ equivocators; the remaining $H=N-k$ honest
+validators each commit to one branch, voting for branch $A$ with probability $\varphi$ (the
+view-split the adversary engineers via leader equivocation, message delay, or transient asynchrony).
+Branch $A$ finalizes iff $k+h_A\ge Q$ and branch $B$ iff $k+(H-h_A)\ge Q$, where $h_A$ is the number
+of honest $A$-votes. Both hold iff
+\begin{equation}
+Q-k \;\le\; h_A \;\le\; N-Q,
+\label{eq:band}
+\end{equation}
+where the upper bound is the branch-$B$ quorum constraint $k+(H-h_A)\ge Q$ with $H=N-k$, giving
+$h_A\le H-(Q{-}k)=N-Q$ \emph{independently of} $k$. This is a feasible band of width $k-F$ for
+$F{+}1\le k\le Q$ (exactly $1$ when $k=F+1$, the single point $h_A=N-Q=F$): each equivocator bought
+beyond the floor adds exactly one feasible split. Modeling $h_A\sim\mathrm{Binomial}(H,\varphi)$,
+\begin{equation}
+\psucc(N,k,\varphi) \;=\; \Pr\!\big[\,Q-k \le h_A \le N-Q\,\big].
+\label{eq:psucc}
+\end{equation}
+Two consequences matter. First, at the floor $k=F+1$ the band collapses to the single point
+$h_A=F$: an adversary with \emph{no} control over views must hit an exact even split, so $\psucc$ is
+modest (for $N=31$, $\psucc=\ArtifactPsuccFloor$ at $\varphi=\tfrac12$). Second, each extra purchased
+equivocator widens the band, and $\psucc$ is maximized at $\varphi=\tfrac12$. The adversary therefore
+trades bribe budget against split-control, and the two routes to a high $\psucc$ price it very
+differently. By an \emph{uncontrolled} split, reaching $\psucc\approx0.85$ at $N=31$ needs $k\approx
+F{+}6$ (about half the committee), which raises the bribe to ${\approx}1.45\times$ the $F{+}1$ floor
+(at $k{=}F{+}5$, ${\approx}1.36\times$, $\psucc\approx0.79$);
+by \emph{view/leader control}---the leader-occupation lever the threat model grants only with bounded
+probability (\S\ref{sec:threat})---a near-even split is forced at the floor bribe. Consequently the
+profitability analyses of \S\ref{sec:eval} that fix $\psucc=0.85$ adopt the view-control regime, and we
+bracket every such result against the uncontrolled-split floor $\psucc=\ArtifactPsuccFloor$ rather than
+treat $0.85$ as a default. We treat
+$\psucc$ as a protocol-and-network property, not a per-validator cost, and validate
+Eq.~\eqref{eq:psucc} against a Monte-Carlo BFT harness in \S\ref{sec:eval}.
+
+\subsection{Bribe-Cost Model}
+\label{sec:cost}
+
+Under Assumption~\ref{ass:rational}, validator $i$ equivocates iff the bribe covers its expected
+loss. Equivocation is maximally accountable (Assumption~\ref{ass:accountable}): if the proof is
+enforced before $i$'s stake becomes unslashable, $i$ loses bonded stake $s_i$ and forfeits
+continuation value $R_i$. Let $q=\Pr[\text{proof enforced before } i\text{'s stake unslashable}]$.
+Then the individual participation constraint is
+\begin{equation}
+b_i \;\gtrsim\; q\,(s_i + R_i),
+\label{eq:bribe-individual}
+\end{equation}
+and, summing over the $k=F+1$ required equivocators (homogeneous case $s_i=s,\,R_i=R$),
+\begin{equation}
+B \;=\; \sum_{i=1}^{F+1} b_i \;\approx\; (F+1)\,q\,(s + R).
+\label{eq:bribe-total}
+\end{equation}
+Equation~\eqref{eq:bribe-total} departs from analyses that equate security with total stake: the
+adversary pays for $F+1$ validators, not the whole committee, and pays a \emph{fraction} $q$ of each
+one's stake-at-risk rather than its face value. Crucially, $q$ is not a constant of the universe. It
+is determined by the defender, through (i) the accountability latency $\Tacc$ relative to the
+unbonding/withdrawal delay, (ii) the validity and propagation of equivocation evidence, and (iii) the
+reliability of enforcement. We make the latency dependence explicit in \S\ref{sec:race} and the
+unbonding/rotation dependence in \S\ref{sec:reconf}, where $q$ becomes a function $q(a)$ of attack
+time within the epoch.
+
+\subsection{Value Model}
+\label{sec:value}
+
+Let $\Eval$ be the value the adversary can extract by acting on the fraudulently finalized branch
+before the conflict is resolved. $\Eval$ is upper-bounded by (i) the liquidity reachable through the
+target shard's cross-shard and bridge interfaces within $\Tsettle$, and (ii) the state that the
+conflicting certificate can fork (e.g.\ the balances whose double-spend the two branches encode). We
+treat $\Eval$ as an exogenous deployment parameter and sweep it in \S\ref{sec:eval}.
+
+\subsection{The Accountability Race}
+\label{sec:race}
+
+Start the clock when the conflicting certificate exists ($t=0$). Two latencies compete:
+\begin{align*}
+\Tsettle &= \text{(dest.\ receipt processing)} \\
+         &\quad + \text{(withdrawal beyond clawback)},\\
+\Tacc    &= \text{(observe both certs)} + \text{(propagate proof)} \\
+         &\quad + \text{(enforce slashing)} + \text{(revert/quarantine)}.
+\end{align*}
+The adversary retains $\Eval$ only if it settles before accountability lands. Define
+$\pwin=\Pr[\Tsettle<\Tacc]$. Combining with the success probability $\psucc$ that $k$ equivocators
+actually yield conflicting finality, the realized value is $\psucc\,\pwin\,\Eval$ in expectation. This
+product treats the honest-split event (probability $\psucc$) and the window-open event (probability
+$\pwin$) as \emph{independent}; we adopt this as a modeling assumption and note its sign. Both are
+driven by the same lever---induced asynchrony or leader control raises $\psucc$ and, by delaying
+certificate observation and proof propagation, also raises $\pwin$ (the $\Tacc$-as-master-variable
+coupling below)---so their covariance is plausibly nonnegative, making the factored $\psucc\,\pwin$ a
+\emph{lower} bound on $\mathbb{E}[\psucc\pwin]$ and the break-even $\Eval^{*}\sim1/(\psucc\pwin)$ a
+conservative \emph{upper} bound. Immunity ($\pwin=0$) is unaffected.
+
+\paragraph{Profitability.}
+With \emph{guided} bribes (paid regardless of outcome, per Assumption~\ref{ass:rational} and
+\cite{karakostas2024bribing}) and operating cost $\Cop$, expected profit is
+\begin{equation}
+\mathbb{E}[\Pi] \;=\; \psucc\,\pwin\,\Eval \;-\; B \;-\; \Cop.
+\label{eq:profit-guided}
+\end{equation}
+With \emph{effective} (success-conditional) bribes, the cost moves inside the success event but
+validators demand a premium $B_{\mathrm{succ}}>B$ to bear slashing risk on failed attempts, while
+failed attempts may still incur $B_{\mathrm{fail}}\ge 0$:
+\begin{equation}
+\begin{aligned}
+\mathbb{E}[\Pi] ={}& \psucc\,(\pwin\,\Eval - B_{\mathrm{succ}})\\
+&{} - (1-\psucc)\,B_{\mathrm{fail}} - \Cop.
+\end{aligned}
+\label{eq:profit-effective}
+\end{equation}
+The attack is worth attempting iff $\mathbb{E}[\Pi]>0$. In the deterministic-win, full-success limit
+($\psucc=\pwin=1$), \eqref{eq:profit-guided} reduces to a clean pair of \emph{independent gates}:
+\begin{align}
+\mathrm{(G1)}\quad & \Tsettle < \Tacc, \label{eq:g1}\\
+\mathrm{(G2)}\quad & \Eval > B + \Cop, \label{eq:g2}\\
+& B=(F{+}1)\,q\,(s{+}R). \nonumber
+\end{align}
+Both gates must hold. (G1) is a property of the protocol's pipeline and accountability machinery;
+(G2) is an economic property of stake, liquidity, and $q$.
+
+\paragraph{$\Tacc$ as a master variable.}
+The two gates are coupled through $\Tacc$. A larger $\Tacc$ (slower or less reliable accountability)
+raises $\pwin$ in (G1) \emph{and} lowers $q$ in (G2)---validators who expect to escape enforcement
+before unbonding accept smaller bribes. Thus slow accountability harms the defender twice: it widens
+the settlement window \emph{and} cheapens corruption. ``Cheap to corrupt'' and ``easy to cash out''
+are two symptoms of one underlying quantity. This observation, rather than any single inequality, is
+the conceptual core of the paper, and it is why purely economic defenses (bigger committees, more
+stake) are not a substitute for closing the window.
+
+\begin{proposition}[Immunity by construction]\label{prop:immunity}
+If the protocol admits cross-shard (and bridge) effects predicated on a source-shard certificate
+only after that certificate is past the source shard's accountability window---formally, if it
+guarantees $\Tsettle \ge \Tacc$ for every such effect---then $\pwin=0$, and by
+\eqref{eq:profit-guided} $\mathbb{E}[\Pi]=-B-\Cop\le 0$ for any $B\ge 0,\ \Cop\ge 0$, strictly
+negative whenever $B+\Cop>0$ (any attack that pays a bribe or gas). No rational
+adversary (Assumption~\ref{ass:rational}) mounts the attack, independent of committee size $N$ or
+stake $s$.
+\end{proposition}
+\begin{proof}
+By hypothesis every value-realizing cross-shard effect occurs at or after $\Tacc$, so
+$\Pr[\Tsettle<\Tacc]=0$, i.e.\ $\pwin=0$. Substituting into \eqref{eq:profit-guided} gives
+$\mathbb{E}[\Pi]=-(B+\Cop)\le 0$, strictly negative whenever the adversary pays any bribe or gas. Under
+Assumption~\ref{ass:rational} the adversary declines a strictly negative-expectation action.
+\end{proof}
+
+Proposition~\ref{prop:immunity} is a design rule as much as a theorem: it states the exact condition
+a sharded system must enforce to be unconditionally safe against this attack, and explains why
+enlarging committees or stake (which affect only (G2)) does not help once (G1) is open.
+
+\subsection{Attack Procedure}
+\label{sec:procedure}
+
+Algorithm~\ref{alg:attack} states the end-to-end procedure; Figure~\ref{fig:flow} depicts it. The
+trustless payment mechanism is a contract that releases a bribe only upon submission of a valid
+equivocation proof by a registered validator, so neither party need trust the other
+(cf.~\cite{sookitoth2025bribers}). Appendix~\ref{app:contract} sketches the contract; \S\ref{sec:impl}
+reports a runnable local model of the same logic.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.86\linewidth]{fig1_attack_flow.pdf}
+\caption{Sub-threshold committee bribery and the accountability race. The adversary retains $V$ only
+if cross-shard settlement ($\Tsettle$) precedes end-to-end accountability ($\Tacc$).}
+\label{fig:flow}
+\end{figure}
+
+\begin{algorithm}[t]
+\caption{Sub-threshold committee bribery with accountability race}
+\label{alg:attack}
+\begin{algorithmic}[1]
+\State \textbf{Input:} target committee $C$ ($|C|=3F{+}1$), value target $\Eval$, budget
+\State Estimate $\Tacc,\Tsettle,q$ for $C$ and its cross-shard interface
+\If{$\Tsettle \ge \Tacc$ \textbf{or} $\Eval \le (F{+}1)q(s{+}R)+\Cop$}
+  \State \textbf{abort} \Comment{a gate fails; not profitable (cf.\ Prop.~\ref{prop:immunity})}
+\EndIf
+\State Deploy \textsc{PayToEquivocate} escrow funded with $B \approx (F{+}1)q(s{+}R)$
+\State Recruit $k=F{+}1$ validators of $C$ to register and commit to equivocate
+\State Engineer/await a usable view (leader equivocation or transient asynchrony) so honest
+       validators split across branches $b_A \ne b_B$
+\State Drive $C$ to finalize conflicting certificates $\sigma_A$ on $b_A$ and $\sigma_B$ on $b_B$
+\State On branch $b_A$, submit the cross-shard receipt that moves/duplicates $\Eval$
+\State Withdraw $\Eval$ on the destination beyond clawback \Comment{completes at $\Tsettle$}
+\State Bribed validators submit equivocation proofs to \textsc{PayToEquivocate}; bribes released
+\State \textbf{Outcome:} if completed before $\Tacc$, adversary retains $\Eval$; bribed validators
+       are slashed
+\end{algorithmic}
+\end{algorithm}
+

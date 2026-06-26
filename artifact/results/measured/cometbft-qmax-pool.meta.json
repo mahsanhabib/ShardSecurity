@@ -1,0 +1,135 @@
+{
+  "generated_via": "collect_cosmos.cosmos_rpc",
+  "min_delta_blocks": 0,
+  "chains": [
+    {
+      "chain": "cosmoshub-4",
+      "rpc": "https://rpc.cosmoshub-4-archive.citizenweb3.com:443",
+      "heights": [
+        7081693,
+        12842606,
+        16172866,
+        17062543,
+        23587852
+      ],
+      "n_records": 5,
+      "n_with_slash": 5
+    },
+    {
+      "chain": "juno-1",
+      "rpc": "https://rpc-archive.junonetwork.io",
+      "heights": [
+        13743787
+      ],
+      "n_records": 1,
+      "n_with_slash": 1
+    },
+    {
+      "chain": "kava_2222-10",
+      "rpc": "https://rpc.data.kava.io",
+      "heights": [
+        9745669,
+        17743630
+      ],
+      "n_records": 2,
+      "n_with_slash": 2
+    },
+    {
+      "chain": "celestia",
+      "rpc": "https://public-celestia-rpc.numia.xyz",
+      "heights": [
+        8218923,
+        9217879
+      ],
+      "n_records": 2,
+      "n_with_slash": 2
+    },
+    {
+      "chain": "axelar-dojo-1",
+      "rpc": "https://axelar-rpc.pops.one",
+      "heights": [
+        25094656
+      ],
+      "n_records": 1,
+      "n_with_slash": 1
+    },
+    {
+      "chain": "chihuahua-1",
+      "rpc": "https://rpc.chihuahua.wtf",
+      "heights": [
+        18788477
+      ],
+      "n_records": 1,
+      "n_with_slash": 1
+    },
+    {
+      "chain": "dimension_37-1",
+      "rpc": "https://dimension-rpc.xpla.dev",
+      "heights": [
+        7409123,
+        17265994
+      ],
+      "n_records": 2,
+      "n_with_slash": 2
+    },
+    {
+      "chain": "panacea-3",
+      "rpc": "https://rpc.gopanacea.org",
+      "heights": [
+        17055336
+      ],
+      "n_records": 1,
+      "n_with_slash": 1
+    },
+    {
+      "chain": "fetchhub-4",
+      "rpc": "https://rpc-fetchhub.fetch.ai",
+      "heights": [
+        14085490,
+        14874298
+      ],
+      "n_records": 2,
+      "n_with_slash": 2
+    },
+    {
+      "chain": "likecoin-mainnet-2",
+      "rpc": "https://mainnet-node.like.co/rpc/",
+      "heights": [
+        2502555,
+        3845993,
+        7922030,
+        9425627,
+        14128151
+      ],
+      "n_records": 5,
+      "n_with_slash": 5
+    },
+    {
+      "chain": "realionetwork_3301-1",
+      "rpc": "http://realio.rpc.m.stavr.tech:21097",
+      "heights": [
+        17340735
+      ],
+      "n_records": 1,
+      "n_with_slash": 1
+    },
+    {
+      "chain": "sentinelhub-2",
+      "rpc": "https://rpc-sentinel.busurnode.com",
+      "heights": [
+        28567991
+      ],
+      "n_records": 51,
+      "n_with_slash": 51
+    },
+    {
+      "chain": "osmosis-1",
+      "rpc": "https://rpc.lavenderfive.com/osmosis",
+      "heights": [
+        54953209
+      ],
+      "n_records": 1,
+      "n_with_slash": 1
+    }
+  ]
+}

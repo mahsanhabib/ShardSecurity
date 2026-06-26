@@ -1,0 +1,12 @@
+{
+  "rpc": "https://rpc.cosmoshub-4-archive.citizenweb3.com:443",
+  "heights": [
+    7081693,
+    12842606,
+    16172866,
+    17062543,
+    23587852
+  ],
+  "n": 5,
+  "source": "rpc"
+}

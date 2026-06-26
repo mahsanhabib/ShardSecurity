@@ -1,0 +1,344 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{luu2016elastico,kokoris2018omniledger,zamani2018rapidchain}
+\citation{bano2019sok}
+\citation{mccorry2018smart,winzer2019temporary,tran2023crosschain}
+\citation{karakostas2024bribing}
+\citation{sookitoth2025bribers,kelkar2025omerta,austgen2025liquefaction}
+\citation{buterin2017casper,buchman2018tendermint}
+\@writefile{toc}{\contentsline {section}{Abstract}{1}{section*.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{1}{1}{Introduction}{section.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Overview. \textbf  {(a)}\nonbreakingspace An adversary below the global $\tfrac  13$ threshold bribes the $F{+}1$ validators quorum intersection makes \emph  {necessary} in one $N{=}3F{+}1$ committee, forging two conflicting certificates and moving value $V$ across the shard/bridge boundary. \textbf  {(b)}\nonbreakingspace The attack pays only if value settles before accountability: conventional ungated settlement gives $T_{\mathrm  {settle}}{<}T_{\mathrm  {acc}}$ (adversary keeps $V$), whereas gating cross-shard acceptance on finality forces $T_{\mathrm  {settle}}{\ge }T_{\mathrm  {acc}}$ and $p_{\mathrm  {win}}{=}0$ (Proposition\nonbreakingspace \ref {prop:immunity}).}}{1}{figure.caption.4}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:overview}{{1}{1}{Overview. \textbf {(a)}~An adversary below the global $\tfrac 13$ threshold bribes the $F{+}1$ validators quorum intersection makes \emph {necessary} in one $N{=}3F{+}1$ committee, forging two conflicting certificates and moving value $V$ across the shard/bridge boundary. \textbf {(b)}~The attack pays only if value settles before accountability: conventional ungated settlement gives $\Tsettle {<}\Tacc $ (adversary keeps $V$), whereas gating cross-shard acceptance on finality forces $\Tsettle {\ge }\Tacc $ and $\pwin {=}0$ (Proposition~\ref {prop:immunity})}{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{The composition is not, by itself, an attack.}{1}{section*.5}\protected@file@percent }
+\citation{zamani2018rapidchain}
+\citation{zamyatin2021sok,lee2022sokbridge}
+\@writefile{toc}{\contentsline {paragraph}{The accountability race.}{2}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Two clarifications we treat as load-bearing.}{2}{section*.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Contributions.}{2}{section*.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Positioning.}{2}{section*.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Motivation and Problem Statement}{2}{section.2}\protected@file@percent }
+\newlabel{sec:motivation}{{2}{2}{Motivation and Problem Statement}{section.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{What ``sub-threshold'' means.}{2}{section*.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Why the cost of corruption collapses under sharding.}{2}{section*.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Why value is large.}{2}{section*.12}\protected@file@percent }
+\citation{harmony2019whitepaper}
+\citation{luu2016elastico,kokoris2018omniledger,zamani2018rapidchain}
+\citation{castro1999pbft,yin2019hotstuff,buchman2018tendermint}
+\citation{kokoris2018omniledger}
+\citation{bano2019sok}
+\citation{luu2016elastico}
+\citation{zamani2018rapidchain}
+\citation{avarikioti2019divide}
+\citation{rana2022free2shard}
+\citation{david2022gearbox}
+\citation{liu2025camael}
+\citation{bonneau2016rent}
+\citation{buterin2015pepsilon}
+\citation{mccorry2018smart}
+\citation{winzer2019temporary}
+\citation{tran2023crosschain}
+\citation{judmayer2021sok,judmayer2021paytowin}
+\citation{zhang2023outofband}
+\citation{roughgarden2021tfm,chung2023foundations}
+\citation{karakostas2024bribing}
+\citation{sookitoth2025bribers}
+\citation{sarenche2024commitment}
+\citation{yang2024bride}
+\citation{newman2023decentralization}
+\citation{kelkar2025omerta}
+\citation{austgen2025liquefaction}
+\citation{gazi2025grinding}
+\citation{budish2018economic}
+\citation{budish2024economic}
+\citation{deb2024stakesure}
+\citation{avarikioti2025cobra}
+\citation{tas2023bitcoin}
+\citation{civit2021polygraph}
+\citation{sheng2021forensics}
+\citation{neu2022accountability}
+\citation{gong2025recover}
+\citation{durvasula2025restaking}
+\@writefile{toc}{\contentsline {paragraph}{Why timing is the crux.}{3}{section*.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Problem statement.}{3}{section*.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Background and Related Work}{3}{section.3}\protected@file@percent }
+\newlabel{sec:related}{{3}{3}{Background and Related Work}{section.3}{}}
+\newlabel{sec:background}{{3}{3}{Background and Related Work}{section.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Sharded BFT and quorum intersection.}{3}{section*.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Single-shard compromise and adaptive corruption.}{3}{section*.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Adaptive corruption and corrupted-shard tolerance.}{3}{section*.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Bribery and crypto-economic security.}{3}{section*.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Economic limits, slashable safety, and accountability latency.}{3}{section*.19}\protected@file@percent }
+\citation{berger2025censorship}
+\citation{lee2025hollow}
+\citation{dong2024remotestaking}
+\citation{baron2025aegis}
+\citation{sonnino2020replay}
+\citation{zamyatin2021sok,lee2022sokbridge}
+\citation{schwarzschilling2022three}
+\citation{daian2020flashboys}
+\citation{qin2022quantifying,mcmenamin2023sok}
+\citation{buterin2017casper,buchman2018tendermint}
+\citation{zamani2018rapidchain,kokoris2018omniledger}
+\citation{mccorry2018smart}
+\citation{tran2023crosschain}
+\citation{judmayer2021paytowin}
+\citation{zhang2023outofband}
+\citation{karakostas2024bribing}
+\citation{yang2024bride}
+\citation{sookitoth2025bribers}
+\citation{budish2024economic}
+\citation{deb2024stakesure}
+\citation{avarikioti2025cobra}
+\citation{tas2023bitcoin}
+\citation{dong2024remotestaking}
+\citation{berger2025censorship}
+\citation{liu2025camael}
+\citation{sonnino2020replay}
+\citation{rana2022free2shard}
+\@writefile{toc}{\contentsline {paragraph}{Bribing against an accountability window.}{4}{section*.20}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Cross-shard, cross-chain, and settlement-before-finality value extraction.}{4}{section*.21}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Accountable BFT, slashing, and reconfiguration.}{4}{section*.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Positioning.}{4}{section*.23}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Threat Model}{4}{section.4}\protected@file@percent }
+\newlabel{sec:threat}{{4}{4}{Threat Model}{section.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{Adversary.}{4}{section*.25}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Sub-threshold, precisely.}{4}{section*.26}\protected@file@percent }
+\citation{buterin2017casper,buchman2018tendermint}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Positioning against the closest prior work across the capability dimensions of the attack. \textcolor {green!55!black}{{\fontfamily  {pzd}\fontencoding  {U}\fontseries  {m}\fontshape  {n}\selectfont  \char 51}}\nonbreakingspace addresses it, \textcolor {orange!90!black}{(\kern -0.12em{\fontfamily  {pzd}\fontencoding  {U}\fontseries  {m}\fontshape  {n}\selectfont  \char 51}\kern -0.12em)}\nonbreakingspace partially/implicitly, \textcolor {red!65!black}{{\fontfamily  {pzd}\fontencoding  {U}\fontseries  {m}\fontshape  {n}\selectfont  \char 55}}\nonbreakingspace does not, \textcolor {black!40}{--}\nonbreakingspace not applicable to that work's setting. Columns: bribe \emph  {priced}; \emph  {trustless} payment (no briber--bribee trust); targets \emph  {safety} (vs.\ liveness/censorship); \emph  {committee-local} sub-threshold quorum; cross-shard/bridge \emph  {value} realization; the \emph  {accountability race} (value before slashing); bribe priced by slashing \emph  {latency} $q$; an \emph  {immunity}-by-construction condition; \emph  {reconfiguration} handoff; and an \emph  {implemented/measured} artifact. This work is the only row populated across every dimension.}}{5}{table.caption.24}\protected@file@percent }
+\newlabel{tab:positioning}{{1}{5}{Positioning against the closest prior work across the capability dimensions of the attack. \yes ~addresses it, \partialmark ~partially/implicitly, \nomark ~does not, \namark ~not applicable to that work's setting. Columns: bribe \emph {priced}; \emph {trustless} payment (no briber--bribee trust); targets \emph {safety} (vs.\ liveness/censorship); \emph {committee-local} sub-threshold quorum; cross-shard/bridge \emph {value} realization; the \emph {accountability race} (value before slashing); bribe priced by slashing \emph {latency} $q$; an \emph {immunity}-by-construction condition; \emph {reconfiguration} handoff; and an \emph {implemented/measured} artifact. This work is the only row populated across every dimension}{table.caption.24}{}}
+\@writefile{toc}{\contentsline {paragraph}{Targets and goal.}{5}{section*.27}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Defender.}{5}{section*.28}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Assumptions.}{5}{section*.29}\protected@file@percent }
+\newlabel{ass:rational}{{1}{5}{Rational validators}{assumption.1}{}}
+\newlabel{ass:accountable}{{2}{5}{Accountable equivocation}{assumption.2}{}}
+\newlabel{ass:async}{{3}{5}{Asynchronous settlement}{assumption.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}A Model of Priced Equivocation and the Accountability Race}{5}{section.5}\protected@file@percent }
+\newlabel{sec:design}{{5}{5}{A Model of Priced Equivocation and the Accountability Race}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}The Equivocation Floor (Necessary, Not Sufficient)}{5}{subsection.5.1}\protected@file@percent }
+\newlabel{sec:floor}{{5.1}{5}{The Equivocation Floor (Necessary, Not Sufficient)}{subsection.5.1}{}}
+\newlabel{lem:intersection}{{5.1}{5}{Equivocation floor}{theorem.5.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Summary of formal results. The single conditional inequality $T_{\mathrm  {settle}}<T_{\mathrm  {acc}}$ (gate G1) governs all of them: closing it yields immunity, leaving it open sustains the attack.}}{6}{table.caption.30}\protected@file@percent }
+\newlabel{tab:results}{{2}{6}{Summary of formal results. The single conditional inequality $\Tsettle <\Tacc $ (gate G1) governs all of them: closing it yields immunity, leaving it open sustains the attack}{table.caption.30}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Notation for the sub-threshold bribery and accountability-race model.}}{6}{table.caption.31}\protected@file@percent }
+\newlabel{tab:notation}{{3}{6}{Notation for the sub-threshold bribery and accountability-race model}{table.caption.31}{}}
+\newlabel{eq:band}{{1}{6}{The Equivocation Floor (Necessary, Not Sufficient)}{equation.5.1}{}}
+\newlabel{eq:psucc}{{2}{6}{The Equivocation Floor (Necessary, Not Sufficient)}{equation.5.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Bribe-Cost Model}{6}{subsection.5.2}\protected@file@percent }
+\newlabel{sec:cost}{{5.2}{6}{Bribe-Cost Model}{subsection.5.2}{}}
+\newlabel{eq:bribe-individual}{{3}{6}{Bribe-Cost Model}{equation.5.3}{}}
+\newlabel{eq:bribe-total}{{4}{6}{Bribe-Cost Model}{equation.5.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Value Model}{6}{subsection.5.3}\protected@file@percent }
+\newlabel{sec:value}{{5.3}{6}{Value Model}{subsection.5.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}The Accountability Race}{6}{subsection.5.4}\protected@file@percent }
+\newlabel{sec:race}{{5.4}{6}{The Accountability Race}{subsection.5.4}{}}
+\citation{karakostas2024bribing}
+\citation{sookitoth2025bribers}
+\citation{zamani2018rapidchain,kokoris2018omniledger}
+\@writefile{toc}{\contentsline {paragraph}{Profitability.}{7}{section*.32}\protected@file@percent }
+\newlabel{eq:profit-guided}{{5}{7}{Profitability}{equation.5.5}{}}
+\newlabel{eq:profit-effective}{{6}{7}{Profitability}{equation.5.6}{}}
+\newlabel{eq:g1}{{7}{7}{Profitability}{equation.5.7}{}}
+\newlabel{eq:g2}{{8}{7}{Profitability}{equation.5.8}{}}
+\@writefile{toc}{\contentsline {paragraph}{$T_{\mathrm  {acc}}$ as a master variable.}{7}{section*.33}\protected@file@percent }
+\newlabel{prop:immunity}{{5.2}{7}{Immunity by construction}{theorem.5.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Sub-threshold committee bribery and the accountability race. The adversary retains $V$ only if cross-shard settlement ($T_{\mathrm  {settle}}$) precedes end-to-end accountability ($T_{\mathrm  {acc}}$).}}{7}{figure.caption.34}\protected@file@percent }
+\newlabel{fig:flow}{{2}{7}{Sub-threshold committee bribery and the accountability race. The adversary retains $V$ only if cross-shard settlement ($\Tsettle $) precedes end-to-end accountability ($\Tacc $)}{figure.caption.34}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Attack Procedure}{7}{subsection.5.5}\protected@file@percent }
+\newlabel{sec:procedure}{{5.5}{7}{Attack Procedure}{subsection.5.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Reconfiguration-Phase Accountability Races}{7}{section.6}\protected@file@percent }
+\newlabel{sec:reconf}{{6}{7}{Reconfiguration-Phase Accountability Races}{section.6}{}}
+\@writefile{toc}{\contentsline {paragraph}{Three events that must be distinguished.}{7}{section*.35}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Sub-threshold committee bribery with accountability race}}{8}{algorithm.1}\protected@file@percent }
+\newlabel{alg:attack}{{1}{8}{Sub-threshold committee bribery with accountability race}{algorithm.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Variables.}{8}{section*.36}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Extended profit model.}{8}{section*.37}\protected@file@percent }
+\newlabel{eq:profit-a}{{9}{8}{Extended profit model}{equation.6.9}{}}
+\newlabel{eq:pwin-carry}{{10}{8}{Extended profit model}{equation.6.10}{}}
+\newlabel{eq:pwin-cut}{{11}{8}{Extended profit model}{equation.6.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}What Survives Reconfiguration}{8}{subsection.6.1}\protected@file@percent }
+\newlabel{sec:survives}{{6.1}{8}{What Survives Reconfiguration}{subsection.6.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}A Taxonomy of Reconfiguration Designs}{8}{subsection.6.2}\protected@file@percent }
+\newlabel{sec:taxonomy}{{6.2}{8}{A Taxonomy of Reconfiguration Designs}{subsection.6.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}State Handoff Under Committee Rotation}{8}{subsection.6.3}\protected@file@percent }
+\newlabel{sec:handoff}{{6.3}{8}{State Handoff Under Committee Rotation}{subsection.6.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Reconfiguration designs and their effect on the attack. ``Safe'' is the condition under which $p_{\mathrm  {win}}\to 0$ for old-epoch value-bearing artifacts (Proposition\nonbreakingspace \ref {prop:reconf-safe}); ``dangerous'' is the residual-vulnerability condition (Proposition\nonbreakingspace \ref {prop:reconf-residual}).}}{9}{table.caption.38}\protected@file@percent }
+\newlabel{tab:taxonomy}{{4}{9}{Reconfiguration designs and their effect on the attack. ``Safe'' is the condition under which $\pwin \to 0$ for old-epoch value-bearing artifacts (Proposition~\ref {prop:reconf-safe}); ``dangerous'' is the residual-vulnerability condition (Proposition~\ref {prop:reconf-residual})}{table.caption.38}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Epoch-boundary handoff as a state machine. The safe (accountability-gated) path quarantines old-epoch artifacts until evidence can land ($p_{\mathrm  {win}}=0$); the unsafe (ungated) path executes them immediately, reopening the race.}}{9}{figure.caption.39}\protected@file@percent }
+\newlabel{fig:reconf-fsm}{{3}{9}{Epoch-boundary handoff as a state machine. The safe (accountability-gated) path quarantines old-epoch artifacts until evidence can land ($\pwin =0$); the unsafe (ungated) path executes them immediately, reopening the race}{figure.caption.39}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Counterexamples: When the Attack Does Not Apply}{9}{subsection.6.4}\protected@file@percent }
+\newlabel{sec:counterexamples}{{6.4}{9}{Counterexamples: When the Attack Does Not Apply}{subsection.6.4}{}}
+\newlabel{cex:persistent}{{1}{9}{Persistent slashability after rotation}{counterexample.1}{}}
+\newlabel{cex:gated}{{2}{9}{Accountability-gated receipt carryover}{counterexample.2}{}}
+\newlabel{cex:freeze}{{3}{9}{Cross-shard freeze during reconfiguration}{counterexample.3}{}}
+\newlabel{cex:rolling}{{4}{9}{Rolling reconfiguration}{counterexample.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}Two Propositions}{10}{subsection.6.5}\protected@file@percent }
+\newlabel{sec:reconf-props}{{6.5}{10}{Two Propositions}{subsection.6.5}{}}
+\newlabel{prop:reconf-safe}{{6.1}{10}{Reconfiguration-safe handoff}{theorem.6.1}{}}
+\newlabel{prop:reconf-residual}{{6.2}{10}{Reconfiguration-residual vulnerability}{theorem.6.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Implementation and Artifact}{10}{section.7}\protected@file@percent }
+\newlabel{sec:impl}{{7}{10}{Implementation and Artifact}{section.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Expected profit $\mathbb  {E}[\Pi (a)]$ across the epoch for each handoff design (\S  \ref {sec:eval}, $N=31$, $V=60s$). Hard cutoff (A) collapses as $a\to \tau $ (residual time $r\to 0$); unsafe carryover (C) and reconfiguration-delay designs \emph  {rise} toward the boundary (Proposition\nonbreakingspace \ref {prop:reconf-residual}); accountability-gated carryover stays flat and negative ($p_{\mathrm  {win}}=0$, Proposition\nonbreakingspace \ref {prop:reconf-safe}); rolling reconfiguration (F) has no cliff.}}{10}{figure.caption.40}\protected@file@percent }
+\newlabel{fig:reconf-profit}{{4}{10}{Expected profit $\mathbb {E}[\Pi (a)]$ across the epoch for each handoff design (\S \ref {sec:eval}, $N=31$, $V=60s$). Hard cutoff (A) collapses as $a\to \tau $ (residual time $r\to 0$); unsafe carryover (C) and reconfiguration-delay designs \emph {rise} toward the boundary (Proposition~\ref {prop:reconf-residual}); accountability-gated carryover stays flat and negative ($\pwin =0$, Proposition~\ref {prop:reconf-safe}); rolling reconfiguration (F) has no cliff}{figure.caption.40}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Experimental Setup}{10}{section.8}\protected@file@percent }
+\newlabel{sec:setup}{{8}{10}{Experimental Setup}{section.8}{}}
+\@writefile{toc}{\contentsline {paragraph}{Methodology and provenance.}{10}{section*.41}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Live-measurement hook.}{10}{section*.42}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Simulation parameters and swept ranges (from \texttt  {configs/main.yaml}).}}{11}{table.caption.44}\protected@file@percent }
+\newlabel{tab:params}{{5}{11}{Simulation parameters and swept ranges (from \texttt {configs/main.yaml})}{table.caption.44}{}}
+\@writefile{toc}{\contentsline {paragraph}{Parameters and sweeps.}{11}{section*.43}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Metrics.}{11}{section*.45}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Baselines.}{11}{section*.46}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9}Evaluation}{11}{section.9}\protected@file@percent }
+\newlabel{sec:eval}{{9}{11}{Evaluation}{section.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces $p_{\mathrm  {succ}}$ vs.\ view-split $\varphi $ for the floor and two larger purchases ($N=31$). Markers: Monte-Carlo harness; lines: closed form (Eq.\nonbreakingspace \eqref  {eq:psucc}). The floor peaks at $p_{\mathrm  {succ}}=0.18$; extra equivocators widen the success band.}}{11}{figure.caption.49}\protected@file@percent }
+\newlabel{fig:psucc}{{5}{11}{$\psucc $ vs.\ view-split $\varphi $ for the floor and two larger purchases ($N=31$). Markers: Monte-Carlo harness; lines: closed form (Eq.~\eqref {eq:psucc}). The floor peaks at $\psucc =\ArtifactPsuccFloor $; extra equivocators widen the success band}{figure.caption.49}{}}
+\@writefile{toc}{\contentsline {paragraph}{Validation and proof-of-concept (RQ0).}{11}{section*.47}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{The floor is necessary, not sufficient.}{11}{section*.48}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{RQ1: When does the settlement window open?}{11}{section*.50}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces RQ1. Window-open probability $p_{\mathrm  {win}}$ vs.\ latency ratio $\rho $, for two settle-time coefficients of variation, plus the finality-gated immunity baseline ($p_{\mathrm  {win}}\equiv 0$).}}{12}{figure.caption.51}\protected@file@percent }
+\newlabel{fig:pwin}{{6}{12}{RQ1. Window-open probability $\pwin $ vs.\ latency ratio $\rho $, for two settle-time coefficients of variation, plus the finality-gated immunity baseline ($\pwin \equiv 0$)}{figure.caption.51}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces RQ2. Minimum total bribe $B$ vs.\ committee size $N$ for $q\in \{0.25,0.5,0.75,1.0\}$, $R=0.5s$. Cost is linear in $N$.}}{12}{figure.caption.53}\protected@file@percent }
+\newlabel{fig:cost}{{7}{12}{RQ2. Minimum total bribe $B$ vs.\ committee size $N$ for $q\in \{0.25,0.5,0.75,1.0\}$, $R=0.5s$. Cost is linear in $N$}{figure.caption.53}{}}
+\@writefile{toc}{\contentsline {paragraph}{RQ2: How does the bribe cost scale?}{12}{section*.52}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{RQ3: When is the attack profitable?}{12}{section*.54}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces RQ3. Break-even extractable value $V^{*}=(F{+}1)q(s{+}R)+C_{\mathrm  {op}}$ (units of $s$; $R=0.5s$, $C_{\mathrm  {op}}=1$), regenerated by the artifact.}}{12}{table.caption.55}\protected@file@percent }
+\newlabel{tab:breakeven}{{6}{12}{RQ3. Break-even extractable value $\Eval ^{*}=(F{+}1)q(s{+}R)+\Cop $ (units of $s$; $R=0.5s$, $\Cop =1$), regenerated by the artifact}{table.caption.55}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces RQ3. Profit phase diagram $\mathbb  {E}[\Pi ]$ over $(\rho ,V)$ ($N=31$, $q=0.5$, $p_{\mathrm  {succ}}=0.85$---the strong split-control/view-control regime; uncontrolled-split floor $0.18$). The $E[\Pi ]=0$ contour separates the profitable region (both gates hold) from the rest; the finality-gated baseline is non-positive everywhere.}}{12}{figure.caption.56}\protected@file@percent }
+\newlabel{fig:phase}{{8}{12}{RQ3. Profit phase diagram $\mathbb {E}[\Pi ]$ over $(\rho ,\Eval )$ ($N=31$, $q=0.5$, $\psucc =0.85$---the strong split-control/view-control regime; uncontrolled-split floor $\ArtifactPsuccFloor $). The $E[\Pi ]=0$ contour separates the profitable region (both gates hold) from the rest; the finality-gated baseline is non-positive everywhere}{figure.caption.56}{}}
+\@writefile{toc}{\contentsline {paragraph}{RQ4: How does reconfiguration change the race?}{12}{section*.58}\protected@file@percent }
+\citation{harmony2019whitepaper,cosmosdocs,ethconsensusspecs,multiversxdocs,polkadotwiki,zilliqadocs}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces RQ3. Profit over $(q,V)$ at a window-open latency ratio. The break-even frontier shifts linearly with the enforcement probability $q$.}}{13}{figure.caption.57}\protected@file@percent }
+\newlabel{fig:profitqV}{{9}{13}{RQ3. Profit over $(q,\Eval )$ at a window-open latency ratio. The break-even frontier shifts linearly with the enforcement probability $q$}{figure.caption.57}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces RQ5. Each defensive lever from a profitable baseline ($N=31$, $V=60s$, $p_{\mathrm  {succ}}=0.85$): the gate it attacks (G1 $=$ window $T_{\mathrm  {settle}}<T_{\mathrm  {acc}}$; G2 $=$ cost $V>B$), the resulting window probability $p_{\mathrm  {win}}$, bribe $B$ (units of $s$), expected profit $\mathbb  {E}[\Pi ]$, and whether it makes the attack unprofitable. Only window-closing levers (\textcolor {green!55!black}{{\fontfamily  {pzd}\fontencoding  {U}\fontseries  {m}\fontshape  {n}\selectfont  \char 51}}) work. Regenerated by the artifact.}}{13}{table.caption.60}\protected@file@percent }
+\newlabel{tab:rq5defenses}{{7}{13}{RQ5. Each defensive lever from a profitable baseline ($N=31$, $V=60s$, $\psucc =0.85$): the gate it attacks (G1 $=$ window $\Tsettle <\Tacc $; G2 $=$ cost $V>B$), the resulting window probability $\pwin $, bribe $B$ (units of $s$), expected profit $\mathbb {E}[\Pi ]$, and whether it makes the attack unprofitable. Only window-closing levers (\yes ) work. Regenerated by the artifact}{table.caption.60}{}}
+\@writefile{toc}{\contentsline {paragraph}{RQ5: Which defenses close the attack?}{13}{section*.59}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{RQ6: Does a running protocol reproduce the model?}{13}{section*.62}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces RQ5. Effect of each defensive lever on $\mathbb  {E}[\Pi ]$ ($N=31$, $V=60s$). Only levers that reduce $p_{\mathrm  {win}}$ (finality gating; faster evidence) make the attack unprofitable; economic levers only dent it.}}{13}{figure.caption.61}\protected@file@percent }
+\newlabel{fig:defenses}{{10}{13}{RQ5. Effect of each defensive lever on $\mathbb {E}[\Pi ]$ ($N=31$, $V=60s$). Only levers that reduce $\pwin $ (finality gating; faster evidence) make the attack unprofitable; economic levers only dent it}{figure.caption.61}{}}
+\@writefile{toc}{\contentsline {paragraph}{RQ7: Are deployed systems exposed (documented parameters)?}{13}{section*.64}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces RQ7. The model at documented parameters of named systems (approximate public figures as of 2026; confirm against current specifications before camera-ready). $N$ is the committee size (the per-shard committee for sharded rows; the validator/finality-committee size otherwise), distinct from the measurement sample size $n_{\mathrm  {obs}}$ of Table\nonbreakingspace \ref {tab:measured}. $V^{*}$ is in multiples of one validator's stake-at-risk. The \emph  {Window (G1)} column is the settlement-gate state (\textcolor {green!55!black}{\textnormal  {\textsc  {gated}}}/\textcolor {red!70!black}{\textnormal  {\textsc  {open}}}/\textcolor {orange!90!black}{\textnormal  {\textsc  {depends}}}), and \emph  {Verdict} is the resulting one-word outcome: \textcolor {green!55!black}{\textnormal  {\textsc  {immune}}}\ when G1 is closed by construction, \textcolor {orange!90!black}{\textnormal  {\textsc  {hard\,(G2)}}}\ when (G2) is hard to clear because $q\!\approx \!1$, and \textcolor {red!70!black}{\textnormal  {\textsc  {exposed}}}\ otherwise. $q$ here is the documented-parameter estimate; \S  \ref {sec:measured} measures the operative evidence-expiry-based value. Cosmos\nonbreakingspace Hub and Ethereum\nonbreakingspace PoS are non-sharded accountable-BFT reference points (IBC finality-gating and single-chain accountability, respectively), included as comparators; the fast-exit row is a labelled \emph  {hypothetical}, not a deployed system.}}{14}{table.caption.65}\protected@file@percent }
+\newlabel{tab:realsystems}{{8}{14}{RQ7. The model at documented parameters of named systems (approximate public figures as of 2026; confirm against current specifications before camera-ready). $N$ is the committee size (the per-shard committee for sharded rows; the validator/finality-committee size otherwise), distinct from the measurement sample size $n_{\mathrm {obs}}$ of Table~\ref {tab:measured}. $V^{*}$ is in multiples of one validator's stake-at-risk. The \emph {Window (G1)} column is the settlement-gate state (\gated /\openg /\dependsg ), and \emph {Verdict} is the resulting one-word outcome: \immune \ when G1 is closed by construction, \hardgate \ when (G2) is hard to clear because $q\!\approx \!1$, and \exposed \^^Motherwise. $q$ here is the documented-parameter estimate; \S \ref {sec:measured} measures the operative evidence-expiry-based value. Cosmos~Hub and Ethereum~PoS are non-sharded accountable-BFT reference points (IBC finality-gating and single-chain accountability, respectively), included as comparators; the fast-exit row is a labelled \emph {hypothetical}, not a deployed system}{table.caption.65}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces RQ6. Testbed-\emph  {measured} $p_{\mathrm  {win}}$ (points) vs.\ the closed-form model (line) over the measured latency ratio. An independent discrete-event protocol simulation with real signatures reproduces the $\rho \approx 1$ threshold.}}{14}{figure.caption.63}\protected@file@percent }
+\newlabel{fig:testbed}{{11}{14}{RQ6. Testbed-\emph {measured} $\pwin $ (points) vs.\ the closed-form model (line) over the measured latency ratio. An independent discrete-event protocol simulation with real signatures reproduces the $\rho \approx 1$ threshold}{figure.caption.63}{}}
+\@writefile{toc}{\contentsline {paragraph}{Summary.}{14}{section*.66}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {10}Measurement Protocol and Pre-Registered Falsification (RQ8)}{14}{section.10}\protected@file@percent }
+\newlabel{sec:measured}{{10}{14}{Measurement Protocol and Pre-Registered Falsification (RQ8)}{section.10}{}}
+\@writefile{toc}{\contentsline {paragraph}{A two-target, dual-verdict instrument.}{14}{section*.67}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{$q$: split into a structural ceiling and an attack-conditional estimand.}{15}{section*.68}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{$T_{\mathrm  {acc}}$: a decomposed quantity with cooperative and adversarial bounds.}{15}{section*.69}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{$T_{\mathrm  {settle}}$: receipt and withdrawal-beyond-clawback, measured as two legs.}{15}{section*.70}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{The pre-registered decision rule.}{15}{section*.71}\protected@file@percent }
+\citation{sonnino2020replay}
+\citation{zamyatin2021sok,lee2022sokbridge}
+\citation{mccorry2018smart,karakostas2024bribing,sookitoth2025bribers}
+\@writefile{toc}{\contentsline {paragraph}{Results to date, and honest scope.}{16}{section*.72}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {11}Discussion}{16}{section.11}\protected@file@percent }
+\newlabel{sec:discussion}{{11}{16}{Discussion}{section.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.1}Defenses}{16}{subsection.11.1}\protected@file@percent }
+\newlabel{sec:defenses}{{11.1}{16}{Defenses}{subsection.11.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{A. Accountability-gated cross-shard receipts.}{16}{section*.74}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{B. Persistent slashability across rotation.}{16}{section*.75}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{C. Global evidence submission and D. fast evidence markets.}{16}{section*.76}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{E. State/receipt handoff validation.}{16}{section*.77}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{F. Value-aware committee sizing.}{16}{section*.78}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{G. Cross-shard freeze/drain rules.}{16}{section*.79}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.2}Scope of Applicability}{16}{subsection.11.2}\protected@file@percent }
+\newlabel{sec:applicability}{{11.2}{16}{Scope of Applicability}{subsection.11.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.3}Relationship to Known Attacks}{16}{subsection.11.3}\protected@file@percent }
+\citation{kelkar2025omerta}
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces RQ8 per value-realizing path: measured $\hat  q$, median $T_{\mathrm  {acc}}$, median $T_{\mathrm  {settle}}$, and---where paired observations exist---$p_{\mathrm  {win}}$ with the pre-registered verdict. $n_{\mathrm  {obs}}$ is the measurement sample size (verified evidence items for the $q$/$T_{\mathrm  {acc}}$ arms, paired race episodes for $p_{\mathrm  {win}}$)---\emph  {not} a committee size $N$ (cf.\ Table\nonbreakingspace \ref {tab:realsystems}). The Cosmos Hub, CometBFT-pool, bridge-marginal, and native-IBC negative-control (Cosmos Hub/Osmosis public channel) rows are real data; the self-fill row is the in-process rehearsal, and the fast-exit row the real-client-code run (observed unbonding completion), of``Results to date'' (the self-fill keeps stake slashable, $\hat  q\!\approx \!1$, yet opens via the solver-borne fast fill; the fast-exit escapes slashing, $\hat  q\!\approx \!0$). The cooperative floor ($11.5\,s$, the Cosmos\nonbreakingspace Hub median) and adversarial upper bound ($26.3\,d$, the pooled $90$th percentile) on $T_{\mathrm  {acc}}$, and the distance-to-cliff ($7.2\,s$), are reported in the text; this table shows only the per-row median $T_{\mathrm  {acc}}$. Regenerated by the artifact from \texttt  {results/measured/} (\texttt  {prereg/rq8-v1}).}}{17}{table.caption.73}\protected@file@percent }
+\newlabel{tab:measured}{{9}{17}{RQ8 per value-realizing path: measured $\hat q$, median $\Tacc $, median $\Tsettle $, and---where paired observations exist---$\pwin $ with the pre-registered verdict. $n_{\mathrm {obs}}$ is the measurement sample size (verified evidence items for the $q$/$\Tacc $ arms, paired race episodes for $\pwin $)---\emph {not} a committee size $N$ (cf.\ Table~\ref {tab:realsystems}). The Cosmos Hub, CometBFT-pool, bridge-marginal, and native-IBC negative-control (Cosmos Hub/Osmosis public channel) rows are real data; \ArtifactRowProvenance ``Results to date'' (the self-fill keeps stake slashable, $\hat q\!\approx \!1$, yet opens via the solver-borne fast fill; the fast-exit escapes slashing, $\hat q\!\approx \!0$). The cooperative floor ($\ArtifactTaccCosmosLo $, the Cosmos~Hub median) and adversarial upper bound ($\ArtifactTaccCosmosHi $, the pooled $90$th percentile) on $\Tacc $, and the distance-to-cliff ($\ArtifactCliffCosmos $), are reported in the text; this table shows only the per-row median $\Tacc $. Regenerated by the artifact from \texttt {results/measured/} (\texttt {prereg/rq8-v1})}{table.caption.73}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces Defenses and the model quantity each moves. $\downarrow $/$\uparrow $ = decreases/increases for the defender's benefit; ``lat.'' = adds latency/throughput overhead.}}{17}{table.caption.80}\protected@file@percent }
+\newlabel{tab:defenses}{{10}{17}{Defenses and the model quantity each moves. $\downarrow $/$\uparrow $ = decreases/increases for the defender's benefit; ``lat.'' = adds latency/throughput overhead}{table.caption.80}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {12}Limitations}{17}{section.12}\protected@file@percent }
+\newlabel{sec:limitations}{{12}{17}{Limitations}{section.12}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces When the attack applies. ``Applies'' means the assumption opens or sustains a gate; ``No'' means it closes one.}}{18}{table.caption.81}\protected@file@percent }
+\newlabel{tab:applicability}{{11}{18}{When the attack applies. ``Applies'' means the assumption opens or sustains a gate; ``No'' means it closes one}{table.caption.81}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {13}Conclusion}{18}{section.13}\protected@file@percent }
+\newlabel{sec:conclusion}{{13}{18}{Conclusion}{section.13}{}}
+\@writefile{toc}{\contentsline {section}{Ethical Considerations}{18}{section*.82}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{Open Science}{18}{section*.83}\protected@file@percent }
+\bibstyle{ACM-Reference-Format}
+\bibdata{../../reference}
+\bibcite{austgen2025liquefaction}{{1}{2025}{{Austgen et~al\mbox  {.}}}{{}}}
+\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Artifact modules (in \texttt  {artifact/shardbribe/} unless noted).}}{19}{table.caption.84}\protected@file@percent }
+\newlabel{tab:artifact}{{12}{19}{Artifact modules (in \texttt {artifact/shardbribe/} unless noted)}{table.caption.84}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Reproduction}{19}{appendix.A}\protected@file@percent }
+\newlabel{app:repro}{{A}{19}{Reproduction}{appendix.A}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}Proofs}{19}{appendix.B}\protected@file@percent }
+\newlabel{app:proofs}{{B}{19}{Proofs}{appendix.B}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {C}Trustless Bribery Escrow}{19}{appendix.C}\protected@file@percent }
+\newlabel{app:contract}{{C}{19}{Trustless Bribery Escrow}{appendix.C}{}}
+\newlabel{lst:contract}{{1}{19}{Trustless bribery escrow (model)}{lstlisting.1}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}{\ignorespaces Trustless bribery escrow (model).}}{19}{lstlisting.1}\protected@file@percent }
+\bibcite{avarikioti2019divide}{{2}{2023}{{Avarikioti et~al\mbox  {.}}}{{}}}
+\bibcite{avarikioti2025cobra}{{3}{2025}{{Avarikioti et~al\mbox  {.}}}{{}}}
+\bibcite{bano2019sok}{{4}{2019}{{Bano et~al\mbox  {.}}}{{}}}
+\bibcite{baron2025aegis}{{5}{2025}{{Bar-On et~al\mbox  {.}}}{{}}}
+\bibcite{berger2025censorship}{{6}{2025}{{Berger et~al\mbox  {.}}}{{}}}
+\bibcite{bonneau2016rent}{{7}{2016}{{Bonneau}}{{}}}
+\bibcite{buchman2018tendermint}{{8}{2018}{{Buchman et~al\mbox  {.}}}{{}}}
+\bibcite{budish2018economic}{{9}{2018}{{Budish}}{{}}}
+\bibcite{budish2024economic}{{10}{2024}{{Budish et~al\mbox  {.}}}{{}}}
+\bibcite{buterin2015pepsilon}{{11}{2015}{{Buterin}}{{}}}
+\bibcite{buterin2017casper}{{12}{2017}{{Buterin and Griffith}}{{}}}
+\bibcite{castro1999pbft}{{13}{1999}{{Castro and Liskov}}{{}}}
+\bibcite{chung2023foundations}{{14}{2023}{{Chung and Shi}}{{}}}
+\bibcite{civit2021polygraph}{{15}{2021}{{Civit et~al\mbox  {.}}}{{}}}
+\bibcite{cosmosdocs}{{16}{2026}{{Cosmos / Interchain Stack}}{{}}}
+\bibcite{daian2020flashboys}{{17}{2020}{{Daian et~al\mbox  {.}}}{{}}}
+\bibcite{david2022gearbox}{{18}{2022}{{David et~al\mbox  {.}}}{{}}}
+\bibcite{deb2024stakesure}{{19}{2024}{{Deb et~al\mbox  {.}}}{{}}}
+\bibcite{dong2024remotestaking}{{20}{2024}{{Dong et~al\mbox  {.}}}{{}}}
+\bibcite{durvasula2025restaking}{{21}{2025}{{Durvasula and Roughgarden}}{{}}}
+\bibcite{ethconsensusspecs}{{22}{2026}{{Ethereum}}{{}}}
+\bibcite{gazi2025grinding}{{23}{2025}{{Ga\v {z}i et~al\mbox  {.}}}{{}}}
+\bibcite{gong2025recover}{{24}{2025}{{Gong et~al\mbox  {.}}}{{}}}
+\bibcite{harmony2019whitepaper}{{25}{2019}{{Harmony Team}}{{}}}
+\bibcite{judmayer2021paytowin}{{26}{2021a}{{Judmayer et~al\mbox  {.}}}{{}}}
+\bibcite{judmayer2021sok}{{27}{2021b}{{Judmayer et~al\mbox  {.}}}{{}}}
+\bibcite{karakostas2024bribing}{{28}{2024}{{Karakostas et~al\mbox  {.}}}{{}}}
+\bibcite{kelkar2025omerta}{{29}{2025}{{Kelkar et~al\mbox  {.}}}{{}}}
+\bibcite{kokoris2018omniledger}{{30}{2018}{{Kokoris-Kogias et~al\mbox  {.}}}{{}}}
+\bibcite{lee2025hollow}{{31}{2025}{{Lee}}{{}}}
+\bibcite{lee2022sokbridge}{{32}{2022}{{Lee et~al\mbox  {.}}}{{}}}
+\bibcite{liu2025camael}{{33}{2025}{{Liu et~al\mbox  {.}}}{{}}}
+\bibcite{luu2016elastico}{{34}{2016}{{Luu et~al\mbox  {.}}}{{}}}
+\bibcite{mccorry2018smart}{{35}{2018}{{McCorry et~al\mbox  {.}}}{{}}}
+\bibcite{mcmenamin2023sok}{{36}{2023}{{McMenamin}}{{}}}
+\bibcite{multiversxdocs}{{37}{2026}{{MultiversX}}{{}}}
+\bibcite{neu2022accountability}{{38}{2022}{{Neu et~al\mbox  {.}}}{{}}}
+\bibcite{newman2023decentralization}{{39}{2023}{{Newman}}{{}}}
+\bibcite{polkadotwiki}{{40}{2026}{{Polkadot}}{{}}}
+\bibcite{qin2022quantifying}{{41}{2022}{{Qin et~al\mbox  {.}}}{{}}}
+\bibcite{rana2022free2shard}{{42}{2022}{{Rana et~al\mbox  {.}}}{{}}}
+\bibcite{roughgarden2021tfm}{{43}{2021}{{Roughgarden}}{{}}}
+\bibcite{sarenche2024commitment}{{44}{2025}{{Sarenche et~al\mbox  {.}}}{{}}}
+\@writefile{toc}{\contentsline {section}{References}{20}{section*.86}\protected@file@percent }
+\bibcite{schwarzschilling2022three}{{45}{2022}{{Schwarz-Schilling et~al\mbox  {.}}}{{}}}
+\bibcite{sheng2021forensics}{{46}{2021}{{Sheng et~al\mbox  {.}}}{{}}}
+\bibcite{sonnino2020replay}{{47}{2020}{{Sonnino et~al\mbox  {.}}}{{}}}
+\bibcite{sookitoth2025bribers}{{48}{2025}{{So\'{o}ki-T\'{o}th et~al\mbox  {.}}}{{}}}
+\bibcite{tas2023bitcoin}{{49}{2023}{{Tas et~al\mbox  {.}}}{{}}}
+\bibcite{tran2023crosschain}{{50}{2023}{{Tran et~al\mbox  {.}}}{{}}}
+\bibcite{winzer2019temporary}{{51}{2019}{{Winzer et~al\mbox  {.}}}{{}}}
+\bibcite{yang2024bride}{{52}{2026}{{Yang et~al\mbox  {.}}}{{}}}
+\bibcite{yin2019hotstuff}{{53}{2019}{{Yin et~al\mbox  {.}}}{{}}}
+\bibcite{zamani2018rapidchain}{{54}{2018}{{Zamani et~al\mbox  {.}}}{{}}}
+\bibcite{zamyatin2021sok}{{55}{2021}{{Zamyatin et~al\mbox  {.}}}{{}}}
+\bibcite{zhang2023outofband}{{56}{2023}{{Zhang et~al\mbox  {.}}}{{}}}
+\bibcite{zilliqadocs}{{57}{2026}{{Zilliqa}}{{}}}
+\newlabel{tocindent-1}{0pt}
+\newlabel{tocindent0}{0pt}
+\newlabel{tocindent1}{8.37pt}
+\newlabel{tocindent2}{14.53499pt}
+\newlabel{tocindent3}{0pt}
+\newlabel{tocindent4}{0pt}
+\newlabel{tocindent5}{0pt}
+\newlabel{TotPages}{{21}{21}{}{page.21}{}}
+\gdef \@abspage@last{21}

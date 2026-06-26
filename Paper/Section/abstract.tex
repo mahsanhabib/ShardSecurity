@@ -1,0 +1,27 @@
+\begin{abstract}
+Security analyses of sharded Byzantine-fault-tolerant (BFT) blockchains almost always treat the
+Byzantine fraction inside a committee as \emph{exogenous}. We show it is not. Once an epoch's
+committee membership is revealed, an adversary who is below the \emph{network-wide} corruption
+threshold---yet at or above one committee's local threshold---can conditionally \emph{purchase} the
+$F{+}1$ validators that quorum intersection makes \emph{necessary} for two conflicting certificates
+in an $N{=}3F{+}1$ committee. We are precise that $F{+}1$ equivocators are necessary but \emph{not
+sufficient}: completion also requires honest validators to split across branches, a
+protocol-and-network property we fold into a success probability $\psucc$. The decisive question is
+whether the resulting violation can be monetized before accountability resolves. We formalize this
+as an \emph{accountability race} with two independent gates---a settlement window $\Tsettle<\Tacc$
+and economic profitability $V>B+\Cop$---and identify accountability latency $\Tacc$ as the
+\emph{master variable} that simultaneously widens the window and cheapens the bribe. We prove that
+designs which finality-gate cross-shard acceptance are \emph{immune by construction}, and extend the
+model across epoch boundaries with paired reconfiguration-safe-handoff and residual-vulnerability
+theorems. All results are reproducible: we release a seeded simulator and a discrete-event BFT
+testbed with real Ed25519 signatures, in which the race latencies are measured from a running
+protocol and the model's $\rho{\approx}1$ threshold is reproduced to within $\ArtifactMaxValErr$. On
+real data we measure passive Cosmos enforcement latency and a seconds-scale bridge open window; the
+paired race and dual verdict are an in-process rehearsal on the validated testbed, not a production
+run on consensus client code. A case study of six deployed systems places them in the safe regime,
+concentrating residual risk in fast-exit, ungated-settlement designs.
+\end{abstract}
+
+\paperkeywords{blockchain sharding; Byzantine fault tolerance; bribery attacks;
+accountable safety; slashing; cross-shard transactions; committee reconfiguration;
+crypto-economic security.}
