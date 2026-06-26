@@ -1,0 +1,3 @@
+# Keep shell scripts LF so they run on Linux/HPC (LONI) no matter the cloner's autocrlf.
+*.sh      text eol=lf
+*.sbatch  text eol=lf
