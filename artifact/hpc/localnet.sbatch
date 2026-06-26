@@ -19,7 +19,7 @@
 #   git clone --depth 1 -b v19.2.0 https://github.com/cosmos/gaia && (cd gaia && make install)
 # ============================================================================
 #SBATCH -J shardbribe-localnet
-#SBATCH -A REPLACE_WITH_YOUR_ALLOCATION   # <-- your LONI allocation
+#SBATCH -A loni_dl_tu_bih                  # LONI allocation
 #SBATCH -p single                         # 1 node; raise -c for a larger committee
 #SBATCH -N 1
 #SBATCH -c 8

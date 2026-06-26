@@ -9,7 +9,7 @@
 #   # watch:  squeue -u $USER   ;  tail -f slurm-shardbribe-mc-*.out
 # ============================================================================
 #SBATCH -J shardbribe-mc
-#SBATCH -A REPLACE_WITH_YOUR_ALLOCATION   # <-- your LONI allocation (qshow / balance)
+#SBATCH -A loni_dl_tu_bih                  # LONI allocation
 #SBATCH -p single                         # single-node partition (this job is 1 node)
 #SBATCH -N 1
 #SBATCH -c 8                              # cores (numpy BLAS uses them); raise for big sweeps
