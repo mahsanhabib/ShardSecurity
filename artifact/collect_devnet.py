@@ -110,10 +110,61 @@ def main() -> int:
                          "(the Proposition-1 twin; verdict RULED_OUT).")
     ap.add_argument("--dst-chain", default="ibc-devnet-zone-b",
                     help="(arm B) destination 'bridge' zone chain-id (value sink)")
+    ap.add_argument("--committee", action="store_true",
+                    help="(N4 committee fork) assemble ONE faithful committee-fork record "
+                         "from the two partitions' conflicting /commit certs + the real "
+                         "slashes. Needs --rpc-a, --rpc-b, --fork-height. See N4-COMMITTEE.md.")
+    ap.add_argument("--rpc-a", default=None, help="(N4) partition-A CometBFT RPC")
+    ap.add_argument("--rpc-b", default=None, help="(N4) partition-B CometBFT RPC")
+    ap.add_argument("--fork-height", type=int, default=None,
+                    help="(N4) committed height where the two partitions' certs conflict")
+    ap.add_argument("--chain", default=None, help="(N4) committee chain-id (allowlisted)")
     args = ap.parse_args()
 
     out = Path(args.out) if args.out else Path(
         os.path.join(HERE, "results", "measured", f"{args.chain_id}.jsonl"))
+
+    # --- N4 committee fork: F+1 distinct equivocators + honest split on real code ----
+    if args.committee:
+        chain = args.chain or args.chain_id
+        if not (args.rpc_a and args.rpc_b and args.fork_height):
+            print("[collect_devnet] --committee needs --rpc-a, --rpc-b, --fork-height "
+                  "(the height where the two partitions' certs conflict). See N4-COMMITTEE.md.",
+                  file=sys.stderr)
+            return 2
+        print(f"[collect_devnet] committee-fork arm on {chain} at height "
+              f"{args.fork_height} (A={args.rpc_a} B={args.rpc_b}) ...")
+        try:
+            records = lm.committee_harness(
+                chain, rpc_a=args.rpc_a, rpc_b=args.rpc_b, height=args.fork_height,
+                F=1, slash_window=args.slash_window,
+                block_interval_ms=args.block_interval_ms, src_chain=chain)
+        except Exception as ex:                       # noqa: BLE001 - surface to user
+            print(f"[collect_devnet] ERROR: {ex}", file=sys.stderr)
+            return 2
+        if not records:
+            print("[collect_devnet] no committee-fork record assembled. Nothing written.")
+            return 1
+        if args.append and out.exists():
+            existing = [json.loads(l) for l in out.read_text().splitlines() if l.strip()]
+            payload = existing + [r.to_dict() for r in records]
+            out.write_text("\n".join(json.dumps(x, sort_keys=True) for x in payload) + "\n")
+        else:
+            lm.write_jsonl(records, out)
+        r0 = records[0]
+        out.with_suffix(".meta.json").write_text(json.dumps(
+            {"chain_id": chain, "backend": "committee-rpc", "fork_height": args.fork_height,
+             "committee_size": r0.committee_size, "quorum_size": r0.quorum_size,
+             "n_equivocators": r0.n_equivocators, "n_honest_split": r0.n_honest_split,
+             "quorum_intersection_ok": r0.quorum_intersection_ok,
+             "conflicting_certs": r0.conflicting_certs, "n_slashed": r0.n_slashed,
+             "T_acc_ms": r0.T_acc}, indent=2))
+        print(f"[collect_devnet] wrote {out}  (N={r0.committee_size}, Q={r0.quorum_size}, "
+              f"equivocators={r0.n_equivocators}, honest_split={r0.n_honest_split}, "
+              f"conflicting={r0.conflicting_certs}, slashed={r0.n_slashed}, "
+              f"intersection_ok={r0.quorum_intersection_ok})")
+        print("           next: run_all.py then make_tables.py to fold into RQ8.")
+        return 0
 
     # --- arm B: paired settlement-vs-accountability race on real client code -----
     if args.paired_records:

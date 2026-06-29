@@ -46,7 +46,14 @@ cd artifact
 export GAIAD=$HOME/bin/gaiad JQ=$HOME/bin/jq
 sbatch --export=ALL,ARM=B-open  hpc/localnet.sbatch   # paired race -> across-v3-selffill-rpc.jsonl (OPEN)
 sbatch --export=ALL,ARM=B-gated hpc/localnet.sbatch   # Prop-1 twin -> across-v3-paired-gated-rpc.jsonl (RULED_OUT)
+sbatch --export=ALL,ARM=N4      hpc/localnet.sbatch   # faithful N=4 committee fork -> committee-fork-rpc.jsonl
 ```
+
+The **N=4 committee fork** (`ARM=N4`) is the faithful-committee experiment: 2 *distinct* equivocators
++ an honest split -> two real conflicting certs -> real slash of both. It runs its own 6-node
+partitioned driver (`run_committee.sh`) and self-retries the same-round trigger; full design + caveats
+in `artifact/N4-COMMITTEE.md`. Like Arm B it needs only **one** node and does not require HPC, but
+runs here fine.
 
 New records land in `results/measured/`. Commit them (or copy back to the laptop), then on the
 laptop run `python run_all.py --config configs/main.yaml` + `python make_tables.py …` to flip the

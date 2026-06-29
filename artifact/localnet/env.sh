@@ -100,5 +100,38 @@ B_UNBONDING="${B_UNBONDING:-$A_UNBONDING}"
 B_EVIDENCE_AGE="${B_EVIDENCE_AGE:-$A_EVIDENCE_AGE}"
 B_EVIDENCE_NUMBLOCKS="${B_EVIDENCE_NUMBLOCKS:-$A_EVIDENCE_NUMBLOCKS}"
 
+# --- N4 COMMITTEE FORK: faithful N=3F+1 with F+1 distinct equivocators + split ---
+# Builds a REAL N=4 (F=1, Q=3, floor k=2) committee that produces TWO conflicting
+# commit certificates on real client code: two DISTINCT validators (e1,e2) each
+# double-sign across a partition while the two honest validators (h1,h2) split, one
+# per branch. Closes the attack side that the two-nodes-one-key arms (A/C/B) do not:
+# Lemma 1's quorum-intersection floor + the honest split (psucc) realized live, then
+# real x/evidence -> x/slashing on BOTH equivocators. See N4-COMMITTEE-DESIGN.md.
+CHAIN_N4="${CHAIN_N4:-shardbribe-committee-1}"   # MUST be in ALLOWED_EQUIVOCATION_CHAINS
+WORK_N4="${WORK_N4:-${TMPDIR:-/tmp}/rq8-committee}"   # own scratch root (never the A/C/B work dir)
+# 4 equal-power validators (25% each): each partition of 3 = 75% >= 2/3 -> commits.
+N4_VAL_STAKE="${N4_VAL_STAKE:-25000000}"         # equal power so the floor is exactly F+1
+# mainnet-like accountability (reuse arm A) so the slash is REAL and q~1: the point of
+# this arm is the ATTACK side (distinct equivocators + split), not weak slashing.
+N4_UNBONDING="${N4_UNBONDING:-$A_UNBONDING}"
+N4_EVIDENCE_AGE="${N4_EVIDENCE_AGE:-$A_EVIDENCE_AGE}"
+N4_EVIDENCE_NUMBLOCKS="${N4_EVIDENCE_NUMBLOCKS:-$A_EVIDENCE_NUMBLOCKS}"
+# 6 node homes on a dedicated 4xxxx range (never collides with src 36xxx / dst 38xxx).
+# partition A = {e1a, e2a, h1}; partition B = {e1b, e2b, h2}. e1a/e1b share e1's key,
+# e2a/e2b share e2's key (two-nodes-one-key x2), double_sign_check_height=0.
+P_E1A_RPC="${P_E1A_RPC:-41657}"; P_E1A_P2P="${P_E1A_P2P:-41656}"
+P_E2A_RPC="${P_E2A_RPC:-41757}"; P_E2A_P2P="${P_E2A_P2P:-41756}"
+P_H1_RPC="${P_H1_RPC:-41857}";   P_H1_P2P="${P_H1_P2P:-41856}"
+P_E1B_RPC="${P_E1B_RPC:-42657}"; P_E1B_P2P="${P_E1B_P2P:-42656}"
+P_E2B_RPC="${P_E2B_RPC:-42757}"; P_E2B_P2P="${P_E2B_P2P:-42756}"
+P_H2_RPC="${P_H2_RPC:-42857}";   P_H2_P2P="${P_H2_P2P:-42856}"
+RPC_A="http://127.0.0.1:${P_H1_RPC}"   # read partition A's committed block from honest h1
+RPC_B="http://127.0.0.1:${P_H2_RPC}"   # read partition B's committed block from honest h2
+N4_TIMEOUT_COMMIT="${N4_TIMEOUT_COMMIT:-1s}"     # ~1s blocks
+N4_FORK_HEIGHT="${N4_FORK_HEIGHT:-12}"           # target height to fork at (after warmup)
+N4_DOUBLESPEND_AMT="${N4_DOUBLESPEND_AMT:-9000000}"  # the same coins spent two ways (A vs B)
+N4_HEAL_WAIT="${N4_HEAL_WAIT:-20}"               # s to wait after heal for evidence+slash
+N4_SLASH_WINDOW="${N4_SLASH_WINDOW:-12}"         # blocks to scan for both slashes post-heal
+
 log() { printf '[localnet] %s\n' "$*" >&2; }
 die() { printf '[localnet] ERROR: %s\n' "$*" >&2; exit 1; }

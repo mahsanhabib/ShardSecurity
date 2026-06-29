@@ -9,6 +9,8 @@
 #   sbatch --export=ALL,ARM=B-gated hpc/localnet.sbatch   # Proposition-1 twin -> RULED_OUT
 #   sbatch --export=ALL,ARM=A       hpc/localnet.sbatch   # real q_attack / T_acc
 #   sbatch --export=ALL,ARM=C       hpc/localnet.sbatch   # fast-exit positive control
+#   sbatch --export=ALL,ARM=N4      hpc/localnet.sbatch   # faithful N=4 committee fork
+#                                                         #   (F+1 distinct equivocators + split)
 #
 # Needs userspace `gaiad` (v19.2.0, the version arms A/C were validated on) and `jq`
 # on PATH -- NO sudo/Docker required (they bind 127.0.0.1 ports on the allocated node).
@@ -29,7 +31,7 @@
 
 set -euo pipefail
 cd "$SLURM_SUBMIT_DIR"                     # = artifact/
-ARM="${ARM:?set ARM=A|C|B-open|B-gated, e.g. sbatch --export=ALL,ARM=B-open hpc/localnet.sbatch}"
+ARM="${ARM:?set ARM=A|C|B-open|B-gated|N4, e.g. sbatch --export=ALL,ARM=B-open hpc/localnet.sbatch}"
 
 # gaiad + jq must be reachable (env override or PATH). Fail fast with guidance.
 export GAIAD="${GAIAD:-gaiad}" JQ="${JQ:-jq}"
@@ -47,5 +49,13 @@ export WORK_DST="${WORK_DST:-${TMPDIR:-/tmp}/rq8-destzone-$SLURM_JOB_ID}"
 export EPISODES="${EPISODES:-40}"
 
 echo "[localnet] ARM=$ARM gaiad=$($GAIAD version 2>&1 | head -1) EPISODES=$EPISODES ($(date))"
-bash localnet/run_arm.sh "$ARM"           # add a 2nd arg --assemble to fold + regenerate
+if [ "$ARM" = "N4" ]; then
+  # faithful N=4 committee fork (F+1 distinct equivocators + honest split -> two
+  # conflicting certs -> real slash of both). Its own 6-node partitioned driver; the
+  # same-round trigger is flaky, so it self-retries (N4_MAX_ATTEMPTS). See N4-COMMITTEE.md.
+  export WORK_N4="${WORK_N4:-${TMPDIR:-/tmp}/rq8-committee-$SLURM_JOB_ID}"
+  bash localnet/run_committee.sh          # add --assemble to fold + regenerate
+else
+  bash localnet/run_arm.sh "$ARM"         # add a 2nd arg --assemble to fold + regenerate
+fi
 echo "[localnet] done ($(date)). New records under results/measured/; commit/copy them back."

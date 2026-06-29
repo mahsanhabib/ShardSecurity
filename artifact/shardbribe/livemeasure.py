@@ -33,6 +33,7 @@ from pathlib import Path
 # NEVER appear here.
 ALLOWED_EQUIVOCATION_CHAINS = {
     "shardbribe-localnet-1",
+    "shardbribe-committee-1",       # N4 faithful committee fork (F+1 distinct equivocators)
     "fastexit-devnet-positive",
     "ibc-devnet-zone-a",
     "ibc-devnet-zone-b",
@@ -94,6 +95,14 @@ class MeasuredRecord:
     # --- arm C (real unbond, observed completion) ---
     t_unbond_complete: float | None = None          # observed unbonding maturity (ms)
     unbond_caught: bool | None = None               # slash reached the exiting stake (clawback)
+    # --- N4 committee fork (faithful N=3F+1, F+1 distinct equivocators + honest split) ---
+    committee_size: int | None = None               # N = 3F+1
+    quorum_size: int | None = None                  # Q = 2F+1
+    n_equivocators: int | None = None               # distinct validators signing BOTH certs (Lemma 1 floor)
+    n_honest_split: int | None = None               # honest validators that split across branches
+    quorum_intersection_ok: bool | None = None      # |certA ∩ certB| >= F+1 AND == equivocator set
+    conflicting_certs: bool | None = None           # the two certs commit DIFFERENT block-ids at same (H,r)
+    n_slashed: int | None = None                    # distinct equivocators slashed (real x/slashing)
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -937,6 +946,180 @@ def paired_harness(chain_id: str, *, rpc_url: str, relayer_records: list,
     return _paired_rpc(chain_id, rpc_url=rpc_url, relayer_records=relayer_records,
                        gated=gated, src_chain=src_chain, dst_chain=dst_chain,
                        block_interval_ms=block_interval_ms, slash_window=slash_window)
+
+
+# --------------------------------------------------------------------------
+# N4 COMMITTEE FORK arm: faithful N=3F+1 with F+1 distinct equivocators + an
+# honest-vote split, producing TWO conflicting commit certificates on real
+# client code (Lemma 1 floor + psucc realized, not just single-key evidence).
+# Pure parsers/assembler -- offline-tested in tests/test_livemeasure_committee.py.
+# Full recipe in artifact/N4-COMMITTEE-DESIGN.md / N4-COMMITTEE.md.
+# --------------------------------------------------------------------------
+# CometBFT /commit signature flags: 1=absent, 2=commit (signed THIS block), 3=nil.
+_BLOCK_ID_FLAG_COMMIT = 2
+
+
+def parse_commit_signers(commit_json: dict) -> dict:
+    """From a CometBFT ``/commit?height=H`` response, extract the committed block-id,
+    (height, round), and the set of validator addresses that actually signed THIS
+    block (block_id_flag == COMMIT). Absent/nil signers are excluded -- only flag-2
+    signatures are precommits for the committed block_id, which is what a quorum
+    certificate is. Pure; offline-testable."""
+    res = commit_json.get("result", commit_json)
+    sh = res.get("signed_header", res)
+    commit = sh.get("commit", {}) or {}
+    header = sh.get("header", {}) or {}
+    block_id = (commit.get("block_id") or {}).get("hash") or ""
+    height = commit.get("height") or header.get("height")
+    rnd = commit.get("round", 0)
+    signers = set()
+    sig_ts = {}
+    for s in commit.get("signatures", []) or []:
+        flag = s.get("block_id_flag")
+        addr = s.get("validator_address") or ""
+        if flag == _BLOCK_ID_FLAG_COMMIT and addr:
+            signers.add(addr)
+            ts = s.get("timestamp")
+            if ts:
+                try:
+                    sig_ts[addr] = parse_rfc3339_ms(ts)
+                except Exception:                      # noqa: BLE001 - tolerate odd ts
+                    pass
+    return {"height": int(height) if height is not None else None,
+            "round": int(rnd) if rnd is not None else 0,
+            "block_id": block_id, "signers": signers, "signer_timestamps": sig_ts}
+
+
+def parse_committee_fork(commit_a: dict, commit_b: dict, *, F: int = 1) -> dict:
+    """Combine the two conflicting commits captured from the two partitions' RPCs
+    (each ``/commit?height=H``) into a structural fork record proving the attack's
+    necessary-and-sufficient condition on real client code:
+
+      * ``conflicting_certs`` -- the two certs commit DIFFERENT block-ids (a real
+        double-spend of the same shard state), at the SAME height;
+      * ``same_round`` -- both at the same round, the precondition for genuine
+        DuplicateVoteEvidence (different rounds are not duplicate votes);
+      * ``equivocators`` -- signers in BOTH certs; by quorum intersection there are
+        >= F+1 of them (Lemma 1), each having signed two conflicting blocks;
+      * ``honest_a``/``honest_b`` -- the honest split (one branch each);
+      * ``quorum_intersection_ok`` -- |A ∩ B| >= F+1 AND the certs genuinely conflict.
+
+    F defaults to 1 (the N=4 smallest faithful committee). Pure; offline-testable."""
+    a = parse_commit_signers(commit_a)
+    b = parse_commit_signers(commit_b)
+    sa, sb = a["signers"], b["signers"]
+    equivocators = sa & sb
+    honest_a = sa - equivocators
+    honest_b = sb - equivocators
+    same_height = (a["height"] is not None and a["height"] == b["height"])
+    same_round = (a["round"] == b["round"])
+    conflicting = bool(a["block_id"]) and bool(b["block_id"]) and (a["block_id"] != b["block_id"])
+    floor = F + 1
+    return {
+        "height": a["height"], "round_a": a["round"], "round_b": b["round"],
+        "same_height": same_height, "same_round": same_round,
+        "block_id_a": a["block_id"], "block_id_b": b["block_id"],
+        "conflicting_certs": conflicting and same_height,
+        "signers_a": sa, "signers_b": sb,
+        "quorum_a": len(sa), "quorum_b": len(sb),
+        "equivocators": equivocators, "n_equivocators": len(equivocators),
+        "honest_a": honest_a, "honest_b": honest_b,
+        "n_honest_split": len(honest_a) + len(honest_b),
+        "floor": floor,
+        # the realized attack: certs genuinely conflict at one (H,r) AND the
+        # intersection meets the F+1 quorum-intersection floor (Lemma 1).
+        "quorum_intersection_ok": bool(conflicting and same_height and same_round
+                                       and len(equivocators) >= floor),
+        "signer_timestamps": {**a["signer_timestamps"], **b["signer_timestamps"]},
+    }
+
+
+def assemble_committee_record(fork: dict, *, t_fork_ms: float, slashed: list,
+                              N: int, src_chain: str,
+                              measurement_resolution_ms: float,
+                              source: str = "devnet-committee-rpc") -> MeasuredRecord:
+    """Assemble ONE faithful committee-fork episode into a MeasuredRecord.
+
+    ``fork``     -- output of ``parse_committee_fork``.
+    ``t_fork_ms``-- the conflicting-cert time (race t=0): the infraction-block /
+                    precommit time at (H, r). The accountability clock starts here.
+    ``slashed``  -- list of {"validator_address":addr, "t_slash_ms":t} for the
+                    addresses x/slashing tombstoned (real ``parse_slash_events``,
+                    address-normalized by the collector to the /commit address space).
+
+    T_acc is measured to when BOTH equivocators are caught (the max slash time), so a
+    partial slash does not understate accountability. The committee fields record that
+    the Lemma-1 floor and the honest split were realized on real client code. The
+    record also carries t_infraction/t_slash/T_acc so it flows through estimate_path
+    like arm A (now N=4, two distinct validators slashed). Pure; offline-testable."""
+    equivs = set(fork.get("equivocators") or set())
+    slashed_equiv = [s for s in (slashed or []) if s.get("validator_address") in equivs]
+    n_slashed = len({s["validator_address"] for s in slashed_equiv})
+    slash_times = [s["t_slash_ms"] for s in slashed_equiv if s.get("t_slash_ms") is not None]
+    t_slash_last = max(slash_times) if slash_times else None
+    T_acc = (t_slash_last - t_fork_ms) if (t_slash_last is not None) else None
+    F = fork.get("floor", 2) - 1
+    return MeasuredRecord(
+        # accountability arm (like A): both equivocators caught -> q-arm reinforced at N=4
+        t_infraction=t_fork_ms, t_fork=t_fork_ms,
+        t_evidence_committed=t_slash_last, t_detect=t_slash_last,
+        t_slash_effective=t_slash_last, T_acc=T_acc,
+        t_revert=None, tacc_bound="lo",                 # cooperative slash (mainnet-like src)
+        # the realized attack structure
+        committee_size=N, quorum_size=2 * F + 1,
+        n_equivocators=fork.get("n_equivocators"),
+        n_honest_split=fork.get("n_honest_split"),
+        quorum_intersection_ok=fork.get("quorum_intersection_ok"),
+        conflicting_certs=fork.get("conflicting_certs"),
+        n_slashed=n_slashed,
+        height=fork.get("height"),
+        src_chain=src_chain, source=source, fork_formed=bool(fork.get("conflicting_certs")),
+        measurement_resolution_ms=measurement_resolution_ms,
+        structurally_gated=False)
+
+
+def committee_harness(chain_id: str, *, rpc_a: str, rpc_b: str, height: int,
+                      F: int = 1, slash_window: int = 8,
+                      block_interval_ms: float = 1000.0,
+                      src_chain: str | None = None) -> list:
+    """Real-client-code COMMITTEE-FORK backend (gated to the localnet allowlist).
+
+    Reads the two conflicting commits from the two partitions' RPCs at the same
+    ``height`` (each partition committed a different block), assembles the structural
+    fork, then reads the real slash events from whichever partition's chain carried
+    them (after heal). Python cannot stage the partitioned fork through the RPC; the
+    operator/kit owns the genesis, partition, double-spend injection, and heal (see
+    N4-COMMITTEE.md) and passes the committed ``height``. Read-only over the RPCs."""
+    assert_localnet_only(chain_id)               # hard refusal on any shared/mainnet id
+    if not (rpc_a and rpc_b):
+        raise NotImplementedError(
+            "committee backend needs BOTH partition RPCs (rpc_a, rpc_b) of a running "
+            "private N=4 localnet, plus the committed fork height. See N4-COMMITTEE.md.")
+    commit_a = _rpc_get(rpc_a, "/commit", {"height": height})
+    commit_b = _rpc_get(rpc_b, "/commit", {"height": height})
+    fork = parse_committee_fork(commit_a, commit_b, F=F)
+    # t_fork: earliest precommit timestamp at (H,r); fall back to the A-block time.
+    ts = fork.get("signer_timestamps") or {}
+    t_fork = (min(ts.values()) if ts
+              else parse_block_time_ms(_rpc_get(rpc_a, "/block", {"height": height})))
+    # slashes land after heal; scan both partitions' block_results for slash events.
+    slashed = []
+    for rpc in (rpc_a, rpc_b):
+        for dh in range(0, slash_window + 1):
+            evs = parse_slash_events(_rpc_get(rpc, "/block_results", {"height": height + dh}))
+            for ev in evs:
+                addr = ev["attributes"].get("address") or ev["attributes"].get("validator_address")
+                if addr:
+                    t = parse_block_time_ms(_rpc_get(rpc, "/block", {"height": height + dh}))
+                    slashed.append({"validator_address": addr, "t_slash_ms": t})
+        if slashed:
+            break                                # one partition's chain carries the slashes
+    N = 3 * F + 1
+    rec = assemble_committee_record(
+        fork, t_fork_ms=t_fork, slashed=slashed, N=N,
+        src_chain=src_chain or chain_id,
+        measurement_resolution_ms=block_interval_ms)
+    return [rec]
 
 
 if __name__ == "__main__":
