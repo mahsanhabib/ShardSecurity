@@ -92,6 +92,7 @@ log "[N4] clone e1a->e1b, e2a->e2b (two-nodes-one-key x2, fresh node_key each)"
 "$GAIAD" init e1b --chain-id "$CHAIN" --home "$H_E1B" --overwrite >/dev/null 2>&1
 "$GAIAD" init e2b --chain-id "$CHAIN" --home "$H_E2B" --overwrite >/dev/null 2>&1
 for h in "$H_E1A" "$H_E2A" "$H_H1" "$H_E1B" "$H_E2B" "$H_H2"; do
+  [ "$h" = "$HUB" ] && continue              # HUB already holds the final genesis (don't cp onto itself)
   cp "$HUB/config/genesis.json" "$h/config/genesis.json"
 done
 cp "$H_E1A/config/priv_validator_key.json" "$H_E1B/config/priv_validator_key.json"   # SAME key as e1a
