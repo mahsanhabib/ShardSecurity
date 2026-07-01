@@ -4,148 +4,329 @@ entering extended mode
 (main.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/ieeetran\IEEEtran.cls
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/ieeetran\IEEEtran.cls
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd)
 -- Using 8.5in x 11in (letter) paper.
 -- Using PDF output.
 -- This is a 10 point document.
 )
 ** ATTENTION: Overriding command lockouts (line 7).
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd))
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 For additional information on amsmath, use the `?' option.
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty))
- (C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty))
+ (C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
 fg)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
-))) (C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
-)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithm.st
-y (C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty))
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algpseudoc
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+))) (C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+) (C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\pifont.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\upzd.fd)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\upsy.fd))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
+y
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-latex.def)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
+code.tex
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
+sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s.code.tex
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+libraryfiltered.code.tex))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
+fg)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-pdftex.def
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-common-pdf.def)))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+ssoftpath.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+sprotocol.code.tex))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+e.code.tex
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
+code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
+r.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.basic.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.trigonometric.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.random.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.comparison.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.base.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.round.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.misc.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.integerarithmetics.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
+code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
+.code.tex))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
+tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epoints.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathconstruct.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathusage.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+escopes.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+egraphicstate.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransformations.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+equick.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eobjects.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathprocessing.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+earrows.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eshade.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eimage.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eexternal.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+elayers.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransparency.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epatterns.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+erdf.code.tex)))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+plot.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-0-65.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-1-18.sty))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
+y
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
+ty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
+code.tex))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z\tikz.code.tex
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplothandlers.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+matrix.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytopaths.code.tex)))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryarrows.meta.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarypositioning.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarycalc.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithm.st
+y (C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algpseudoc
 ode.sty
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algorithmi
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algorithmi
 cx.sty
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) (C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg))
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+) (C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
 ty)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
 )
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
 keys.sty)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
 ty
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
 .sty))
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro
 .sty)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
 lestring.sty
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 )))
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
 .sty))
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty))
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty)
 
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
 echeck.sty
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
 ounter.sty))) (../Section/_generated/tab_summary.tex)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def) (main.aux)
 -- Lines per column: 56 (exact).
 
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
 )
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
 fg)) (main.out) (main.out) (../Section/abstract.tex
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd)
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd))
-(../Section/introduction.tex
-Underfull \vbox (badness 10000) has occurred while \output is active
-Underfull \vbox (badness 2020) has occurred while \output is active [1{C:/Users
-/mdnay/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/mdnay/AppData
-/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}])
-(../Section/motivation.tex
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd)
+Underfull \hbox (badness 5161) in paragraph at lines 1--23
+[]\T1/ptm/b/it/9 Abstract\T1/ptm/b/n/9 ---Security anal-y-ses of sharded Byzant
+ine-fault-
+) (../Section/introduction.tex [1{C:/Users/mahab/AppData/Local/MiKTeX/fonts/map
+/pdftex/pdftex.map}{C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/enc/dvip
+s/base/8r.enc}]) (../Section/motivation.tex
 Underfull \hbox (badness 2617) in paragraph at lines 5--11
  \T1/ptm/m/it/10 a) What ``sub-threshold'' means.: [][] \T1/ptm/m/n/10 Through-
 out, \T1/ptm/m/it/10 sub-
-[2]) (../Section/related_work.tex
-Underfull \hbox (badness 10000) in paragraph at lines 43--55
- \T1/ptm/m/it/10 d) Cross-shard, cross-chain, and settlement-before-
+[2]) (../Section/related_work.tex [3]
+Underfull \hbox (badness 10000) in paragraph at lines 114--127
+ \T1/ptm/m/it/10 g) Cross-shard, cross-chain, and settlement-before-
 
-Underfull \hbox (badness 2302) in paragraph at lines 43--55
-\T1/ptm/m/n/10 com-mit-tee. Miner/maximal-extractable-value re-search [[]]
-[3]
-Underfull \hbox (badness 3977) in paragraph at lines 96--96
-[]|\T1/ptm/m/n/9 Trustless, safety (not live-ness),
-) (../Section/threat_model.tex) (../Section/methodology.tex [4]
-Underfull \hbox (badness 2269) in paragraph at lines 84--89
+Underfull \hbox (badness 3312) in paragraph at lines 114--127
+\T1/ptm/m/n/10 by a bribed com-mit-tee. Miner/maximal-extractable-value
+
+Underfull \hbox (badness 1442) in paragraph at lines 114--127
+\T1/ptm/m/n/10 value [[]], [[]]; to-gether these mo-ti-vate treat-ing $\OML/cmm
+/m/it/10 V$ \T1/ptm/m/n/10 as
+
+Underfull \hbox (badness 2245) in paragraph at lines 139--151
+\T1/ptm/m/n/10 whether the work \T1/ptm/m/it/10 prices \T1/ptm/m/n/10 the cor-r
+up-tion, whether it is
+[4]
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+) (../Section/threat_model.tex) (../Section/methodology.tex [5]
+Underfull \vbox (badness 3158) has occurred while \output is active
+Underfull \hbox (badness 2269) in paragraph at lines 111--116
 []\T1/ptm/m/n/10 Under As-sump-tion []1[], val-ida-tor $\OML/cmm/m/it/10 i$ \T1
 /ptm/m/n/10 equiv-o-cates iff the
 
-Underfull \hbox (badness 3815) in paragraph at lines 84--89
+Underfull \hbox (badness 3815) in paragraph at lines 111--116
 \T1/ptm/m/n/10 bribe cov-ers its ex-pected loss. Equiv-o-ca-tion is max-i-
 
-Underfull \hbox (badness 1762) in paragraph at lines 84--89
+Underfull \hbox (badness 1762) in paragraph at lines 111--116
 \T1/ptm/m/n/10 mally ac-count-able (As-sump-tion []2[]): if the proof is en-
 
-Underfull \hbox (badness 1789) in paragraph at lines 84--89
+Underfull \hbox (badness 1789) in paragraph at lines 111--116
 \T1/ptm/m/n/10 stake $\OML/cmm/m/it/10 s[]$ \T1/ptm/m/n/10 and for-feits con-ti
 n-u-a-tion value $\OML/cmm/m/it/10 R[]$\T1/ptm/m/n/10 . Let $\OML/cmm/m/it/10 q
  \OT1/cmr/m/n/10 =
-[5]
-Underfull \hbox (badness 2460) in paragraph at lines 224--225
+[6] [7]
+Underfull \hbox (badness 2460) in paragraph at lines 251--252
 []\T1/ptm/m/n/10 On branch $\OML/cmm/m/it/10 b[]$\T1/ptm/m/n/10 , sub-mit the c
 ross-shard re-ceipt that
-) (../Section/reconfiguration.tex [6] [7 <../artifact/figures/fig1_attack_flow.
-pdf>]
+) (../Section/reconfiguration.tex [8 <../../artifact/figures/fig1_attack_flow.p
+df>]
 Underfull \hbox (badness 10000) in paragraph at lines 109--109
 \T1/ptm/m/n/9 un-in-cluded txns
 
@@ -247,9 +428,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--109
 
 Underfull \hbox (badness 1867) in paragraph at lines 109--109
 []|\T1/ptm/m/n/9 Some ar-ti-facts ex-e-
-[8 <../artifact/figures/fig5_reconf_fsm.pdf>]) (../Section/implementation.tex
-(C:\Users\mdnay\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd))
-(../Section/experimental_setup.tex [9]
+[9 <../../artifact/figures/fig5_reconf_fsm.pdf>])
+(../Section/implementation.tex
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd))
+(../Section/experimental_setup.tex [10]
 Underfull \hbox (badness 10000) in paragraph at lines 66--66
 []|$\OMS/cmsy/m/n/9 f\OT1/cmr/m/n/9 4\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 7\OML/cmm
 /m/it/9 ; [] ; \OT1/cmr/m/n/9 400\OMS/cmsy/m/n/9 g$ \T1/ptm/m/n/9 (8
@@ -258,49 +440,71 @@ Underfull \hbox (badness 2197) in paragraph at lines 70--75
  \T1/ptm/m/it/10 d) Met-rics.: [][] \T1/ptm/m/n/10 We re-port (i) $\OML/cmm/m/i
 t/10 p[]$ \T1/ptm/m/n/10 vs. $\OML/cmm/m/it/10 '$ \T1/ptm/m/n/10 for $\OML/cmm/
 m/it/10 k \OMS/cmsy/m/n/10 2
-) (../Section/evaluation.tex [10 <../artifact/figures/fig6_reconf_profit.pdf>]
-(../Section/_generated/tab_breakeven.tex) [11 <../artifact/figures/fig_psucc.pd
-f> <../artifact/figures/fig_pwin.pdf> <../artifact/figures/fig4_cost.pdf>]
-[12 <../artifact/figures/fig3_phase.pdf> <../artifact/figures/fig_profit_qV.pdf
-> <../artifact/figures/fig_defenses.pdf>]
+[11 <../../artifact/figures/fig6_reconf_profit.pdf>])
+(../Section/evaluation.tex [12 <../../artifact/figures/fig_psucc.pdf> <../../ar
+tifact/figures/fig_pwin.pdf>] (../Section/_generated/tab_breakeven.tex)
+(../Section/_generated/tab_defenses.tex) [13 <../../artifact/figures/fig4_cost.
+pdf> <../../artifact/figures/fig3_phase.pdf> <../../artifact/figures/fig_profit
+_qV.pdf>]
 
 LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
-(Font)              using `T1/ptm/m/it' instead on input line 189.
+(Font)              using `T1/ptm/m/it' instead on input line 200.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 200.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 200.
 
 (../Section/_generated/tab_realsystems.tex))
-(../Section/measured_evaluation.tex
-Underfull \vbox (badness 4805) has occurred while \output is active
-Underfull \hbox (badness 2005) in paragraph at lines 43--47
+(../Section/measured_evaluation.tex [14 <../../artifact/figures/fig_defenses.pd
+f> <../../artifact/figures/fig_testbed.pdf>]
+Underfull \hbox (badness 2005) in paragraph at lines 52--56
 []\T1/ptm/b/n/10 Primary open tar-get \T1/ptm/m/n/10 --- a real fast/in-tent br
 idge
-[13 <../artifact/figures/fig_testbed.pdf>]
-Underfull \vbox (badness 2080) has occurred while \output is active
-Underfull \hbox (badness 4981) in paragraph at lines 107--118
+
+Underfull \vbox (badness 2080) has occurred while \output is active [15]
+Underfull \hbox (badness 4981) in paragraph at lines 119--130
  \T1/ptm/m/it/10 d) $\OML/cmm/m/it/10 T[]$\T1/ptm/m/it/10 : re-ceipt and withdr
 awal-beyond-clawback,
 
-Underfull \hbox (badness 1997) in paragraph at lines 120--137
+Underfull \hbox (badness 1997) in paragraph at lines 132--149
  \T1/ptm/m/it/10 e) The pre-registered de-ci-sion rule.: [][] \T1/ptm/m/n/10 Al
 l es-ti-ma-tors
 
-Underfull \hbox (badness 3769) in paragraph at lines 120--137
+Underfull \hbox (badness 3769) in paragraph at lines 132--149
 \T1/ptm/m/n/10 (Clopper--Pearson/Wilson/rule-of-three for $\OML/cmm/m/it/10 q$\
 T1/ptm/m/n/10 ; Gamma/log-
-
-Underfull \vbox (badness 2080) has occurred while \output is active [14]
+[16]
 
 LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
-(Font)              using `T1/ptm/m/it' instead on input line 190.
+(Font)              using `T1/ptm/m/it' instead on input line 206.
 
-(../Section/_generated/tab_measured.tex)) (../Section/discussion.tex
+(../Section/_generated/tab_measured.tex
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]|\T1/ptm/m/n/9 0.00, []\T1/ptm/m/sc/9 ruled-
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]|\T1/ptm/m/n/9 0.93, []\T1/ptm/m/sc/9 open-
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]|\T1/ptm/m/n/9 1.00, []\T1/ptm/m/sc/9 open-
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]|\T1/ptm/m/n/9 1.00, []\T1/ptm/m/sc/9 open-
+)) (../Section/discussion.tex
 Underfull \hbox (badness 2884) in paragraph at lines 39--41
 \T1/ptm/m/n/10 value-bearing cross-shard ar-ti-facts dur-ing re-con-fig-u-ra-ti
 on
 
 Underfull \hbox (badness 10000) in paragraph at lines 60--60
 []|\T1/ptm/m/n/9 Primarily
-[15]) (../Section/limitations.tex [16]) (../Section/conclusion.tex)
-(../Section/ethical_considerations.tex) (../Section/open_science.tex
+) (../Section/limitations.tex [17]
+Underfull \vbox (badness 1038) has occurred while \output is active)
+(../Section/conclusion.tex) (../Section/ethical_considerations.tex [18])
+(../Section/open_science.tex
 Underfull \hbox (badness 1509) in paragraph at lines 4--12
 []\T1/ptm/m/n/10 The ar-ti-fact needed to eval-u-ate the pa-per is the lo-
 
@@ -313,7 +517,7 @@ Underfull \hbox (badness 2020) in paragraph at lines 4--12
 Underfull \hbox (badness 2165) in paragraph at lines 4--12
 \T1/ptm/m/n/10 ter-min-is-tic un-der \T1/pcr/m/n/10 configs/main.yaml\T1/ptm/m/
 n/10 ; it re-gen-er-ates
-[17]) (../Section/appendix_repro.tex
+) (../Section/appendix_repro.tex
 Underfull \hbox (badness 10000) in paragraph at lines 11--14
 []\T1/pcr/m/n/9 python run_all.py --config
 
@@ -325,7 +529,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--14
 
 Underfull \hbox (badness 10000) in paragraph at lines 11--14
 \T1/pcr/m/n/9 results/main.json --out
-
+[19]
 Underfull \hbox (badness 5345) in paragraph at lines 42--42
 []|\T1/ptm/m/n/9 single source of truth
 
@@ -408,8 +612,32 @@ as-ing in $\OML/cmm/m/it/10 a$\T1/ptm/m/n/10 . The bribe term
 
 Underfull \hbox (badness 1635) in paragraph at lines 69--80
 \T1/ptm/m/n/10 con-trast with the hard-cutoff de-sign is im-me-di-ate from
-[18]) (main.bbl
-Underfull \hbox (badness 2158) in paragraph at lines 143--146
+[20]) (main.bbl
+Underfull \hbox (badness 1831) in paragraph at lines 136--141
+[]\T1/ptm/m/n/8 B. David, B. Ma-gri, C. Matt, J. B. Nielsen, and D. Tschudi,
+
+Underfull \hbox (badness 3735) in paragraph at lines 136--141
+\T1/ptm/m/n/8 pp. 683--696, cryp-tol-ogy ePrint Archive, Pa-per 2021/211; DOI
+
+Underfull \hbox (badness 1675) in paragraph at lines 194--198
+[]\T1/ptm/m/n/8 R. Sarenche, E. N. Tas, B. Mon-not, C. Schwarz-Schilling, and
+
+Underfull \hbox (badness 1400) in paragraph at lines 200--205
+\T1/ptm/m/n/8 bribery-enabled de-layed block pro-duc-tion,'' \T1/ptm/m/it/8 IEE
+E Trans-ac-tions on
+[21]
+Underfull \hbox (badness 2990) in paragraph at lines 229--231
+[]\T1/ptm/m/n/8 S. Deb, R. Raynor, and S. Kan-nan, ``STAKESURE: Proof of
+
+Underfull \hbox (badness 1424) in paragraph at lines 314--318
+\T1/ptm/m/it/8 Sym-po-sium on Se-cu-rity and Pri-vacy (S&P)\T1/ptm/m/n/8 , 2022
+, pp. 198--214,
+
+Underfull \hbox (badness 10000) in paragraph at lines 320--322
+[]\T1/ptm/m/n/8 C. Mc-Me-namin, ``SoK: Cross-domain MEV,'' arXiv preprint
+
+Underfull \vbox (badness 1270) has occurred while \output is active
+Underfull \hbox (badness 2158) in paragraph at lines 329--332
 []\T1/ptm/m/n/8 Ethereum, ``Ethereum con-sen-sus spec-i-fi-ca-tions,'' []$https
  : / / github . com /
 )
@@ -424,34 +652,1426 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[19] (main.aux) )
-(see the transcript file for additional information)<C:/Users/mdnay/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/mdnay/Ap
+[22] (main.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)<C:/Users/mahab/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/mahab/Ap
 pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/U
-sers/mdnay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.
-pfb><C:/Users/mdnay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmmi6.pfb><C:/Users/mdnay/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmmi7.pfb><C:/Users/mdnay/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmmi8.pfb><C:/Users/mdnay/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/mdnay/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mdnay/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/mdnay/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/mdnay/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/mdna
-y/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Use
-rs/mdnay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-<C:/Users/mdnay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb><C:/Users/mdnay/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmsy6.pfb><C:/Users/mdnay/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmsy7.pfb><C:/Users/mdnay/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmsy8.pfb><C:/Users/mdnay/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/mdnay/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/mdnay/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/
-mdnay/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/User
-s/mdnay/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/User
-s/mdnay/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Use
-rs/mdnay/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Use
-rs/mdnay/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (19 pages, 842007 bytes).
+sers/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.
+pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmmi5.pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmmi6.pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmmi7.pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/mahab/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/mahab/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mahab/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/mahab/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/mah
+ab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Us
+ers/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb
+><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mr9.pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmsy6.pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmsy7.pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/mahab/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/mahab/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/mahab/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C
+:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb>
+<C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb>
+<C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb
+><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb
+><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pf
+b><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/zapfding/uzdr.p
+fb>
+Output written on main.pdf (22 pages, 898117 bytes).
+Transcript written on main.log.
+This is BibTeX, Version 0.99d (MiKTeX 24.1)
+The top-level auxiliary file: main.aux
+The style file: IEEEtran.bst
+Database file #1: ../../reference.bib
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+
+Done.
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(main.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/ieeetran\IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+-- This is a 10 point document.
+)
+** ATTENTION: Overriding command lockouts (line 7).
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty))
+ (C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+))) (C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+) (C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\pifont.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\upzd.fd)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\upsy.fd))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
+y
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-latex.def)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
+code.tex
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
+sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s.code.tex
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+libraryfiltered.code.tex))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
+fg)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-pdftex.def
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-common-pdf.def)))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+ssoftpath.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+sprotocol.code.tex))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+e.code.tex
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
+code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
+r.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.basic.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.trigonometric.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.random.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.comparison.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.base.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.round.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.misc.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.integerarithmetics.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
+code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
+.code.tex))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
+tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epoints.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathconstruct.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathusage.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+escopes.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+egraphicstate.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransformations.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+equick.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eobjects.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathprocessing.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+earrows.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eshade.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eimage.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eexternal.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+elayers.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransparency.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epatterns.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+erdf.code.tex)))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+plot.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-0-65.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-1-18.sty))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
+y
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
+ty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
+code.tex))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z\tikz.code.tex
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplothandlers.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+matrix.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytopaths.code.tex)))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryarrows.meta.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarypositioning.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarycalc.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithm.st
+y (C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algpseudoc
+ode.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algorithmi
+cx.sty
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro
+.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+)))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty)
+
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty))) (../Section/_generated/tab_summary.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def) (main.aux)
+-- Lines per column: 56 (exact).
+
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg)) (main.out) (main.out) (../Section/abstract.tex
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd)
+Underfull \hbox (badness 5161) in paragraph at lines 1--23
+[]\T1/ptm/b/it/9 Abstract\T1/ptm/b/n/9 ---Security anal-y-ses of sharded Byzant
+ine-fault-
+) (../Section/introduction.tex [1{C:/Users/mahab/AppData/Local/MiKTeX/fonts/map
+/pdftex/pdftex.map}{C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/enc/dvip
+s/base/8r.enc}]) (../Section/motivation.tex
+Underfull \hbox (badness 2617) in paragraph at lines 5--11
+ \T1/ptm/m/it/10 a) What ``sub-threshold'' means.: [][] \T1/ptm/m/n/10 Through-
+out, \T1/ptm/m/it/10 sub-
+[2]) (../Section/related_work.tex [3]
+Underfull \hbox (badness 10000) in paragraph at lines 114--127
+ \T1/ptm/m/it/10 g) Cross-shard, cross-chain, and settlement-before-
+
+Underfull \hbox (badness 3312) in paragraph at lines 114--127
+\T1/ptm/m/n/10 by a bribed com-mit-tee. Miner/maximal-extractable-value
+
+Underfull \hbox (badness 1442) in paragraph at lines 114--127
+\T1/ptm/m/n/10 value [[]], [[]]; to-gether these mo-ti-vate treat-ing $\OML/cmm
+/m/it/10 V$ \T1/ptm/m/n/10 as
+
+Underfull \hbox (badness 2245) in paragraph at lines 139--151
+\T1/ptm/m/n/10 whether the work \T1/ptm/m/it/10 prices \T1/ptm/m/n/10 the cor-r
+up-tion, whether it is
+[4]
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+) (../Section/threat_model.tex) (../Section/methodology.tex [5]
+Underfull \vbox (badness 3158) has occurred while \output is active
+Underfull \hbox (badness 2269) in paragraph at lines 111--116
+[]\T1/ptm/m/n/10 Under As-sump-tion []1[], val-ida-tor $\OML/cmm/m/it/10 i$ \T1
+/ptm/m/n/10 equiv-o-cates iff the
+
+Underfull \hbox (badness 3815) in paragraph at lines 111--116
+\T1/ptm/m/n/10 bribe cov-ers its ex-pected loss. Equiv-o-ca-tion is max-i-
+
+Underfull \hbox (badness 1762) in paragraph at lines 111--116
+\T1/ptm/m/n/10 mally ac-count-able (As-sump-tion []2[]): if the proof is en-
+
+Underfull \hbox (badness 1789) in paragraph at lines 111--116
+\T1/ptm/m/n/10 stake $\OML/cmm/m/it/10 s[]$ \T1/ptm/m/n/10 and for-feits con-ti
+n-u-a-tion value $\OML/cmm/m/it/10 R[]$\T1/ptm/m/n/10 . Let $\OML/cmm/m/it/10 q
+ \OT1/cmr/m/n/10 =
+[6] [7]
+Underfull \hbox (badness 2460) in paragraph at lines 251--252
+[]\T1/ptm/m/n/10 On branch $\OML/cmm/m/it/10 b[]$\T1/ptm/m/n/10 , sub-mit the c
+ross-shard re-ceipt that
+) (../Section/reconfiguration.tex [8 <../../artifact/figures/fig1_attack_flow.p
+df>]
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 un-in-cluded txns
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 Last-block at-tack
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 weak un-less the
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 ma-li-cious tx was
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 Value-bearing
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 ar-ti-facts can-not
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 ex-e-cute af-ter the
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 Protocol stops
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 shard txns and
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 fin-ishes pend-ing
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 Old-epoch
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 re-ceipt-s/out-box
+
+Underfull \hbox (badness 6380) in paragraph at lines 109--109
+\T1/ptm/m/n/9 im-ported in epoch
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 and ex-e-cutes next
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 Import is
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 accountability-gated
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 Imported
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 re-ceipts ex-e-cuted
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 im-me-di-ately on
+
+Underfull \hbox (badness 2617) in paragraph at lines 109--109
+\T1/ptm/m/n/9 the new com-mit-tee
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 New com-mit-tee
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 re-ject-s/quar-an-tines
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 con-flict-ing old
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 New com-mit-tee
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 head-ers, re-ceipt
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 roots, as-sign-ments,
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 Preserves
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 Beacon quar-an-tines
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 Validators ro-tate
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 No cut-off,
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 but at-tacker
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 op-ti-mizes $\OML/cmm/m/it/9 a$ \T1/ptm/m/n/9 via
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 Old-epoch ar-ti-facts
+
+Underfull \hbox (badness 1867) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 Some ar-ti-facts ex-e-
+[9 <../../artifact/figures/fig5_reconf_fsm.pdf>])
+(../Section/implementation.tex
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd))
+(../Section/experimental_setup.tex [10]
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+[]|$\OMS/cmsy/m/n/9 f\OT1/cmr/m/n/9 4\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 7\OML/cmm
+/m/it/9 ; [] ; \OT1/cmr/m/n/9 400\OMS/cmsy/m/n/9 g$ \T1/ptm/m/n/9 (8
+
+Underfull \hbox (badness 2197) in paragraph at lines 70--75
+ \T1/ptm/m/it/10 d) Met-rics.: [][] \T1/ptm/m/n/10 We re-port (i) $\OML/cmm/m/i
+t/10 p[]$ \T1/ptm/m/n/10 vs. $\OML/cmm/m/it/10 '$ \T1/ptm/m/n/10 for $\OML/cmm/
+m/it/10 k \OMS/cmsy/m/n/10 2
+[11 <../../artifact/figures/fig6_reconf_profit.pdf>])
+(../Section/evaluation.tex [12 <../../artifact/figures/fig_psucc.pdf> <../../ar
+tifact/figures/fig_pwin.pdf>] (../Section/_generated/tab_breakeven.tex)
+(../Section/_generated/tab_defenses.tex) [13 <../../artifact/figures/fig4_cost.
+pdf> <../../artifact/figures/fig3_phase.pdf> <../../artifact/figures/fig_profit
+_qV.pdf>]
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 200.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 200.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 200.
+
+(../Section/_generated/tab_realsystems.tex))
+(../Section/measured_evaluation.tex [14 <../../artifact/figures/fig_defenses.pd
+f> <../../artifact/figures/fig_testbed.pdf>]
+Underfull \hbox (badness 2005) in paragraph at lines 52--56
+[]\T1/ptm/b/n/10 Primary open tar-get \T1/ptm/m/n/10 --- a real fast/in-tent br
+idge
+
+Underfull \vbox (badness 2080) has occurred while \output is active [15]
+Underfull \hbox (badness 4981) in paragraph at lines 119--130
+ \T1/ptm/m/it/10 d) $\OML/cmm/m/it/10 T[]$\T1/ptm/m/it/10 : re-ceipt and withdr
+awal-beyond-clawback,
+
+Underfull \hbox (badness 1997) in paragraph at lines 132--149
+ \T1/ptm/m/it/10 e) The pre-registered de-ci-sion rule.: [][] \T1/ptm/m/n/10 Al
+l es-ti-ma-tors
+
+Underfull \hbox (badness 3769) in paragraph at lines 132--149
+\T1/ptm/m/n/10 (Clopper--Pearson/Wilson/rule-of-three for $\OML/cmm/m/it/10 q$\
+T1/ptm/m/n/10 ; Gamma/log-
+[16]
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 206.
+
+(../Section/_generated/tab_measured.tex
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]|\T1/ptm/m/n/9 0.00, []\T1/ptm/m/sc/9 ruled-
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]|\T1/ptm/m/n/9 0.93, []\T1/ptm/m/sc/9 open-
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]|\T1/ptm/m/n/9 1.00, []\T1/ptm/m/sc/9 open-
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]|\T1/ptm/m/n/9 1.00, []\T1/ptm/m/sc/9 open-
+)) (../Section/discussion.tex
+Underfull \hbox (badness 2884) in paragraph at lines 39--41
+\T1/ptm/m/n/10 value-bearing cross-shard ar-ti-facts dur-ing re-con-fig-u-ra-ti
+on
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+[]|\T1/ptm/m/n/9 Primarily
+) (../Section/limitations.tex [17]
+Underfull \vbox (badness 1038) has occurred while \output is active)
+(../Section/conclusion.tex) (../Section/ethical_considerations.tex [18])
+(../Section/open_science.tex
+Underfull \hbox (badness 1509) in paragraph at lines 4--12
+[]\T1/ptm/m/n/10 The ar-ti-fact needed to eval-u-ate the pa-per is the lo-
+
+Underfull \hbox (badness 1715) in paragraph at lines 4--12
+\T1/ptm/m/n/10 plot-ting scripts, ta-ble gen-er-a-tor, tests, and a README
+
+Underfull \hbox (badness 2020) in paragraph at lines 4--12
+\T1/ptm/m/n/10 with ex-act re-pro-duc-tion com-mands. The ar-ti-fact is de-
+
+Underfull \hbox (badness 2165) in paragraph at lines 4--12
+\T1/ptm/m/n/10 ter-min-is-tic un-der \T1/pcr/m/n/10 configs/main.yaml\T1/ptm/m/
+n/10 ; it re-gen-er-ates
+) (../Section/appendix_repro.tex
+Underfull \hbox (badness 10000) in paragraph at lines 11--14
+[]\T1/pcr/m/n/9 python run_all.py --config
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--14
+\T1/pcr/m/n/9 python plot_figures.py --input
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--14
+\T1/pcr/m/n/9 python make_tables.py --input
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--14
+\T1/pcr/m/n/9 results/main.json --out
+[19]
+Underfull \hbox (badness 5345) in paragraph at lines 42--42
+[]|\T1/ptm/m/n/9 single source of truth
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+\T1/ptm/m/n/9 for the equa-tions of
+
+Underfull \hbox (badness 4242) in paragraph at lines 42--42
+\T1/ptm/m/n/9 Ÿ[]V[]: equiv-o-ca-tion floor,
+
+Underfull \hbox (badness 2418) in paragraph at lines 42--42
+\T1/ptm/m/n/9 mit-tee; on equiv-o-ca-tion
+
+Underfull \hbox (badness 6542) in paragraph at lines 42--42
+\T1/ptm/m/n/9 emits a gen-uine, ver-
+
+Underfull \hbox (badness 8000) in paragraph at lines 42--42
+\T1/ptm/m/n/9 i-fi-able ev-i-dence ob-ject
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+[]|\T1/ptm/m/n/9 Monte-Carlo quo-rum
+
+Underfull \hbox (badness 4846) in paragraph at lines 42--42
+\T1/ptm/m/it/9 sures $\OML/cmm/m/it/9 T[]$\T1/ptm/m/n/9 /$\OML/cmm/m/it/9 T[]$ 
+\T1/ptm/m/n/9 from
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+\T1/ptm/m/n/9 an accountability-gating
+
+Underfull \hbox (badness 3895) in paragraph at lines 42--42
+[]|\T1/ptm/m/n/9 runnable \T1/ptm/m/sc/9 Pay-ToE-quiv-
+
+Underfull \hbox (badness 4416) in paragraph at lines 42--42
+\T1/ptm/m/n/9 on a valid proof, re-
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+[]|\T1/ptm/m/n/9 epoch-boundary model:
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+[]|\T1/ptm/m/n/9 documented-parameter
+
+Underfull \hbox (badness 2521) in paragraph at lines 42--42
+[]|\T1/ptm/m/n/9 read-only col-lec-tors for
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+[]|\T1/ptm/m/n/9 driver: self-validates,
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+\T1/ptm/m/n/9 then runs ev-ery
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+\T1/ptm/m/n/9 ex-per-i-ment into one
+
+Underfull \hbox (badness 3954) in paragraph at lines 45--51
+[]\T1/ptm/m/n/10 The live mea-sure-ment of Ÿ[]X[] is a \T1/ptm/m/it/10 sep-a-ra
+te, read-
+
+Underfull \hbox (badness 5592) in paragraph at lines 45--51
+\T1/ptm/m/it/10 only \T1/ptm/m/n/10 step driven by \T1/pcr/m/n/10 collect_*.py\
+T1/ptm/m/n/10 : each col-lec-tor
+
+Underfull \hbox (badness 4001) in paragraph at lines 45--51
+\T1/ptm/m/n/10 fetches already-public on-chain data (his-tor-i-cal double-
+
+Underfull \hbox (badness 6380) in paragraph at lines 45--51
+\T1/ptm/m/n/10 sign slashes, or-di-nary bridge fills) over pub-lic end-
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--80
+[]\T1/ptm/m/n/10 Under car-ry-over, $\OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 (\OML/
+cmm/m/it/10 a\OT1/cmr/m/n/10 ) =
+
+Underfull \hbox (badness 1721) in paragraph at lines 69--80
+[]\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 T[] < T[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/1
+0 H[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a\OT1/cmr/m/n/10 )]$ \T1/ptm/m/n/10 from
+ Eq. []. Since
+
+Underfull \hbox (badness 2503) in paragraph at lines 69--80
+\T1/ptm/m/n/10 in $\OML/cmm/m/it/10 a$\T1/ptm/m/n/10 , $\OML/cmm/m/it/10 p[]\OT
+1/cmr/m/n/10 (\OML/cmm/m/it/10 a\OT1/cmr/m/n/10 )$ \T1/ptm/m/n/10 is non-de-cre
+as-ing in $\OML/cmm/m/it/10 a$\T1/ptm/m/n/10 . The bribe term
+
+Underfull \hbox (badness 1635) in paragraph at lines 69--80
+\T1/ptm/m/n/10 con-trast with the hard-cutoff de-sign is im-me-di-ate from
+[20]) (main.bbl
+Underfull \hbox (badness 1831) in paragraph at lines 136--141
+[]\T1/ptm/m/n/8 B. David, B. Ma-gri, C. Matt, J. B. Nielsen, and D. Tschudi,
+
+Underfull \hbox (badness 3735) in paragraph at lines 136--141
+\T1/ptm/m/n/8 pp. 683--696, cryp-tol-ogy ePrint Archive, Pa-per 2021/211; DOI
+
+Underfull \hbox (badness 1675) in paragraph at lines 194--198
+[]\T1/ptm/m/n/8 R. Sarenche, E. N. Tas, B. Mon-not, C. Schwarz-Schilling, and
+
+Underfull \hbox (badness 1400) in paragraph at lines 200--205
+\T1/ptm/m/n/8 bribery-enabled de-layed block pro-duc-tion,'' \T1/ptm/m/it/8 IEE
+E Trans-ac-tions on
+[21]
+Underfull \hbox (badness 2990) in paragraph at lines 229--231
+[]\T1/ptm/m/n/8 S. Deb, R. Raynor, and S. Kan-nan, ``STAKESURE: Proof of
+
+Underfull \hbox (badness 1424) in paragraph at lines 314--318
+\T1/ptm/m/it/8 Sym-po-sium on Se-cu-rity and Pri-vacy (S&P)\T1/ptm/m/n/8 , 2022
+, pp. 198--214,
+
+Underfull \hbox (badness 10000) in paragraph at lines 320--322
+[]\T1/ptm/m/n/8 C. Mc-Me-namin, ``SoK: Cross-domain MEV,'' arXiv preprint
+
+Underfull \vbox (badness 1270) has occurred while \output is active
+Underfull \hbox (badness 2158) in paragraph at lines 329--332
+[]\T1/ptm/m/n/8 Ethereum, ``Ethereum con-sen-sus spec-i-fi-ca-tions,'' []$https
+ : / / github . com /
+)
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the appropriate paper size.
+
+[22] (main.aux) )
+(see the transcript file for additional information)<C:/Users/mahab/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/mahab/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/U
+sers/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.
+pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmmi5.pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmmi6.pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmmi7.pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/mahab/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/mahab/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mahab/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/mahab/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/mah
+ab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Us
+ers/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb
+><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mr9.pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmsy6.pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmsy7.pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/mahab/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/mahab/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/mahab/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C
+:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb>
+<C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb>
+<C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb
+><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb
+><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pf
+b><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/zapfding/uzdr.p
+fb>
+Output written on main.pdf (22 pages, 898117 bytes).
+Transcript written on main.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(main.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/ieeetran\IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+-- This is a 10 point document.
+)
+** ATTENTION: Overriding command lockouts (line 7).
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty))
+ (C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+))) (C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+) (C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\pifont.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\upzd.fd)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\upsy.fd))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
+y
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-latex.def)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
+code.tex
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
+sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s.code.tex
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+libraryfiltered.code.tex))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
+fg)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-pdftex.def
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-common-pdf.def)))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+ssoftpath.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+sprotocol.code.tex))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+e.code.tex
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
+code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
+r.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.basic.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.trigonometric.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.random.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.comparison.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.base.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.round.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.misc.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.integerarithmetics.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
+code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
+.code.tex))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
+tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epoints.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathconstruct.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathusage.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+escopes.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+egraphicstate.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransformations.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+equick.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eobjects.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathprocessing.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+earrows.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eshade.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eimage.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eexternal.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+elayers.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransparency.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epatterns.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+erdf.code.tex)))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+plot.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-0-65.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-1-18.sty))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
+y
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
+ty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
+code.tex))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z\tikz.code.tex
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplothandlers.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+matrix.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytopaths.code.tex)))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryarrows.meta.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarypositioning.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarycalc.code.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithm.st
+y (C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algpseudoc
+ode.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algorithmi
+cx.sty
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro
+.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+)))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty))
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty)
+
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty))) (../Section/_generated/tab_summary.tex)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def) (main.aux)
+-- Lines per column: 56 (exact).
+
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg)) (main.out) (main.out) (../Section/abstract.tex
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd)
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd)
+Underfull \hbox (badness 5161) in paragraph at lines 1--23
+[]\T1/ptm/b/it/9 Abstract\T1/ptm/b/n/9 ---Security anal-y-ses of sharded Byzant
+ine-fault-
+) (../Section/introduction.tex [1{C:/Users/mahab/AppData/Local/MiKTeX/fonts/map
+/pdftex/pdftex.map}{C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/enc/dvip
+s/base/8r.enc}]) (../Section/motivation.tex
+Underfull \hbox (badness 2617) in paragraph at lines 5--11
+ \T1/ptm/m/it/10 a) What ``sub-threshold'' means.: [][] \T1/ptm/m/n/10 Through-
+out, \T1/ptm/m/it/10 sub-
+[2]) (../Section/related_work.tex [3]
+Underfull \hbox (badness 10000) in paragraph at lines 114--127
+ \T1/ptm/m/it/10 g) Cross-shard, cross-chain, and settlement-before-
+
+Underfull \hbox (badness 3312) in paragraph at lines 114--127
+\T1/ptm/m/n/10 by a bribed com-mit-tee. Miner/maximal-extractable-value
+
+Underfull \hbox (badness 1442) in paragraph at lines 114--127
+\T1/ptm/m/n/10 value [[]], [[]]; to-gether these mo-ti-vate treat-ing $\OML/cmm
+/m/it/10 V$ \T1/ptm/m/n/10 as
+
+Underfull \hbox (badness 2245) in paragraph at lines 139--151
+\T1/ptm/m/n/10 whether the work \T1/ptm/m/it/10 prices \T1/ptm/m/n/10 the cor-r
+up-tion, whether it is
+[4]
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 161.
+
+) (../Section/threat_model.tex) (../Section/methodology.tex [5]
+Underfull \vbox (badness 3158) has occurred while \output is active
+Underfull \hbox (badness 2269) in paragraph at lines 111--116
+[]\T1/ptm/m/n/10 Under As-sump-tion []1[], val-ida-tor $\OML/cmm/m/it/10 i$ \T1
+/ptm/m/n/10 equiv-o-cates iff the
+
+Underfull \hbox (badness 3815) in paragraph at lines 111--116
+\T1/ptm/m/n/10 bribe cov-ers its ex-pected loss. Equiv-o-ca-tion is max-i-
+
+Underfull \hbox (badness 1762) in paragraph at lines 111--116
+\T1/ptm/m/n/10 mally ac-count-able (As-sump-tion []2[]): if the proof is en-
+
+Underfull \hbox (badness 1789) in paragraph at lines 111--116
+\T1/ptm/m/n/10 stake $\OML/cmm/m/it/10 s[]$ \T1/ptm/m/n/10 and for-feits con-ti
+n-u-a-tion value $\OML/cmm/m/it/10 R[]$\T1/ptm/m/n/10 . Let $\OML/cmm/m/it/10 q
+ \OT1/cmr/m/n/10 =
+[6] [7]
+Underfull \hbox (badness 2460) in paragraph at lines 251--252
+[]\T1/ptm/m/n/10 On branch $\OML/cmm/m/it/10 b[]$\T1/ptm/m/n/10 , sub-mit the c
+ross-shard re-ceipt that
+) (../Section/reconfiguration.tex [8 <../../artifact/figures/fig1_attack_flow.p
+df>]
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 un-in-cluded txns
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 Last-block at-tack
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 weak un-less the
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 ma-li-cious tx was
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 Value-bearing
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 ar-ti-facts can-not
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 ex-e-cute af-ter the
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 Protocol stops
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 shard txns and
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 fin-ishes pend-ing
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 Old-epoch
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 re-ceipt-s/out-box
+
+Underfull \hbox (badness 6380) in paragraph at lines 109--109
+\T1/ptm/m/n/9 im-ported in epoch
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 and ex-e-cutes next
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 Import is
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 accountability-gated
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 Imported
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 re-ceipts ex-e-cuted
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 im-me-di-ately on
+
+Underfull \hbox (badness 2617) in paragraph at lines 109--109
+\T1/ptm/m/n/9 the new com-mit-tee
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 New com-mit-tee
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 re-ject-s/quar-an-tines
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 con-flict-ing old
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 New com-mit-tee
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 head-ers, re-ceipt
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 roots, as-sign-ments,
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 Preserves
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 Beacon quar-an-tines
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 Validators ro-tate
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 No cut-off,
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 but at-tacker
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+\T1/ptm/m/n/9 op-ti-mizes $\OML/cmm/m/it/9 a$ \T1/ptm/m/n/9 via
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 Old-epoch ar-ti-facts
+
+Underfull \hbox (badness 1867) in paragraph at lines 109--109
+[]|\T1/ptm/m/n/9 Some ar-ti-facts ex-e-
+[9 <../../artifact/figures/fig5_reconf_fsm.pdf>])
+(../Section/implementation.tex
+(C:\Users\mahab\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd))
+(../Section/experimental_setup.tex [10]
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+[]|$\OMS/cmsy/m/n/9 f\OT1/cmr/m/n/9 4\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 7\OML/cmm
+/m/it/9 ; [] ; \OT1/cmr/m/n/9 400\OMS/cmsy/m/n/9 g$ \T1/ptm/m/n/9 (8
+
+Underfull \hbox (badness 2197) in paragraph at lines 70--75
+ \T1/ptm/m/it/10 d) Met-rics.: [][] \T1/ptm/m/n/10 We re-port (i) $\OML/cmm/m/i
+t/10 p[]$ \T1/ptm/m/n/10 vs. $\OML/cmm/m/it/10 '$ \T1/ptm/m/n/10 for $\OML/cmm/
+m/it/10 k \OMS/cmsy/m/n/10 2
+[11 <../../artifact/figures/fig6_reconf_profit.pdf>])
+(../Section/evaluation.tex [12 <../../artifact/figures/fig_psucc.pdf> <../../ar
+tifact/figures/fig_pwin.pdf>] (../Section/_generated/tab_breakeven.tex)
+(../Section/_generated/tab_defenses.tex) [13 <../../artifact/figures/fig4_cost.
+pdf> <../../artifact/figures/fig3_phase.pdf> <../../artifact/figures/fig_profit
+_qV.pdf>]
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 200.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 200.
+
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 200.
+
+(../Section/_generated/tab_realsystems.tex))
+(../Section/measured_evaluation.tex [14 <../../artifact/figures/fig_defenses.pd
+f> <../../artifact/figures/fig_testbed.pdf>]
+Underfull \hbox (badness 2005) in paragraph at lines 52--56
+[]\T1/ptm/b/n/10 Primary open tar-get \T1/ptm/m/n/10 --- a real fast/in-tent br
+idge
+
+Underfull \vbox (badness 2080) has occurred while \output is active [15]
+Underfull \hbox (badness 4981) in paragraph at lines 119--130
+ \T1/ptm/m/it/10 d) $\OML/cmm/m/it/10 T[]$\T1/ptm/m/it/10 : re-ceipt and withdr
+awal-beyond-clawback,
+
+Underfull \hbox (badness 1997) in paragraph at lines 132--149
+ \T1/ptm/m/it/10 e) The pre-registered de-ci-sion rule.: [][] \T1/ptm/m/n/10 Al
+l es-ti-ma-tors
+
+Underfull \hbox (badness 3769) in paragraph at lines 132--149
+\T1/ptm/m/n/10 (Clopper--Pearson/Wilson/rule-of-three for $\OML/cmm/m/it/10 q$\
+T1/ptm/m/n/10 ; Gamma/log-
+[16]
+
+LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
+(Font)              using `T1/ptm/m/it' instead on input line 206.
+
+(../Section/_generated/tab_measured.tex
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]|\T1/ptm/m/n/9 0.00, []\T1/ptm/m/sc/9 ruled-
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]|\T1/ptm/m/n/9 0.93, []\T1/ptm/m/sc/9 open-
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]|\T1/ptm/m/n/9 1.00, []\T1/ptm/m/sc/9 open-
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]|\T1/ptm/m/n/9 1.00, []\T1/ptm/m/sc/9 open-
+)) (../Section/discussion.tex
+Underfull \hbox (badness 2884) in paragraph at lines 39--41
+\T1/ptm/m/n/10 value-bearing cross-shard ar-ti-facts dur-ing re-con-fig-u-ra-ti
+on
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+[]|\T1/ptm/m/n/9 Primarily
+) (../Section/limitations.tex [17]
+Underfull \vbox (badness 1038) has occurred while \output is active)
+(../Section/conclusion.tex) (../Section/ethical_considerations.tex [18])
+(../Section/open_science.tex
+Underfull \hbox (badness 1509) in paragraph at lines 4--12
+[]\T1/ptm/m/n/10 The ar-ti-fact needed to eval-u-ate the pa-per is the lo-
+
+Underfull \hbox (badness 1715) in paragraph at lines 4--12
+\T1/ptm/m/n/10 plot-ting scripts, ta-ble gen-er-a-tor, tests, and a README
+
+Underfull \hbox (badness 2020) in paragraph at lines 4--12
+\T1/ptm/m/n/10 with ex-act re-pro-duc-tion com-mands. The ar-ti-fact is de-
+
+Underfull \hbox (badness 2165) in paragraph at lines 4--12
+\T1/ptm/m/n/10 ter-min-is-tic un-der \T1/pcr/m/n/10 configs/main.yaml\T1/ptm/m/
+n/10 ; it re-gen-er-ates
+) (../Section/appendix_repro.tex
+Underfull \hbox (badness 10000) in paragraph at lines 11--14
+[]\T1/pcr/m/n/9 python run_all.py --config
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--14
+\T1/pcr/m/n/9 python plot_figures.py --input
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--14
+\T1/pcr/m/n/9 python make_tables.py --input
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--14
+\T1/pcr/m/n/9 results/main.json --out
+[19]
+Underfull \hbox (badness 5345) in paragraph at lines 42--42
+[]|\T1/ptm/m/n/9 single source of truth
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+\T1/ptm/m/n/9 for the equa-tions of
+
+Underfull \hbox (badness 4242) in paragraph at lines 42--42
+\T1/ptm/m/n/9 Ÿ[]V[]: equiv-o-ca-tion floor,
+
+Underfull \hbox (badness 2418) in paragraph at lines 42--42
+\T1/ptm/m/n/9 mit-tee; on equiv-o-ca-tion
+
+Underfull \hbox (badness 6542) in paragraph at lines 42--42
+\T1/ptm/m/n/9 emits a gen-uine, ver-
+
+Underfull \hbox (badness 8000) in paragraph at lines 42--42
+\T1/ptm/m/n/9 i-fi-able ev-i-dence ob-ject
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+[]|\T1/ptm/m/n/9 Monte-Carlo quo-rum
+
+Underfull \hbox (badness 4846) in paragraph at lines 42--42
+\T1/ptm/m/it/9 sures $\OML/cmm/m/it/9 T[]$\T1/ptm/m/n/9 /$\OML/cmm/m/it/9 T[]$ 
+\T1/ptm/m/n/9 from
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+\T1/ptm/m/n/9 an accountability-gating
+
+Underfull \hbox (badness 3895) in paragraph at lines 42--42
+[]|\T1/ptm/m/n/9 runnable \T1/ptm/m/sc/9 Pay-ToE-quiv-
+
+Underfull \hbox (badness 4416) in paragraph at lines 42--42
+\T1/ptm/m/n/9 on a valid proof, re-
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+[]|\T1/ptm/m/n/9 epoch-boundary model:
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+[]|\T1/ptm/m/n/9 documented-parameter
+
+Underfull \hbox (badness 2521) in paragraph at lines 42--42
+[]|\T1/ptm/m/n/9 read-only col-lec-tors for
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+[]|\T1/ptm/m/n/9 driver: self-validates,
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+\T1/ptm/m/n/9 then runs ev-ery
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+\T1/ptm/m/n/9 ex-per-i-ment into one
+
+Underfull \hbox (badness 3954) in paragraph at lines 45--51
+[]\T1/ptm/m/n/10 The live mea-sure-ment of Ÿ[]X[] is a \T1/ptm/m/it/10 sep-a-ra
+te, read-
+
+Underfull \hbox (badness 5592) in paragraph at lines 45--51
+\T1/ptm/m/it/10 only \T1/ptm/m/n/10 step driven by \T1/pcr/m/n/10 collect_*.py\
+T1/ptm/m/n/10 : each col-lec-tor
+
+Underfull \hbox (badness 4001) in paragraph at lines 45--51
+\T1/ptm/m/n/10 fetches already-public on-chain data (his-tor-i-cal double-
+
+Underfull \hbox (badness 6380) in paragraph at lines 45--51
+\T1/ptm/m/n/10 sign slashes, or-di-nary bridge fills) over pub-lic end-
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--80
+[]\T1/ptm/m/n/10 Under car-ry-over, $\OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 (\OML/
+cmm/m/it/10 a\OT1/cmr/m/n/10 ) =
+
+Underfull \hbox (badness 1721) in paragraph at lines 69--80
+[]\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 T[] < T[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/1
+0 H[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a\OT1/cmr/m/n/10 )]$ \T1/ptm/m/n/10 from
+ Eq. []. Since
+
+Underfull \hbox (badness 2503) in paragraph at lines 69--80
+\T1/ptm/m/n/10 in $\OML/cmm/m/it/10 a$\T1/ptm/m/n/10 , $\OML/cmm/m/it/10 p[]\OT
+1/cmr/m/n/10 (\OML/cmm/m/it/10 a\OT1/cmr/m/n/10 )$ \T1/ptm/m/n/10 is non-de-cre
+as-ing in $\OML/cmm/m/it/10 a$\T1/ptm/m/n/10 . The bribe term
+
+Underfull \hbox (badness 1635) in paragraph at lines 69--80
+\T1/ptm/m/n/10 con-trast with the hard-cutoff de-sign is im-me-di-ate from
+[20]) (main.bbl
+Underfull \hbox (badness 1831) in paragraph at lines 136--141
+[]\T1/ptm/m/n/8 B. David, B. Ma-gri, C. Matt, J. B. Nielsen, and D. Tschudi,
+
+Underfull \hbox (badness 3735) in paragraph at lines 136--141
+\T1/ptm/m/n/8 pp. 683--696, cryp-tol-ogy ePrint Archive, Pa-per 2021/211; DOI
+
+Underfull \hbox (badness 1675) in paragraph at lines 194--198
+[]\T1/ptm/m/n/8 R. Sarenche, E. N. Tas, B. Mon-not, C. Schwarz-Schilling, and
+
+Underfull \hbox (badness 1400) in paragraph at lines 200--205
+\T1/ptm/m/n/8 bribery-enabled de-layed block pro-duc-tion,'' \T1/ptm/m/it/8 IEE
+E Trans-ac-tions on
+[21]
+Underfull \hbox (badness 2990) in paragraph at lines 229--231
+[]\T1/ptm/m/n/8 S. Deb, R. Raynor, and S. Kan-nan, ``STAKESURE: Proof of
+
+Underfull \hbox (badness 1424) in paragraph at lines 314--318
+\T1/ptm/m/it/8 Sym-po-sium on Se-cu-rity and Pri-vacy (S&P)\T1/ptm/m/n/8 , 2022
+, pp. 198--214,
+
+Underfull \hbox (badness 10000) in paragraph at lines 320--322
+[]\T1/ptm/m/n/8 C. Mc-Me-namin, ``SoK: Cross-domain MEV,'' arXiv preprint
+
+Underfull \vbox (badness 1270) has occurred while \output is active
+Underfull \hbox (badness 2158) in paragraph at lines 329--332
+[]\T1/ptm/m/n/8 Ethereum, ``Ethereum con-sen-sus spec-i-fi-ca-tions,'' []$https
+ : / / github . com /
+)
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the appropriate paper size.
+
+[22] (main.aux) )
+(see the transcript file for additional information)<C:/Users/mahab/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/mahab/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/U
+sers/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.
+pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmmi5.pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmmi6.pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmmi7.pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/mahab/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/mahab/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mahab/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/mahab/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/mah
+ab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Us
+ers/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb
+><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mr9.pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmsy6.pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmsy7.pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/mahab/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/mahab/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/mahab/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C
+:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb>
+<C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb>
+<C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb
+><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb
+><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pf
+b><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/zapfding/uzdr.p
+fb>
+Output written on main.pdf (22 pages, 898117 bytes).
 Transcript written on main.log.

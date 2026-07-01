@@ -3,6 +3,8 @@
 \toprule
 System & Path & $n_{\mathrm{obs}}$ & $\hat q$ & $\Tacc$ (med) & $\Tsettle$ (med) & $\pwin$ / verdict \\
 \midrule
+Across V3 (gated twin) & finality-gated relayer (Prop.1) & 14 & 0.00 & 2.1\,s & 13.4\,s & 0.00, \ruledout \\
+Across V3 (self-fill) & paired self-fill (real code) & 14 & 0.00 & 2.1\,s & 1.7\,s & 0.93, \openwin \\
 Across V3 (self-fill) & paired self-fill (rehearsal) & 60 & 1.00 & 13.0\,min & 5.4\,s & 1.00, \openwin \\
 Across V3 & fast-bridge marginal (real) & -- & N/A & -- & 5.0\,s & \indet \\
 CometBFT pool (13 chains) & pooled double-sign q\_max / T\_acc & 75 & 0.32 & 22.8\,d & -- & \ruledout \\

@@ -1,0 +1,14 @@
+{
+  "chain_id": "shardbribe-localnet-1",
+  "backend": "paired-rpc",
+  "gated": false,
+  "preview": {
+    "episodes": 1,
+    "q_attack_point": 0.0,
+    "paired": 1,
+    "pwin_point": 1.0,
+    "T_settle_median_s": 1.572,
+    "T_acc_median_s": 2.077260009765625,
+    "tacc_bound": "lo"
+  }
+}

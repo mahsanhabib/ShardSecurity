@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.8.27)  23 JUN 2026 15:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.8.27)  1 JUL 2026 12:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1005,47 +1005,43 @@ LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
 (Font)              using `T1/ptm/m/it' instead on input line 161.
 
 ) (../Section/threat_model.tex) (../Section/methodology.tex [5]
-Underfull \hbox (badness 2269) in paragraph at lines 109--114
+Underfull \vbox (badness 3158) has occurred while \output is active []
+
+
+Underfull \hbox (badness 2269) in paragraph at lines 111--116
 []\T1/ptm/m/n/10 Under As-sump-tion []1[], val-ida-tor $\OML/cmm/m/it/10 i$ \T1
 /ptm/m/n/10 equiv-o-cates iff the
  []
 
 
-Underfull \hbox (badness 3815) in paragraph at lines 109--114
+Underfull \hbox (badness 3815) in paragraph at lines 111--116
 \T1/ptm/m/n/10 bribe cov-ers its ex-pected loss. Equiv-o-ca-tion is max-i-
  []
 
 
-Underfull \hbox (badness 1762) in paragraph at lines 109--114
+Underfull \hbox (badness 1762) in paragraph at lines 111--116
 \T1/ptm/m/n/10 mally ac-count-able (As-sump-tion []2[]): if the proof is en-
  []
 
 
-Underfull \hbox (badness 1789) in paragraph at lines 109--114
+Underfull \hbox (badness 1789) in paragraph at lines 111--116
 \T1/ptm/m/n/10 stake $\OML/cmm/m/it/10 s[]$ \T1/ptm/m/n/10 and for-feits con-ti
 n-u-a-tion value $\OML/cmm/m/it/10 R[]$\T1/ptm/m/n/10 . Let $\OML/cmm/m/it/10 q
  \OT1/cmr/m/n/10 =
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 2591) has occurred while \output is active []
-
- [6]
-[7]
+[6] [7]
 <../../artifact/figures/fig1_attack_flow.pdf, id=463, 202.08499pt x 237.04561pt
 >
 File: ../../artifact/figures/fig1_attack_flow.pdf Graphic file (type pdf)
 <use ../../artifact/figures/fig1_attack_flow.pdf>
 Package pdftex.def Info: ../../artifact/figures/fig1_attack_flow.pdf  used on i
-nput line 229.
+nput line 231.
 (pdftex.def)             Requested size: 216.72015pt x 254.21861pt.
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 236.
+put line 238.
 
-Underfull \hbox (badness 2460) in paragraph at lines 249--250
+Underfull \hbox (badness 2460) in paragraph at lines 251--252
 []\T1/ptm/m/n/10 On branch $\OML/cmm/m/it/10 b[]$\T1/ptm/m/n/10 , sub-mit the c
 ross-shard re-ceipt that
  []
@@ -1268,56 +1264,56 @@ ne 31.
 File: ../../artifact/figures/fig_pwin.pdf Graphic file (type pdf)
 <use ../../artifact/figures/fig_pwin.pdf>
 Package pdftex.def Info: ../../artifact/figures/fig_pwin.pdf  used on input lin
-e 48.
+e 47.
 (pdftex.def)             Requested size: 252.0pt x 182.59674pt.
 <../../artifact/figures/fig4_cost.pdf, id=602, 237.49855pt x 187.90802pt>
 File: ../../artifact/figures/fig4_cost.pdf Graphic file (type pdf)
 <use ../../artifact/figures/fig4_cost.pdf>
 Package pdftex.def Info: ../../artifact/figures/fig4_cost.pdf  used on input li
-ne 65.
+ne 64.
 (pdftex.def)             Requested size: 252.0pt x 199.39084pt.
  [12 <../../artifact/figures/fig_psucc.pdf> <../../artifact/figures/fig_pwin.pd
 f>] (../Section/_generated/tab_breakeven.tex)
-<../../artifact/figures/fig3_phase.pdf, id=655, 292.8785pt x 227.83937pt>
+<../../artifact/figures/fig3_phase.pdf, id=657, 292.8785pt x 227.83937pt>
 File: ../../artifact/figures/fig3_phase.pdf Graphic file (type pdf)
 <use ../../artifact/figures/fig3_phase.pdf>
 Package pdftex.def Info: ../../artifact/figures/fig3_phase.pdf  used on input l
-ine 97.
+ine 96.
 (pdftex.def)             Requested size: 252.0pt x 196.03885pt.
-<../../artifact/figures/fig_profit_qV.pdf, id=656, 256.4442pt x 194.47656pt>
+<../../artifact/figures/fig_profit_qV.pdf, id=658, 256.4442pt x 194.47656pt>
 File: ../../artifact/figures/fig_profit_qV.pdf Graphic file (type pdf)
 <use ../../artifact/figures/fig_profit_qV.pdf>
 Package pdftex.def Info: ../../artifact/figures/fig_profit_qV.pdf  used on inpu
-t line 107.
+t line 105.
 (pdftex.def)             Requested size: 252.0pt x 191.10799pt.
 
 (../Section/_generated/tab_defenses.tex)
-<../../artifact/figures/fig_defenses.pdf, id=664, 294.96321pt x 194.47656pt>
+<../../artifact/figures/fig_defenses.pdf, id=666, 294.96321pt x 194.47656pt>
 File: ../../artifact/figures/fig_defenses.pdf Graphic file (type pdf)
 <use ../../artifact/figures/fig_defenses.pdf>
 Package pdftex.def Info: ../../artifact/figures/fig_defenses.pdf  used on input
- line 147.
+ line 144.
 (pdftex.def)             Requested size: 252.0pt x 166.15454pt.
  [13 <../../artifact/figures/fig4_cost.pdf> <../../artifact/figures/fig3_phase.
 pdf> <../../artifact/figures/fig_profit_qV.pdf>]
-<../../artifact/figures/fig_testbed.pdf, id=731, 249.79825pt x 188.75493pt>
+<../../artifact/figures/fig_testbed.pdf, id=733, 249.79825pt x 188.75493pt>
 File: ../../artifact/figures/fig_testbed.pdf Graphic file (type pdf)
 <use ../../artifact/figures/fig_testbed.pdf>
 Package pdftex.def Info: ../../artifact/figures/fig_testbed.pdf  used on input 
-line 174.
+line 169.
 (pdftex.def)             Requested size: 252.0pt x 190.41919pt.
 
 
 LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
-(Font)              using `T1/ptm/m/it' instead on input line 209.
+(Font)              using `T1/ptm/m/it' instead on input line 200.
 
 
 LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
-(Font)              using `T1/ptm/m/it' instead on input line 209.
+(Font)              using `T1/ptm/m/it' instead on input line 200.
 
 
 LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
-(Font)              using `T1/ptm/m/it' instead on input line 209.
+(Font)              using `T1/ptm/m/it' instead on input line 200.
 
 (../Section/_generated/tab_realsystems.tex))
 (../Section/measured_evaluation.tex [14 <../../artifact/figures/fig_defenses.pd
@@ -1328,10 +1324,7 @@ idge
  []
 
 
-Underfull \vbox (badness 1331) has occurred while \output is active []
-
-
-Underfull \vbox (badness 1331) has occurred while \output is active []
+Underfull \vbox (badness 2080) has occurred while \output is active []
 
  [15]
 Underfull \hbox (badness 4981) in paragraph at lines 119--130
@@ -1354,15 +1347,25 @@ T1/ptm/m/n/10 ; Gamma/log-
 [16]
 
 LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
-(Font)              using `T1/ptm/m/it' instead on input line 208.
+(Font)              using `T1/ptm/m/it' instead on input line 206.
 
 (../Section/_generated/tab_measured.tex
-Underfull \hbox (badness 10000) in paragraph at lines 15--15
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]|\T1/ptm/m/n/9 0.00, []\T1/ptm/m/sc/9 ruled-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]|\T1/ptm/m/n/9 0.93, []\T1/ptm/m/sc/9 open-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
 []|\T1/ptm/m/n/9 1.00, []\T1/ptm/m/sc/9 open-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--15
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
 []|\T1/ptm/m/n/9 1.00, []\T1/ptm/m/sc/9 open-
  []
 
@@ -1377,11 +1380,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--60
 []|\T1/ptm/m/n/9 Primarily
  []
 
-) (../Section/limitations.tex [17]) (../Section/conclusion.tex)
-(../Section/ethical_considerations.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
+) (../Section/limitations.tex [17]
+Underfull \vbox (badness 1038) has occurred while \output is active []
 
- [18])
+)
+(../Section/conclusion.tex) (../Section/ethical_considerations.tex [18])
 (../Section/open_science.tex
 Underfull \hbox (badness 1509) in paragraph at lines 4--12
 []\T1/ptm/m/n/10 The ar-ti-fact needed to eval-u-ate the pa-per is the lo-
@@ -1404,9 +1407,6 @@ n/10 ; it re-gen-er-ates
  []
 
 ) (../Section/appendix_repro.tex
-Underfull \vbox (badness 1132) has occurred while \output is active []
-
- [19]
 Underfull \hbox (badness 10000) in paragraph at lines 11--14
 []\T1/pcr/m/n/9 python run_all.py --config
  []
@@ -1426,7 +1426,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--14
 \T1/pcr/m/n/9 results/main.json --out
  []
 
-
+[19]
 Underfull \hbox (badness 5345) in paragraph at lines 42--42
 []|\T1/ptm/m/n/9 single source of truth
  []
@@ -1599,6 +1599,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 320--322
  []
 
 
+Underfull \vbox (badness 1270) has occurred while \output is active []
+
+
 Underfull \hbox (badness 2158) in paragraph at lines 329--332
 []\T1/ptm/m/n/8 Ethereum, ``Ethereum con-sen-sus spec-i-fi-ca-tions,'' []$https
  : / / github . com /
@@ -1627,11 +1630,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  25242 strings out of 474486
  468644 string characters out of 5743755
- 2102542 words of memory out of 5000000
+ 2110542 words of memory out of 5000000
  46788 multiletter control sequences out of 15000+600000
  703266 words of font info for 180 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,14n,87p,1545b,1979s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,14n,87p,1257b,1985s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmex10.pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cmextra/cmex9.pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fonts/typ
@@ -1662,9 +1665,9 @@ s/type1/urw/times/utmbi8a.pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/times/utmr8a.pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fon
 ts/type1/urw/times/utmri8a.pfb><C:/Users/mahab/AppData/Local/Programs/MiKTeX/fo
 nts/type1/urw/zapfding/uzdr.pfb>
-Output written on main.pdf (22 pages, 900296 bytes).
+Output written on main.pdf (22 pages, 898117 bytes).
 PDF statistics:
- 1093 PDF objects out of 1200 (max. 8388607)
+ 1094 PDF objects out of 1200 (max. 8388607)
  235 named destinations out of 1000 (max. 500000)
  319 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -5,7 +5,7 @@
 \newcommand{\ArtifactPoCEvidence}{11}
 \newcommand{\ArtifactPoCBribes}{11}
 \newcommand{\ArtifactPsuccFloor}{0.18}
-\newcommand{\ArtifactRuntime}{2093}
+\newcommand{\ArtifactRuntime}{240}
 \newcommand{\ArtifactSigBytes}{64}
 \newcommand{\ArtifactEvidenceBytes}{130}
 \newcommand{\ArtifactTbBaseRho}{0.27}
@@ -20,12 +20,12 @@
 \newcommand{\ArtifactTsettleIBC}{11.9\,s}
 \newcommand{\ArtifactCosmosVerdict}{\ruledout}
 \newcommand{\ArtifactBridgeTsettle}{5.0\,s}
-\newcommand{\ArtifactBridgePwin}{1.00}
+\newcommand{\ArtifactBridgePwin}{0.93}
 \newcommand{\ArtifactBridgeVerdict}{\openwin}
 \newcommand{\ArtifactCliffCosmos}{7.2\,s}
 \newcommand{\ArtifactPosCtrlMode}{the fast-exit positive control runs on real client code (observed unbonding completion): the equivocator submits a real \texttt{MsgUndelegate} whose maturity is read on-chain against the slash, on a two-nodes-one-key localnet}
-\newcommand{\ArtifactPairedMode}{the paired race is an in-process \texttt{shadow} rehearsal}
-\newcommand{\ArtifactRqEightProvenance}{the paired race remains a \emph{rehearsal} on the validated model (the fast-exit positive control now runs on real consensus client code (observed unbonding completion)), \emph{not} yet a production paired run}
-\newcommand{\ArtifactRqEightOwed}{the real-client-code re-derivation (the \texttt{rpc} backend on a private two-nodes-one-key localnet), the $\ge 4$-node propagation timing, and a self-run-archive re-derivation of $q_{\max}$}
-\newcommand{\ArtifactRqEightRemains}{to replace the in-process rehearsal of the paired race with the real-client-code localnet run}
-\newcommand{\ArtifactRowProvenance}{the self-fill row is the in-process rehearsal, and the fast-exit row the real-client-code run (observed unbonding completion), of}
+\newcommand{\ArtifactPairedMode}{the paired race runs on real client code}
+\newcommand{\ArtifactRqEightProvenance}{the paired race and the fast-exit positive control now run on real consensus client code (the latter via observed unbonding completion)}
+\newcommand{\ArtifactRqEightOwed}{the $\ge 4$-node propagation timing, and a self-run-archive re-derivation of $q_{\max}$}
+\newcommand{\ArtifactRqEightRemains}{to complete the remaining propagation-timing and self-run-archive re-derivations}
+\newcommand{\ArtifactRowProvenance}{the self-fill and fast-exit rows are the real-client-code runs of (the fast-exit row via observed unbonding completion)}
